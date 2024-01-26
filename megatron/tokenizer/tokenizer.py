@@ -263,8 +263,9 @@ class _GPT2BPETokenizer(AbstractTokenizer):
         super().__init__(name)
 
         self.tokenizer = GPT2Tokenizer(vocab_file, merge_file, errors='replace',
-                                       special_tokens=[], max_len=None)
+                                       special_tokens=['<pad>'], max_len=None)
         self.eod_id = self.tokenizer.encoder['<|endoftext|>']
+        self.pad_id = self.tokenizer.special_tokens['<pad>']
 
     @property
     def vocab_size(self):
@@ -287,6 +288,10 @@ class _GPT2BPETokenizer(AbstractTokenizer):
     @property
     def eod(self):
         return self.eod_id
+    
+    @property
+    def pad(self):
+        return self.pad_id
 
 
 class _SentencePieceTokenizer(AbstractTokenizer):

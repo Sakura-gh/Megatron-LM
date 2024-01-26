@@ -12,3 +12,4 @@ logs
 *.parquet
 *refinedweb0.json
 *wiki.json
+*.pkl
