@@ -67,17 +67,19 @@ class Encoder(object):
     def encode(self, json_line):
         data = json.loads(json_line)
         ids = {}
+        len_doc = -1
         for key in self.args.json_keys:
             text = data[key]
             doc_ids = []
             for sentence in Encoder.splitter.tokenize(text):
                 sentence_ids = Encoder.tokenizer.tokenize(sentence)
                 if len(sentence_ids) > 0:
+                    len_doc = len(sentence_ids)
                     doc_ids.append(sentence_ids)
             if len(doc_ids) > 0 and self.args.append_eod:
                 doc_ids[-1].append(Encoder.tokenizer.eod)
             ids[key] = doc_ids
-        return ids, len(json_line)
+        return ids, len(json_line), len_doc
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -153,7 +155,8 @@ def main():
     tokenizer = build_tokenizer(args)
     pool = multiprocessing.Pool(args.workers, initializer=encoder.initializer)
     encoded_docs = pool.imap(encoder.encode, fin, args.chunk_size)
-    #encoded_docs = map(encoder.encode, fin)
+    print(f'encoded_docs: {encoded_docs}')
+    # encoded_docs = map(encoder.encode, fin)
 
     level = "document"
     if args.split_sentences:
@@ -178,7 +181,37 @@ def main():
     total_bytes_processed = 0
     print("Time to startup:", startup_end - startup_start)
 
-    for i, (doc, bytes_processed) in enumerate(encoded_docs, start=1):
+    doc_length_count = {
+        '128': 0,
+        '256': 0,
+        '512': 0,
+        '1024': 0,
+        '2048': 0,
+        '4096': 0,
+        '8192': 0,
+        '16384': 0,
+        '>16k': 0
+    }
+    for i, (doc, bytes_processed, len_doc) in enumerate(encoded_docs, start=1):
+        if len_doc > 0:
+            if len_doc <= 128:
+                doc_length_count['128'] += 1
+            elif len_doc <= 256:
+                doc_length_count['256'] += 1
+            elif len_doc <= 512:
+                doc_length_count['512'] += 1
+            elif len_doc <= 1024:
+                doc_length_count['1024'] += 1
+            elif len_doc <= 2048:
+                doc_length_count['2048'] += 1
+            elif len_doc <= 4096:
+                doc_length_count['4096'] += 1
+            elif len_doc <= 8192:
+                doc_length_count['8192'] += 1
+            elif len_doc <= 16384:
+                doc_length_count['16384'] += 1
+            else:
+                doc_length_count['>16k'] += 1
         total_bytes_processed += bytes_processed
         for key, sentences in doc.items():
             if len(sentences) == 0:
@@ -193,7 +226,9 @@ def main():
             print(f"Processed {i} documents",
                   f"({i/elapsed} docs/s, {mbs} MB/s).",
                   file=sys.stderr)
+
     print("Done! Now finalizing.")
+    print(f'doc_length_count: {doc_length_count}')
 
     for key in args.json_keys:
         builders[key].finalize(output_idx_files[key])

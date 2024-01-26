@@ -6,3 +6,9 @@ build
 *~
 slurm*
 logs
+.hypothesis/*
+*.bin
+*.idx
+*.parquet
+*refinedweb0.json
+*wiki.json
