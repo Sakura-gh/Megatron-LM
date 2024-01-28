@@ -363,7 +363,8 @@ def _build_index_mappings(name, data_prefix, documents, sizes,
     data_cache_success = True
 
     # Build the indexed mapping if not exist.
-    if build_indices and torch.distributed.get_rank() == 0:
+    # workaround: for data file not shared multi-node, need to build indices for each node
+    if build_indices and torch.distributed.get_rank() % 8 == 0:
         print_rank_0(' > WARNING: could not find index map files, building '
                      'the indices on rank 0 ...')
 

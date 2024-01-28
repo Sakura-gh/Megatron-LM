@@ -8,6 +8,7 @@ from megatron import get_args
 from megatron import print_rank_0
 from megatron import get_timers
 from megatron import get_tokenizer
+from megatron.core import mpu
 from megatron.core import tensor_parallel
 from megatron.core.enums import ModelType
 from megatron.data.gpt_dataset import build_train_valid_test_datasets
@@ -15,6 +16,7 @@ from megatron.model import GPTModel
 from megatron.training import pretrain
 from megatron.utils import get_ltor_masks_and_position_ids
 from megatron.utils import average_losses_across_data_parallel_group
+from gpt_seq_dataset import GPTJsonDataset
 
 def model_provider(pre_process=True, post_process=True):
     """Build the model."""
@@ -35,20 +37,27 @@ def get_batch(data_iterator):
     tokenizer = get_tokenizer()
 
     # Items and their type.
-    keys = ['text']
-    datatype = torch.int64
+    # keys = ['text']
+    # datatype = torch.int64
 
     # Broadcast data.
     if data_iterator is not None:
         data = next(data_iterator)
+        # data = data.cuda()
     else:
         data = None
-    data_b = tensor_parallel.broadcast_data(keys, data, datatype)
+    # data_b = tensor_parallel.broadcast_data(keys, data, datatype)
+
+    datatype = torch.int64
+    data = tensor_parallel.broadcast_data(data, datatype)
 
     # Unpack.
-    tokens_ = data_b['text'].long()
+    # tokens_ = data_b['text'].long()
+    tokens_ = data.long()
     labels = tokens_[:, 1:].contiguous()
     tokens = tokens_[:, :-1].contiguous()
+
+    # print(f'tokens = {tokens}\nargs.reset_position_ids={args.reset_position_ids}, args.reset_attention_mask={args.reset_attention_mask}')
 
     # Get the masks and postition ids.
     attention_mask, loss_mask, position_ids = get_ltor_masks_and_position_ids(
@@ -110,10 +119,27 @@ def train_valid_test_datasets_provider(train_val_test_num_samples):
 
     return train_ds, valid_ds, test_ds
 
+def train_dataset_provider(max_seq_len=1024):
+    """Build train dataset."""
+    train_dataset = GPTJsonDataset(
+        json_file='data/web/refinedweb0.json',
+        key='content',
+        max_seq_len=max_seq_len,
+        vocab_file='data/vocab.json',
+        merge_file='data/merges.txt')
+    
+    return train_dataset
+
+
 
 if __name__ == "__main__":
 
-    pretrain(train_valid_test_datasets_provider,
+    # pretrain(train_valid_test_datasets_provider,
+    #          model_provider,
+    #          ModelType.encoder_or_decoder,
+    #          forward_step,
+    #          args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+    pretrain(train_dataset_provider,
              model_provider,
              ModelType.encoder_or_decoder,
              forward_step,
