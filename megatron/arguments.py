@@ -1035,6 +1035,10 @@ def _add_data_args(parser):
     group.add_argument('--data-cache-path', default=None,
                        help='Path to a directory to hold cached index files.')
 
+    group.add_argument('--json-file', type=str, default=None,
+                       help='Path to the json dataset.')
+    group.add_argument('--json-key', type=str, default=None,
+                       help='key for json dataset.')
     group.add_argument('--vocab-size', type=int, default=None,
                        help='Size of vocab before EOD or padding.')
     group.add_argument('--vocab-file', type=str, default=None,

@@ -11,7 +11,9 @@ NNODES=1
 NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
 
-DATA_PATH=./data/web/refinedweb0.json
+JSON_FILE=./data/web/refinedweb0.json
+JSON_KEY=content
+DATA_PATH=./data/refinedweb0_content_document
 VOCAB_FILE=./data/vocab.json
 MERGE_FILE=./data/merges.txt
 
@@ -19,6 +21,8 @@ MERGE_FILE=./data/merges.txt
 # VOCAB_FILE=./data/vocab.json
 # MERGE_FILE=./data/merges.txt
 
+# JSON_FILE=/opt/tiger/test/data/web/refinedweb0.json
+# JSON_KEY=content
 # VOCAB_FILE=/opt/tiger/test/data/vocab.json
 # MERGE_FILE=/opt/tiger/test/data/merges.txt
 # DATA_PATH=/opt/tiger/test/data/web/refinedweb0_content_document
@@ -88,6 +92,8 @@ GPT_ARGS="
 
 DATA_ARGS="
     --data-path $DATA_PATH \
+    --json-file $JSON_FILE \
+    --json-key $JSON_KEY \
     --vocab-file $VOCAB_FILE \
     --merge-file $MERGE_FILE \
     --data-impl mmap \

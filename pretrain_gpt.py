@@ -119,14 +119,15 @@ def train_valid_test_datasets_provider(train_val_test_num_samples):
 
     return train_ds, valid_ds, test_ds
 
-def train_dataset_provider(max_seq_len=1024):
+def train_dataset_provider():
     """Build train dataset."""
+    args = get_args()
     train_dataset = GPTJsonDataset(
-        json_file='data/web/refinedweb0.json',
-        key='content',
-        max_seq_len=max_seq_len,
-        vocab_file='data/vocab.json',
-        merge_file='data/merges.txt')
+        json_file=args.json_file,
+        key=args.json_key,
+        max_seq_len=args.seq_length,
+        vocab_file=args.vocab_file,
+        merge_file=args.merge_file)
     
     return train_dataset
 

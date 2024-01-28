@@ -127,7 +127,7 @@ def pretrain(train_dataset_provider,
     args.do_train = True
     args.do_valid = False
     if mpu.get_tensor_model_parallel_rank() == 0:
-        train_dataset = train_dataset_provider(args.seq_length)
+        train_dataset = train_dataset_provider()
         # train_dataloader = DataLoader(train_dataset, batch_size=8, shuffle=True)
         print(f'consumed_train_samples = {args.consumed_train_samples}, dataloader_type = {args.dataloader_type}')
         assert args.dataloader_type == 'single', 'only support single dataloader type!'
