@@ -6,7 +6,8 @@ from typing import Optional, List, Union, Callable, Tuple
 
 import torch
 
-from megatron import core
+from megatron import core, get_args
+from megatron.model.gpt_model import print_ranks
 from megatron.core.parallel_state import (
     get_pipeline_model_parallel_group,
     get_pipeline_model_parallel_rank,
@@ -292,7 +293,8 @@ def _communicate(*, tensor_send_next: Optional[torch.Tensor],
     # This will come from config in the next version, for now hard
     # code it here to match existing functionality.
     batch_p2p_sync = True
-
+    args = get_args()
+    variable_seq_lengths = args.variable_seq_lengths
     if not variable_seq_lengths:
         recv_prev_shape = tensor_shape
         recv_next_shape = tensor_shape
@@ -301,7 +303,9 @@ def _communicate(*, tensor_send_next: Optional[torch.Tensor],
             _communicate_shapes(tensor_send_next,
                                 tensor_send_prev,
                                 recv_prev,
-                                recv_next)
+                                recv_next,
+                                use_ring_exchange_p2p=False)
+    # print_ranks(f'variable_seq_lengths = {variable_seq_lengths}, recv_prev_shape = {recv_prev_shape}, recv_next_shape={recv_next_shape}', ranks=[0, 4])
 
     if recv_prev:
         if dtype is None:

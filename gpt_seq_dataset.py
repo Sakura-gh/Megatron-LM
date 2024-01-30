@@ -64,9 +64,10 @@ class GPTJsonDataset(Dataset):
             end_time = time.time()
             print(f'Building dataset end, time cost: {end_time - start_time: .3f} s')
 
-        # deal with max_seq_len
-        print(f'Cutting or padding data to max_seq_len = {max_seq_len} begin ...')
+        # deal with max_seq_len + 1 (for tokens/labels seq_len = max_seq_len+1 - 1)
+        print(f'Cutting or padding data to max_seq_len + 1 = {max_seq_len + 1} begin ...')
         start_time = time.time()
+        max_seq_len = max_seq_len + 1
         for idx, doc_ids in enumerate(self.data):
             if len(doc_ids) > max_seq_len:
                 self.data[idx] = doc_ids[:max_seq_len]
@@ -83,15 +84,34 @@ class GPTJsonDataset(Dataset):
         tokens = torch.tensor(self.data[idx])
         return tokens
 
+def get_mask_and_position_ids(tokens, pad):
+    batch_size, seq_length = tokens.shape
+    # attention mask for common attention
+    # attention_mask = torch.tril(torch.ones(
+    #     (batch_size, seq_length, seq_length))).view(
+    #         batch_size, 1, seq_length, seq_length)
+    # pad_mask = tokens.eq(pad)
+    # attention_mask = attention_mask.masked_fill(pad_mask.unsqueeze(1).unsqueeze(1), 0.0)
+
+    # attention mask for flash-attn
+    attention_mask = tokens.ne(pad)
+
+    position_ids = torch.arange(seq_length, dtype=torch.long)
+    position_ids = position_ids.unsqueeze(0).expand_as(tokens)
+
+    return attention_mask, position_ids
+
 if __name__ == '__main__':
+    root_folder = '/home/gehao/megatron/Megatron-LM'
     test_dataset = GPTJsonDataset(
-        json_file='data/web/refinedweb0.json',
+        json_file=f'{root_folder}/data/web/refinedweb0.json',
         key='content',
         max_seq_len=1024,
-        vocab_file='data/vocab.json',
-        merge_file='data/merges.txt')
-    test_dataloader = DataLoader(test_dataset, batch_size=8, shuffle=True)
+        vocab_file=f'{root_folder}/data/vocab.json',
+        merge_file=f'{root_folder}/data/merges.txt')
+    test_dataloader = DataLoader(test_dataset, batch_size=4, shuffle=False)
     for idx, tokens in enumerate(test_dataloader):
         if idx > 4:
             break
-        print(f'batch {idx}: shape = {tokens.shape}\ntokens = {tokens}')
+        attention_mask, position_ids = get_mask_and_position_ids(tokens, test_dataset.encoder.pad_id())
+        print(f'batch {idx}: shape = {tokens.shape}\ntokens = {tokens}\nattention_mask={attention_mask}\nposition_ids={position_ids}')

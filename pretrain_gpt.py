@@ -16,7 +16,8 @@ from megatron.model import GPTModel
 from megatron.training import pretrain
 from megatron.utils import get_ltor_masks_and_position_ids
 from megatron.utils import average_losses_across_data_parallel_group
-from gpt_seq_dataset import GPTJsonDataset
+from gpt_seq_dataset import GPTJsonDataset, get_mask_and_position_ids
+from megatron.model.gpt_model import print_ranks
 
 def model_provider(pre_process=True, post_process=True):
     """Build the model."""
@@ -30,6 +31,39 @@ def model_provider(pre_process=True, post_process=True):
     )
     return model
 
+statistics = {
+    'packing_seq_len': {
+        '128': 0,
+        '256': 0,
+        '512': 0,
+        '1024': 0,
+        '2048': 0,
+        '4096': 0,
+        '8192': 0,
+        '16384': 0,
+        '>16k': 0
+    }
+}
+
+def update_statistics(seq_len):
+    if seq_len <= 128:
+        statistics['packing_seq_len']['128'] += 1
+    elif seq_len <= 256:
+        statistics['packing_seq_len']['256'] += 1
+    elif seq_len <= 512:
+        statistics['packing_seq_len']['512'] += 1
+    elif seq_len <= 1024:
+        statistics['packing_seq_len']['1024'] += 1
+    elif seq_len <= 2048:
+        statistics['packing_seq_len']['2048'] += 1
+    elif seq_len <= 4096:
+        statistics['packing_seq_len']['4096'] += 1
+    elif seq_len <= 8192:
+        statistics['packing_seq_len']['8192'] += 1
+    elif seq_len <= 16384:
+        statistics['packing_seq_len']['16384'] += 1
+    else:
+        statistics['packing_seq_len']['>16k'] += 1
 
 def get_batch(data_iterator):
     """Generate a batch"""
@@ -59,13 +93,22 @@ def get_batch(data_iterator):
 
     # print(f'tokens = {tokens}\nargs.reset_position_ids={args.reset_position_ids}, args.reset_attention_mask={args.reset_attention_mask}')
 
-    # Get the masks and postition ids.
-    attention_mask, loss_mask, position_ids = get_ltor_masks_and_position_ids(
-        tokens,
-        tokenizer.eod,
-        args.reset_position_ids,
-        args.reset_attention_mask,
-        args.eod_mask_loss)
+    # # Get the masks and postition ids.
+    # attention_mask, loss_mask, position_ids = get_ltor_masks_and_position_ids(
+    #     tokens,
+    #     tokenizer.eod,
+    #     args.reset_position_ids,
+    #     args.reset_attention_mask,
+    #     args.eod_mask_loss)
+
+    attention_mask, position_ids = get_mask_and_position_ids(tokens, tokenizer.pad)
+    attention_mask = attention_mask.cuda()
+    position_ids = position_ids.cuda()
+    loss_mask = torch.ones(tokens.size(), dtype=torch.float).cuda()
+
+    # statistics for analysis
+    packing_seq_len = attention_mask.eq(True).sum().item()
+    update_statistics(packing_seq_len)
 
     return tokens, labels, loss_mask, attention_mask, position_ids
 
@@ -145,3 +188,4 @@ if __name__ == "__main__":
              ModelType.encoder_or_decoder,
              forward_step,
              args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+    print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
