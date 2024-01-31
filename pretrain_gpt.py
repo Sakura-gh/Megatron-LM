@@ -42,28 +42,39 @@ statistics = {
         '8192': 0,
         '16384': 0,
         '>16k': 0
-    }
+    },
+    'real_seq_len': {
+        '128': 0,
+        '256': 0,
+        '512': 0,
+        '1024': 0,
+        '2048': 0,
+        '4096': 0,
+        '8192': 0,
+        '16384': 0,
+        '>16k': 0
+    }    
 }
 
-def update_statistics(seq_len):
+def update_statistics(seq_len, attr='packing_seq_len'):
     if seq_len <= 128:
-        statistics['packing_seq_len']['128'] += 1
+        statistics[attr]['128'] += 1
     elif seq_len <= 256:
-        statistics['packing_seq_len']['256'] += 1
+        statistics[attr]['256'] += 1
     elif seq_len <= 512:
-        statistics['packing_seq_len']['512'] += 1
+        statistics[attr]['512'] += 1
     elif seq_len <= 1024:
-        statistics['packing_seq_len']['1024'] += 1
+        statistics[attr]['1024'] += 1
     elif seq_len <= 2048:
-        statistics['packing_seq_len']['2048'] += 1
+        statistics[attr]['2048'] += 1
     elif seq_len <= 4096:
-        statistics['packing_seq_len']['4096'] += 1
+        statistics[attr]['4096'] += 1
     elif seq_len <= 8192:
-        statistics['packing_seq_len']['8192'] += 1
+        statistics[attr]['8192'] += 1
     elif seq_len <= 16384:
-        statistics['packing_seq_len']['16384'] += 1
+        statistics[attr]['16384'] += 1
     else:
-        statistics['packing_seq_len']['>16k'] += 1
+        statistics[attr]['>16k'] += 1
 
 def get_batch(data_iterator):
     """Generate a batch"""
@@ -108,7 +119,11 @@ def get_batch(data_iterator):
 
     # statistics for analysis
     packing_seq_len = attention_mask.eq(True).sum().item()
-    update_statistics(packing_seq_len)
+    update_statistics(packing_seq_len, 'packing_seq_len')
+
+    real_seq_len_list = attention_mask.eq(True).sum(dim=1).tolist()
+    for real_seq_len in real_seq_len_list:
+        update_statistics(real_seq_len, 'real_seq_len')
 
     return tokens, labels, loss_mask, attention_mask, position_ids
 
