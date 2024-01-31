@@ -67,6 +67,7 @@ GPT_ARGS="
     --lr-warmup-fraction .01 \
     --bf16 \
     --use-flash-attn \
+    --sequence-packing \
     --use-distributed-optimizer \
     --no-masked-softmax-fusion \
     --no-bias-gelu-fusion \

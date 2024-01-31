@@ -417,6 +417,7 @@ class ParallelAttention(MegatronModule):
         self.attn_mask_type = attn_mask_type
         self.params_dtype = args.params_dtype
         self.sequence_parallel = args.sequence_parallel
+        self.sequence_packing = args.sequence_packing
 
         self.use_flash_attn = args.use_flash_attn \
             and attention_type == AttnType.self_attn \
@@ -664,7 +665,8 @@ class ParallelAttention(MegatronModule):
                 context_layer = self.core_attention(
                     query_layer, key_layer, value_layer, attention_mask)
         else:
-            if indices is not None:
+            if self.sequence_packing:
+                assert indices is not None, 'sequence packing requires indices must not be None!'
                 # use sequence packing
                 # [total_nnz, 1, np, hn] -> [total_nnz, np, hn] 
                 query_layer = torch.squeeze(query_layer, dim=1)
@@ -686,6 +688,7 @@ class ParallelAttention(MegatronModule):
                 total_nnz, np, hn = attn_output_unpad.shape
                 context_layer = attn_output_unpad.reshape(total_nnz, 1, np*hn).contiguous()
             else:
+                assert indices is None, 'common flash requries indices must be None!'
                 q, k, v = [rearrange(x, 's b ... -> b s ...').contiguous()
                         for x in (query_layer, key_layer, value_layer)]
                 if not self.sequence_parallel:

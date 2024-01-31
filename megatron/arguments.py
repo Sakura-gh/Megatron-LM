@@ -196,7 +196,11 @@ def validate_args(args, defaults={}):
     # across batches/microbatches. Due to additional communication overhead
     # during pipeline parallelism, it should not be set if sequence length
     # is constant during training.
-    args.variable_seq_lengths = True
+    # sequence packing will result different seq_len across micro batches
+    if args.sequence_packing:
+        args.variable_seq_lengths = True
+    else:
+        args.variable_seq_lengths = False
 
     # Iteration-based training.
     if args.train_iters:
@@ -1035,6 +1039,8 @@ def _add_data_args(parser):
     group.add_argument('--data-cache-path', default=None,
                        help='Path to a directory to hold cached index files.')
 
+    group.add_argument('--sequence-packing', action='store_true',
+                       help='remove all seq padding tokens and packed them into one seq in micro batch.')
     group.add_argument('--json-file', type=str, default=None,
                        help='Path to the json dataset.')
     group.add_argument('--json-key', type=str, default=None,
