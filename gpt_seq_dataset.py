@@ -57,7 +57,9 @@ class GPTJsonDataset(Dataset):
             with open(json_file, 'r') as f:
                 for json_line in tqdm(f.readlines()):
                     doc_ids = self.encoder.encode(json_line)
-                    self.data.append(doc_ids)
+                    # doc_ids may be empty, will cause error when mbs=1
+                    if len(doc_ids) > 0:
+                        self.data.append(doc_ids)
             # save cache
             with open(cache_path, 'wb') as f:
                 pickle.dump(self.data, f)                    

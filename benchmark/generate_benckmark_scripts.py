@@ -62,9 +62,9 @@ def generate_benchmark_scripts(args):
                     for mbs in mbs_range:
                         f.write(f'echo \"{model_size}, {seq_len//1024}k, gbs={gbs}: dp={used_strategy[0]}, tp={used_strategy[1]}, pp={used_strategy[2]}, mbs={mbs}\"\n')
                         f.write(f'bash {base_script} {used_strategy_str} {model_config_str} {seq_len} {mbs} {gbs}\n')
-                        f.write('sleep 5\n')
                         f.write('ps -aux | grep torchrun | awk \'{print $2}\' | xargs kill -9\n')
-                        f.write('ps -aux | grep pretrain_gpt.py | awk \'{print $2}\' | xargs kill -9\n\n')
+                        f.write('ps -aux | grep pretrain_gpt.py | awk \'{print $2}\' | xargs kill -9\n')
+                        f.write('sleep 10\n\n')
 
                     f.write('# ---\n\n')
     
