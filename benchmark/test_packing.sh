@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CUDA_DEVICE_MAX_CONNECTIONS=1
+# export CUDA_DEVICE_MAX_CONNECTIONS=1
 export NCCL_DEBUG=VERSION
 
 GPUS_PER_NODE=8 # 3d
@@ -12,19 +12,12 @@ NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
 
 
-# ROOT_FOLDER=/home/gehao/megatron/Megatron-LM
-# JSON_FILE=${ROOT_FOLDER}/data/web/refinedweb0.json
-# JSON_KEY=content
-# VOCAB_FILE=${ROOT_FOLDER}/data/vocab.json
-# MERGE_FILE=${ROOT_FOLDER}/data/merges.txt
-# DATA_PATH=${ROOT_FOLDER}/data/web/refinedweb0_content_document
-
-ROOT_FOLDER=/opt/tiger/test/data
-JSON_FILE=${ROOT_FOLDER}/web/refinedweb0.json
+ROOT_FOLDER=/home/gehao/megatron/Megatron-LM
+JSON_FILE=${ROOT_FOLDER}/data/web/refinedweb0.json
 JSON_KEY=content
-VOCAB_FILE=${ROOT_FOLDER}/vocab.json
-MERGE_FILE=${ROOT_FOLDER}/merges.txt
-DATA_PATH=${ROOT_FOLDER}/web/refinedweb0_content_document
+VOCAB_FILE=${ROOT_FOLDER}/data/vocab.json
+MERGE_FILE=${ROOT_FOLDER}/data/merges.txt
+DATA_PATH=${ROOT_FOLDER}/data/web/refinedweb0_content_document
 
 
 DISTRIBUTED_ARGS="
@@ -80,6 +73,7 @@ GPT_ARGS="
     --no-bias-gelu-fusion \
     --no-bias-dropout-fusion \
     --no-gradient-accumulation-fusion \
+    --no-async-tensor-model-parallel-allreduce
 "
     # --no-masked-softmax-fusion \
     # --no-bias-gelu-fusion \

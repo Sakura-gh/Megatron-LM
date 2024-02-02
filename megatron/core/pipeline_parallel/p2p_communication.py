@@ -107,6 +107,8 @@ def _communicate_shapes(tensor_send_next, tensor_send_prev,
 
     return recv_prev_shape, recv_next_shape
 
+# use default process group for p2p; otherwise will hang when use packing
+# similar problem: https://github.com/pytorch/pytorch/issues/116590
 def _batched_p2p_ops(*,
                      tensor_send_prev: Optional[torch.Tensor],
                      tensor_recv_prev: Optional[torch.Tensor],
@@ -117,29 +119,33 @@ def _batched_p2p_ops(*,
     if tensor_send_prev is not None:
         send_prev_op = torch.distributed.P2POp(
             torch.distributed.isend, tensor_send_prev,
-            get_pipeline_model_parallel_prev_rank(),
-            group)
+            get_pipeline_model_parallel_prev_rank())
+            # group)
         ops.append(send_prev_op)
     if tensor_recv_prev is not None:
         recv_prev_op = torch.distributed.P2POp(
             torch.distributed.irecv, tensor_recv_prev,
-            get_pipeline_model_parallel_prev_rank(),
-            group)
+            get_pipeline_model_parallel_prev_rank())
+            # group)
+        # print_ranks(f'prev rank = {get_pipeline_model_parallel_prev_rank()}, tensor_recv_prev = {tensor_recv_prev.shape}', [2])
         ops.append(recv_prev_op)
     if tensor_send_next is not None:
         send_next_op = torch.distributed.P2POp(
             torch.distributed.isend, tensor_send_next,
-            get_pipeline_model_parallel_next_rank(),
-            group)
+            get_pipeline_model_parallel_next_rank())
+            # group)
+        # print_ranks(f'next rank = {get_pipeline_model_parallel_next_rank()}, tensor_send_next = {tensor_send_next.shape}', [0])
         ops.append(send_next_op)
     if tensor_recv_next is not None:
         recv_next_op = torch.distributed.P2POp(
             torch.distributed.irecv, tensor_recv_next,
-            get_pipeline_model_parallel_next_rank(),
-            group)
+            get_pipeline_model_parallel_next_rank())
+            # group)
         ops.append(recv_next_op)
     if len(ops) > 0:
+        # print_ranks(f'ops = {ops}', [0,2])
         reqs = torch.distributed.batch_isend_irecv(ops)
+        # print_ranks(f'reqs = {reqs}', [0,2])
     else:
         reqs = []
     return reqs
@@ -295,6 +301,7 @@ def _communicate(*, tensor_send_next: Optional[torch.Tensor],
     batch_p2p_sync = True
     args = get_args()
     variable_seq_lengths = args.variable_seq_lengths
+    # print_ranks(f'variable_seq_lengths begin to calculate recv shape...', [0,2,4,6])
     if not variable_seq_lengths:
         recv_prev_shape = tensor_shape
         recv_next_shape = tensor_shape
@@ -305,7 +312,7 @@ def _communicate(*, tensor_send_next: Optional[torch.Tensor],
                                 recv_prev,
                                 recv_next,
                                 use_ring_exchange_p2p=False)
-    # print_ranks(f'variable_seq_lengths = {variable_seq_lengths}, recv_prev_shape = {recv_prev_shape}, recv_next_shape={recv_next_shape}', ranks=[0, 4])
+    # print_ranks(f'variable_seq_lengths = {variable_seq_lengths}, recv_prev_shape = {recv_prev_shape}, recv_next_shape={recv_next_shape}', ranks=[0, 2, 4, 6])
 
     if recv_prev:
         if dtype is None:
@@ -344,6 +351,11 @@ def _communicate(*, tensor_send_next: Optional[torch.Tensor],
     else:
         p2p_func = _p2p_ops
 
+    # print_ranks(f'tensor_send_next={tensor_send_next}, tensor_recv_prev={tensor_recv_prev}', [0,2])
+    # if tensor_send_next is not None:
+    #     print_ranks(f'tensor_send_next={tensor_send_next.shape}, tensor_send_prev={tensor_send_prev}, tensor_recv_prev={tensor_recv_prev}, tensor_recv_next={tensor_recv_next}', [0])
+    # if tensor_recv_prev is not None:
+    #     print_ranks(f'tensor_recv_prev={tensor_recv_prev.shape}, tensor_send_next={tensor_send_next}, tensor_send_prev={tensor_send_prev}, tensor_recv_next={tensor_recv_next}', [2])
     reqs = p2p_func(tensor_send_prev=tensor_send_prev,
                     tensor_recv_prev=tensor_recv_prev,
                     tensor_send_next=tensor_send_next,

@@ -11,6 +11,7 @@ from megatron.core import parallel_state
 from megatron.core.pipeline_parallel import p2p_communication
 from megatron.core.enums import ModelType
 from megatron.core.utils import get_attr_wrapped_model, get_model_type
+from megatron.model.gpt_model import print_ranks
 
 # Types
 Shape = Union[List[int], torch.Size]
@@ -1128,12 +1129,17 @@ def forward_backward_pipelining_without_interleaving(*,
         output_tensors = []
     forward_data_store = []
 
+    # print_ranks(f'pipeline stage {rank} enter pipeline schedule...\n', [0,1,2,3,4,5,6,7])
+    debug_ranks = [0, 2, 4, 6]
     # Run warmup forward passes.
     for i in range(num_warmup_microbatches):
+        # print_ranks(f'warmup {i} recv forward', debug_ranks)
         input_tensor = recv_forward(recv_tensor_shapes, dtype, timers=timers)
+        # print_ranks(f'warmup {i} forward step', debug_ranks)
         output_tensor = forward_step(forward_step_func, data_iterator, model, num_microbatches,
                                      input_tensor, forward_data_store,
                                      timers, collect_non_loss_data, dtype, enable_autocast)
+        # print_ranks(f'warmup {i} send forward', debug_ranks)
         send_forward(output_tensor, send_tensor_shapes, timers=timers)
 
         if not forward_only:
@@ -1145,12 +1151,13 @@ def forward_backward_pipelining_without_interleaving(*,
     # If all microbatches are run in warmup / cooldown phase, then no need to
     # receive this tensor here.
     if num_microbatches_remaining > 0:
+        # print_ranks(f'recv forward before 1F1B', debug_ranks)
         input_tensor = recv_forward(recv_tensor_shapes, dtype, timers=timers)
 
     # Run 1F1B in steady state.
     for i in range(num_microbatches_remaining):
         last_iteration = (i == (num_microbatches_remaining - 1))
-
+        # print_ranks(f'forward setp in 1F1B', debug_ranks)
         output_tensor = forward_step(forward_step_func, data_iterator, model, num_microbatches,
                                      input_tensor, forward_data_store,
                                      timers, collect_non_loss_data, dtype, enable_autocast)
@@ -1162,6 +1169,7 @@ def forward_backward_pipelining_without_interleaving(*,
                 input_tensor = recv_forward(recv_tensor_shapes, dtype, timers=timers)
 
         else:
+            # print_ranks('send forward recv backward in 1F1B', debug_ranks)
             output_tensor_grad = \
                 send_forward_recv_backward(output_tensor,
                                            send_tensor_shapes, dtype,
@@ -1177,14 +1185,17 @@ def forward_backward_pipelining_without_interleaving(*,
             input_tensor = input_tensors.pop(0)
             output_tensor = output_tensors.pop(0)
 
+            # print_ranks(f'backward step in 1F1B', debug_ranks)
             input_tensor_grad = \
                 backward_step(grad_scaler, input_tensor, output_tensor,
                               output_tensor_grad, model_type, timers, deallocate_pipeline_outputs)
 
             if last_iteration:
+                # print_ranks(f'send backward in 1F1B', debug_ranks)
                 input_tensor = None
                 send_backward(input_tensor_grad, recv_tensor_shapes, timers=timers)
             else:
+                # print_ranks(f'send backward recv forward in 1F1B', debug_ranks)
                 input_tensor = \
                     send_backward_recv_forward(
                         input_tensor_grad, recv_tensor_shapes, dtype, timers=timers)
@@ -1204,13 +1215,14 @@ def forward_backward_pipelining_without_interleaving(*,
 
             input_tensor = input_tensors.pop(0)
             output_tensor = output_tensors.pop(0)
-
+            # print_ranks(f'cooldown {i} recv backward', debug_ranks)
             output_tensor_grad = recv_backward(send_tensor_shapes, dtype, timers=timers)
 
+            # print_ranks(f'cooldown {i} backward setp', debug_ranks)
             input_tensor_grad = \
                 backward_step(grad_scaler, input_tensor, output_tensor,
                               output_tensor_grad, model_type, timers, deallocate_pipeline_outputs)
-
+            # print_ranks(f'cooldown {i} send backward', debug_ranks)
             send_backward(input_tensor_grad, recv_tensor_shapes, timers=timers)
 
     # Launch any remaining grad reductions

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CUDA_DEVICE_MAX_CONNECTIONS=1
+# export CUDA_DEVICE_MAX_CONNECTIONS=1
 export NCCL_DEBUG=VERSION
 
 GPUS_PER_NODE=8 # 3d
@@ -73,6 +73,7 @@ GPT_ARGS="
     --no-bias-gelu-fusion \
     --no-bias-dropout-fusion \
     --no-gradient-accumulation-fusion \
+    --no-async-tensor-model-parallel-allreduce
 "
     # --no-masked-softmax-fusion \
     # --no-bias-gelu-fusion \

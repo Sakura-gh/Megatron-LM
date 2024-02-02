@@ -103,7 +103,8 @@ class GPTModel(MegatronModule):
         else:
             sequence_length, indices, cu_seqlens, max_seqlen_in_batch = None, None, None, None
 
-        # print_ranks(f'in gpt_model before language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}')
+        # debug_ranks=[0]
+        # print_ranks(f'in gpt_model before language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}', debug_ranks)
         # (1, total_nnz) -> (1, total_nnz, hidden_size) -> (total_nnz, 1, hidden_size)
         lm_output = self.language_model(
             input_ids,
@@ -119,7 +120,7 @@ class GPTModel(MegatronModule):
             retriever_position_ids=retriever_position_ids,
             retriever_attn_mask=retriever_attn_mask,
             inference_params=inference_params)
-        # print_ranks(f'in gpt_model after language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}')
+        # print_ranks(f'in gpt_model after language_model: lm_output shape = {lm_output.shape}', debug_ranks)
 
         if self.post_process:
             # label: (batch_size, seq_len)
