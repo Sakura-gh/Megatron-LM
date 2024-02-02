@@ -21,6 +21,23 @@ parallel_strategies = {
         [1, 2, 4],
         [1, 8, 1],
         [1, 1, 8]
+    ],
+    '16': [
+        [16, 1, 1],
+        [8, 2, 1],
+        [8, 1, 2],
+        [4, 4, 1],
+        [4, 1, 4],
+        [4, 2, 2],
+        [2, 8, 1],
+        [2, 1, 8],
+        [2, 4, 2],
+        [2, 2, 4],
+        [1, 16, 1],
+        [1, 1, 16],
+        [1, 8, 2],
+        [1, 2, 8],
+        [1, 4, 4]
     ]
 }
 
@@ -38,8 +55,8 @@ def generate_benchmark_scripts(args):
     seq_lens = [4096, 8192, 16384]
     mbs_range = [32, 16, 8, 4, 2, 1]
 
-    script_folder = f'benchmark/scripts/{model_size}'
-    log_folder = f'benchmark/logs/{model_size}'
+    script_folder = f'benchmark/scripts/gpus{num_gpus}/{model_size}'
+    log_folder = f'benchmark/logs/gpus{num_gpus}/{model_size}'
     if not os.path.exists(script_folder):
         os.makedirs(script_folder)
     if not os.path.exists(log_folder):
