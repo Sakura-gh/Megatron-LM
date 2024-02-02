@@ -2,6 +2,7 @@
 
 """Pretrain GPT"""
 
+import os
 import torch
 from functools import partial
 from megatron import get_args
@@ -198,9 +199,16 @@ if __name__ == "__main__":
     #          ModelType.encoder_or_decoder,
     #          forward_step,
     #          args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
-    pretrain(train_dataset_provider,
-             model_provider,
-             ModelType.encoder_or_decoder,
-             forward_step,
-             args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
-    print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
+    try:
+        pretrain(train_dataset_provider,
+                model_provider,
+                ModelType.encoder_or_decoder,
+                forward_step,
+                args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+        print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
+    except torch.cuda.OutOfMemoryError as e:
+        print(f'catch {e}')
+        kill_sh = '/opt/tiger/kill.sh'
+        os.system(f"ssh worker-1 bash {kill_sh}")
+        os.system(f"bash {kill_sh}")
+        raise e
