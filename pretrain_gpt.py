@@ -207,7 +207,8 @@ if __name__ == "__main__":
                 args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
         print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
     except torch.cuda.OutOfMemoryError as e:
-        print(f'catch {e}')
+        rank = torch.distributed.get_rank()
+        print(f'rank {rank} catch {e}')
         kill_sh = '/opt/tiger/kill.sh'
         os.system(f"ssh worker-1 bash {kill_sh}")
         os.system(f"bash {kill_sh}")
