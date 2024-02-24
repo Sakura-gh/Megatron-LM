@@ -1,7 +1,26 @@
 #!/bin/bash
 
 # export CUDA_DEVICE_MAX_CONNECTIONS=1
-export NCCL_DEBUG=VERSION
+# export NCCL_DEBUG=VERSION
+
+export CUDA_DEVICE_MAX_CONNECTIONS=1
+export NCCL_NVLS_ENABLE=0
+export NCCL_DEBUG=WARN
+export NCCL_SOCKET_IFNAME=bond0
+export GLOO_SOCKET_IFNAME=bond0
+export NCCL_IB_DISABLE=0
+export NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_5,mlx5_6,mlx5_7,mlx5_8,mlx5_11
+export NCCL_NET_GDR_READ=1
+export NCCL_IB_GID_INDEX=3
+export NCCL_NET_GDR_LEVEL=2
+export NCCL_IB_QPS_PER_CONNECTION=4
+export NCCL_IB_TC=160
+export NCCL_IB_TIMEOUT=22
+export NCCL_PXN_DISABLE=0
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+MEGATRON_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ && pwd )"
+export PYTHONPATH=$MEGATRON_HOME:$PYTHONPATH
 
 GPUS_PER_NODE=8 # 3d
 # Change for multinode config
@@ -11,8 +30,16 @@ NNODES=1
 NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
 
+#hostfile="${MEGATRON_HOME}/two_nodes.txt"
+LOCAL_IP=$(ifconfig bond0 | grep 'inet ' | awk '{print $2}' | cut -d':' -f2)
+#NNODES=$(cat ${hostfile} | wc -l)
+echo "LOCAL_IP = $LOCAL_IP, NODE_RANK = $NODE_RANK"
+#LOCAL_RANK=$(grep -n "\b$LOCAL_IP\b" ${hostfile} | cut -d ':' -f1)
+#NODE_RANK=$(($LOCAL_RANK - 1))
+#WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
 
-ROOT_FOLDER=/home/gehao/megatron/Megatron-LM
+#ROOT_FOLDER=/home/gehao/megatron/Megatron-LM
+ROOT_FOLDER=${MEGATRON_HOME}
 JSON_FILE=${ROOT_FOLDER}/data/web/refinedweb0.json
 JSON_KEY=content
 VOCAB_FILE=${ROOT_FOLDER}/data/vocab.json
@@ -25,7 +52,8 @@ DISTRIBUTED_ARGS="
     --nnodes $NNODES \
     --node_rank $NODE_RANK \
     --master_addr $MASTER_ADDR \
-    --master_port $MASTER_PORT
+    --master_port $MASTER_PORT \
+    --max-restarts 0 --monitor-interval 5
 "
 # bash examples/test.sh 2 2 2 24 768 12 128 2 8 100
 D_P=${1:-1}

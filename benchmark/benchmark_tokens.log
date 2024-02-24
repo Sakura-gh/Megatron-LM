@@ -1,0 +1,171 @@
+7b, 512: dp16, mbs=8, gbs=256, num micro batch=2
+DP=16, MP=1, PP=1
+DP must equal to 8!
+7b, 512: dp8, tp2, mbs=16, gbs=256, num micro batch=2
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 512: dp8, tp2, mbs=8, gbs=256, num micro batch=4
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 512: dp8, pp2, mbs=16, gbs=256, num micro batch=2
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 512: dp8, pp2, mbs=8, gbs=256, num micro batch=4
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 512: dp8, pp2, mbs=4, gbs=256, num micro batch=8
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 512: dp8, pp2, mbs=2, gbs=256, num micro batch=8
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 512: dp4, tp4, mbs=32, gbs=256, num micro batch=2
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 512: dp4, tp4, mbs=16, gbs=256, num micro batch=4
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 512: dp4, tp2, pp2, mbs=32, gbs=256, num micro batch=2
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 512: dp4, tp2, pp2, mbs=16, gbs=256, num micro batch=4
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 512: dp4, tp2, pp2, mbs=8, gbs=256, num micro batch=8
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 512: dp4, tp2, pp2, mbs=4, gbs=256, num micro batch=8
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 1k: dp16, mbs=4, gbs=128, num micro batch=2
+DP=16, MP=1, PP=1
+DP must equal to 8!
+7b, 1k: dp8, tp2, mbs=8, gbs=128, num micro batch=2
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 1k: dp8, tp2, mbs=4, gbs=128, num micro batch=4
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 1k: dp8, pp2, mbs=8, gbs=128, num micro batch=2
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 1k: dp8, pp2, mbs=4, gbs=128, num micro batch=4
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 1k: dp8, pp2, mbs=2, gbs=128, num micro batch=8
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 1k: dp4, tp4, mbs=16, gbs=128, num micro batch=2
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 1k: dp4, tp4, mbs=8, gbs=128, num micro batch=4
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 1k: dp4, tp2, pp2, mbs=16, gbs=128, num micro batch=2
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 1k: dp4, tp2, pp2, mbs=8, gbs=128, num micro batch=4
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 1k: dp4, tp2, pp2, mbs=4, gbs=128, num micro batch=8
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 1k: dp4, tp2, pp2, mbs=2, gbs=128, num micro batch=8
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 2k: dp16, mbs=2, gbs=64, num micro batch=2
+DP=16, MP=1, PP=1
+DP must equal to 8!
+7b, 2k: dp8, tp2, mbs=4, gbs=64, num micro batch=2
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 2k: dp8, tp2, mbs=2, gbs=64, num micro batch=4
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 2k: dp8, pp2, mbs=4, gbs=64, num micro batch=2
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 2k: dp8, pp2, mbs=2, gbs=64, num micro batch=4
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 2k: dp4, tp4, mbs=8, gbs=64, num micro batch=2
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 2k: dp4, tp4, mbs=4, gbs=64, num micro batch=4
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 2k: dp4, tp2, pp2, mbs=8, gbs=64, num micro batch=2
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 2k: dp4, tp2, pp2, mbs=4, gbs=64, num micro batch=4
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 2k: dp4, tp2, pp2, mbs=2, gbs=64, num micro batch=8
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 4k: dp16, mbs=1, gbs=32, num micro batch=2
+DP=16, MP=1, PP=1
+DP must equal to 8!
+7b, 4k: dp8, tp2, mbs=2, gbs=32, num micro batch=2
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 4k: dp8, tp2, mbs=1, gbs=32, num micro batch=4
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 4k: dp8, pp2, mbs=2, gbs=32, num micro batch=2
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 4k: dp8, pp2, mbs=1, gbs=32, num micro batch=4
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 4k: dp4, tp4, mbs=4, gbs=32, num micro batch=2
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 4k: dp4, tp4, mbs=2, gbs=32, num micro batch=4
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 4k: dp4, tp2, pp2, mbs=4, gbs=32, num micro batch=2
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 4k: dp4, tp2, pp2, mbs=2, gbs=32, num micro batch=4
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 4k: dp4, tp2, pp2, mbs=1, gbs=32, num micro batch=8
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 8k: dp8, tp2, mbs=1, gbs=16, num micro batch=2
+DP=8, MP=2, PP=1
+DP must equal to 4!
+7b, 8k: dp8, pp2, mbs=1, gbs=16, num micro batch=2
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 8k: dp4, tp4, mbs=2, gbs=16, num micro batch=2
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 8k: dp4, tp4, mbs=1, gbs=16, num micro batch=4
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 8k: dp4, tp2, pp2, mbs=2, gbs=16, num micro batch=2
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 8k: dp4, tp2, pp2, mbs=1, gbs=16, num micro batch=4
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 16k: dp8, pp2, mbs=1, gbs=8, num micro batch=1, 不完整的pp, gpipe?
+DP=8, MP=1, PP=2
+DP must equal to 4!
+7b, 16k: dp4, tp4, mbs=1, gbs=8, num micro batch=2
+DP=4, MP=4, PP=1
+DP must equal to 2!
+7b, 16k: dp4, tp2, pp2, mbs=1, gbs=8, num micro batch=2
+DP=4, MP=2, PP=2
+DP must equal to 2!
+7b, 16k: dp2, tp8, mbs=1, gbs=8, num micro batch=4
+DP=2, MP=8, PP=1
+DP must equal to 1!
+7b, 16k: tp8, pp2, mbs=1, gbs=8, num micro batch=8
+DP=1, MP=8, PP=2
+DP must equal to 0!
+7b, 16k: dp2, tp2, pp4, mbs=1, gbs=8, num micro batch=4
+DP=2, MP=2, PP=4
+DP must equal to 1!

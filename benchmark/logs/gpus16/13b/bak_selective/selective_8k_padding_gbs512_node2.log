@@ -1,0 +1,787 @@
+13b, 8k, gbs=512: dp=4, tp=4, pp=1, mbs=1
+LOCAL_IP = 10.64.24.52
+DP=4, MP=4, PP=1
+[2024-02-12 04:35:23,687] torch.distributed.run: [WARNING] 
+[2024-02-12 04:35:23,687] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 04:35:23,687] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 04:35:23,687] torch.distributed.run: [WARNING] *****************************************
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+[2024-02-12 04:35:38,711] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 375102) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 9 (local_rank: 1)
+  exitcode  : 1 (pid: 375103)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 375104)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 11 (local_rank: 3)
+  exitcode  : 1 (pid: 375105)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 12 (local_rank: 4)
+  exitcode  : 1 (pid: 375106)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 375107)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 14 (local_rank: 6)
+  exitcode  : 1 (pid: 375108)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[7]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 15 (local_rank: 7)
+  exitcode  : 1 (pid: 375109)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-02-12_04:35:38
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 375102)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (477833): No such process
+kill: (477839): No such process
+kill: (477845): No such process
+kill: (477851): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=4, pp=2, mbs=1
+LOCAL_IP = 10.64.24.52
+DP=2, MP=4, PP=2
+[2024-02-12 04:39:05,753] torch.distributed.run: [WARNING] 
+[2024-02-12 04:39:05,753] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 04:39:05,753] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 04:39:05,753] torch.distributed.run: [WARNING] *****************************************
+[E ProcessGroupGloo.cpp:138] Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+
+SYM206-GPU-A0206-P2-Node52:375359:375513 [5] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375356:375515 [2] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375355:375514 [1] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+
+SYM206-GPU-A0206-P2-Node52:375360:375516 [6] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+[2024-02-12 04:39:20,778] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375357 closing signal SIGTERM
+[2024-02-12 04:39:20,778] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375358 closing signal SIGTERM
+[2024-02-12 04:39:20,778] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375361 closing signal SIGTERM
+[2024-02-12 04:39:21,257] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 375354) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-02-12_04:39:20
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 9 (local_rank: 1)
+  exitcode  : 1 (pid: 375355)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-02-12_04:39:20
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 375356)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-02-12_04:39:20
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 375359)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2024-02-12_04:39:20
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 14 (local_rank: 6)
+  exitcode  : 1 (pid: 375360)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-02-12_04:39:20
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 375354)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (477891): No such process
+kill: (477897): No such process
+kill: (477903): No such process
+kill: (477909): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=2, pp=4, mbs=1
+LOCAL_IP = 10.64.24.52
+DP=2, MP=2, PP=4
+[2024-02-12 04:42:18,463] torch.distributed.run: [WARNING] 
+[2024-02-12 04:42:18,463] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 04:42:18,463] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 04:42:18,463] torch.distributed.run: [WARNING] *****************************************
+
+SYM206-GPU-A0206-P2-Node52:375670:375825 [4] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375673:375828 [7] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375672:375827 [6] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375671:375826 [5] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+[2024-02-12 04:42:33,486] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375666 closing signal SIGTERM
+[2024-02-12 04:42:33,487] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375667 closing signal SIGTERM
+[2024-02-12 04:42:33,487] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375668 closing signal SIGTERM
+[2024-02-12 04:42:33,487] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375669 closing signal SIGTERM
+[2024-02-12 04:42:33,979] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 4 (pid: 375670) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-02-12_04:42:33
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 375671)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-02-12_04:42:33
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 14 (local_rank: 6)
+  exitcode  : 1 (pid: 375672)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-02-12_04:42:33
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 15 (local_rank: 7)
+  exitcode  : 1 (pid: 375673)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-02-12_04:42:33
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 12 (local_rank: 4)
+  exitcode  : 1 (pid: 375670)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (477949): No such process
+kill: (477955): No such process
+kill: (477961): No such process
+kill: (477967): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=8, pp=1, mbs=1
+LOCAL_IP = 10.64.24.52
+DP=2, MP=8, PP=1
+[2024-02-12 04:45:20,916] torch.distributed.run: [WARNING] 
+[2024-02-12 04:45:20,916] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 04:45:20,916] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 04:45:20,916] torch.distributed.run: [WARNING] *****************************************
+[E ProcessGroupGloo.cpp:138] Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+[E ProcessGroupGloo.cpp:138] Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 76, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 56, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 185, in _initialize_distributed
+    mpu.initialize_model_parallel(args.tensor_model_parallel_size,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/core/parallel_state.py", line 166, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+
+SYM206-GPU-A0206-P2-Node52:375978:376112 [0] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375979:376153 [1] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+
+SYM206-GPU-A0206-P2-Node52:375981:376118 [3] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+
+SYM206-GPU-A0206-P2-Node52:375980:376148 [2] misc/socket.cc:484 NCCL WARN socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/pretrain_gpt.py", line 203, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py", line 91, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 82, in initialize_megatron
+    _compile_dependencies()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py", line 133, in _compile_dependencies
+    torch.distributed.barrier()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3685, in barrier
+    work = default_pg.barrier(opts=opts)
+torch.distributed.DistBackendError: NCCL error in: /opt/pytorch/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1207, unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.19.3
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+socketStartConnect: Connect to 10.64.24.49<40755> failed : Software caused connection abort
+[2024-02-12 04:45:35,940] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375984 closing signal SIGTERM
+[2024-02-12 04:45:35,940] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 375985 closing signal SIGTERM
+[2024-02-12 04:45:36,368] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 375978) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-02-12_04:45:35
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 9 (local_rank: 1)
+  exitcode  : 1 (pid: 375979)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-02-12_04:45:35
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 375980)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-02-12_04:45:35
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 11 (local_rank: 3)
+  exitcode  : 1 (pid: 375981)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2024-02-12_04:45:35
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 12 (local_rank: 4)
+  exitcode  : 1 (pid: 375982)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2024-02-12_04:45:35
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 375983)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-02-12_04:45:35
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 375978)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (478007): No such process
+kill: (478013): No such process
+kill: (478019): No such process
+kill: (478025): No such process
+10.64.24.50 kill done.

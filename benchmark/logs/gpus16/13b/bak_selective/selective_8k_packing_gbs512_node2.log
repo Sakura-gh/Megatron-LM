@@ -1,0 +1,2090 @@
+13b, 8k, gbs=512: dp=2, tp=4, pp=2, mbs=2
+LOCAL_IP = 10.64.24.52
+DP=2, MP=4, PP=2
+[2024-02-12 00:30:26,275] torch.distributed.run: [WARNING] 
+[2024-02-12 00:30:26,275] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 00:30:26,275] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 00:30:26,275] torch.distributed.run: [WARNING] *****************************************
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+ > number of parameters on (tensor, pipeline) model parallel rank (2, 1): 1638548480
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 1): 1638548480
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 1): 1638548480
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+ > number of parameters on (tensor, pipeline) model parallel rank (3, 1): 1638548480
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  5.277 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  5.344 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Cutting or padding data end, time cost:  10.557 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.664 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (1095.67, 1198.13)
+    train/valid/test-data-iterators-setup ..........: (0.02, 16422.12)
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+ iteration       10/     100 | consumed samples:         5120 | elapsed time per iteration (ms): 15373.8 | learning rate: 4.687E-07 | global batch size:   512 | lm loss: 1.088640E+01 | loss scale: 1.0 | grad norm: 4.378 | number of skipped iterations:   0 | number of nan iterations:   0 |
+[Rank 9] (after 10 iterations) memory (MB) | allocated: 18854.0458984375 | max allocated: 41171.20361328125 | reserved: 50486.0 | max reserved: 50486.0
+[Rank 10] (after 10 iterations) memory (MB) | allocated: 18854.0458984375 | max allocated: 41170.50634765625 | reserved: 50532.0 | max reserved: 50532.0
+[Rank 8] (after 10 iterations) memory (MB) | allocated: 18854.0458984375 | max allocated: 41171.8779296875 | reserved: 50352.0 | max reserved: 50352.0[Rank 11] (after 10 iterations) memory (MB) | allocated: 18854.0458984375 | max allocated: 41170.50634765625 | reserved: 50538.0 | max reserved: 50538.0
+
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15012.10, 15083.69)
+    forward-compute ................................: (3668.96, 7495.29)
+    backward-compute ...............................: (4672.29, 5438.50)
+    batch-generator ................................: (514.93, 539.47)
+    forward-recv ...................................: (456.81, 462.11)
+    forward-send ...................................: (2.45, 5.20)
+    backward-recv ..................................: (67.16, 76.18)
+    backward-send ..................................: (11.07, 11.57)
+    forward-send-backward-recv .....................: (6521.74, 6612.46)
+    backward-send-forward-recv .....................: (1633.73, 1655.77)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (5.78, 6.10)
+    grads-reduce-scatter ...........................: (15.19, 233.75)
+    params-all-gather ..............................: (8.39, 8.89)
+    optimizer-copy-to-main-grad ....................: (0.72, 0.86)
+    optimizer-clip-main-grad .......................: (7.56, 7.65)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.44, 9.82)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.15)
+    optimizer ......................................: (22.10, 22.35)
+ iteration       20/     100 | consumed samples:        10240 | elapsed time per iteration (ms): 12272.1 | learning rate: 9.375E-07 | global batch size:   512 | lm loss: 1.084426E+01 | loss scale: 1.0 | grad norm: 2.711 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (12163.25, 12206.25)
+    forward-compute ................................: (3456.56, 5467.56)
+    backward-compute ...............................: (4253.70, 4910.21)
+    batch-generator ................................: (113.90, 147.22)
+    forward-recv ...................................: (15.68, 17.48)
+    forward-send ...................................: (0.40, 0.46)
+    backward-recv ..................................: (39.98, 46.77)
+    backward-send ..................................: (2.34, 9.94)
+    forward-send-backward-recv .....................: (4312.15, 4327.48)
+    backward-send-forward-recv .....................: (1729.26, 1844.77)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (5.74, 6.15)
+    grads-reduce-scatter ...........................: (15.40, 15.99)
+    params-all-gather ..............................: (8.30, 8.90)
+    optimizer-copy-to-main-grad ....................: (0.65, 0.83)
+    optimizer-clip-main-grad .......................: (4.60, 4.68)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.17, 10.01)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (19.21, 19.37)
+ iteration       30/     100 | consumed samples:        15360 | elapsed time per iteration (ms): 14119.9 | learning rate: 1.406E-06 | global batch size:   512 | lm loss: 1.070851E+01 | loss scale: 1.0 | grad norm: 1.401 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (14024.60, 14062.44)
+    forward-compute ................................: (3154.71, 7202.92)
+    backward-compute ...............................: (4635.15, 5251.11)
+    batch-generator ................................: (113.90, 147.79)
+    forward-recv ...................................: (17.43, 26.74)
+    forward-send ...................................: (0.44, 0.72)
+    backward-recv ..................................: (36.11, 37.72)
+    backward-send ..................................: (0.48, 0.62)
+    forward-send-backward-recv .....................: (6101.09, 6169.77)
+    backward-send-forward-recv .....................: (1520.78, 1565.52)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (5.71, 5.97)
+    grads-reduce-scatter ...........................: (15.44, 15.98)
+    params-all-gather ..............................: (8.24, 8.85)
+    optimizer-copy-to-main-grad ....................: (0.64, 0.87)
+    optimizer-clip-main-grad .......................: (4.55, 5.26)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.18, 9.46)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (19.13, 19.29)
+Mon Feb 12 00:40:14 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   38C    P0             389W / 700W |  66410MiB / 81559MiB |     57%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   44C    P0             429W / 700W |  66522MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   44C    P0             411W / 700W |  66728MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   38C    P0             415W / 700W |  66332MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   37C    P0             376W / 700W |  54256MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   44C    P0             360W / 700W |  54286MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   42C    P0             354W / 700W |  54352MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   37C    P0             296W / 700W |  53502MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       40/     100 | consumed samples:        20480 | elapsed time per iteration (ms): 13233.0 | learning rate: 1.875E-06 | global batch size:   512 | lm loss: 1.069824E+01 | loss scale: 1.0 | grad norm: 0.963 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13030.47, 13089.60)
+    forward-compute ................................: (3013.75, 6673.25)
+    backward-compute ...............................: (4292.99, 5014.56)
+    batch-generator ................................: (109.84, 147.30)
+    forward-recv ...................................: (17.64, 24.99)
+    forward-send ...................................: (0.46, 0.68)
+    backward-recv ..................................: (30.30, 43.53)
+    backward-send ..................................: (0.45, 6.09)
+    forward-send-backward-recv .....................: (5522.19, 5663.73)
+    backward-send-forward-recv .....................: (1358.13, 1405.79)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (5.75, 6.03)
+    grads-reduce-scatter ...........................: (15.43, 16.05)
+    params-all-gather ..............................: (8.32, 8.87)
+    optimizer-copy-to-main-grad ....................: (0.63, 0.86)
+    optimizer-clip-main-grad .......................: (3.08, 3.11)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.16, 9.45)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (16.81, 16.97)
+ iteration       50/     100 | consumed samples:        25600 | elapsed time per iteration (ms): 15432.4 | learning rate: 2.344E-06 | global batch size:   512 | lm loss: 1.064220E+01 | loss scale: 1.0 | grad norm: 0.832 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15331.07, 15377.80)
+    forward-compute ................................: (3752.06, 7886.06)
+    backward-compute ...............................: (4710.74, 5421.30)
+    batch-generator ................................: (114.07, 145.22)
+    forward-recv ...................................: (20.37, 22.01)
+    forward-send ...................................: (0.54, 0.62)
+    backward-recv ..................................: (38.47, 40.39)
+    backward-send ..................................: (0.54, 1.24)
+    forward-send-backward-recv .....................: (6686.80, 6809.88)
+    backward-send-forward-recv .....................: (2010.97, 2179.93)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (5.75, 6.00)
+    grads-reduce-scatter ...........................: (15.15, 16.11)
+    params-all-gather ..............................: (8.35, 8.89)
+    optimizer-copy-to-main-grad ....................: (0.65, 0.85)
+    optimizer-clip-main-grad .......................: (3.55, 3.61)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.17, 9.52)
+    optimizer-copy-main-to-model-params ............: (2.93, 3.10)
+    optimizer ......................................: (17.39, 17.55)
+ iteration       60/     100 | consumed samples:        30720 | elapsed time per iteration (ms): 13445.3 | learning rate: 2.812E-06 | global batch size:   512 | lm loss: 1.066069E+01 | loss scale: 1.0 | grad norm: 0.884 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13342.34, 13384.78)
+    forward-compute ................................: (3088.97, 6803.88)
+    backward-compute ...............................: (4436.95, 5073.61)
+    batch-generator ................................: (113.04, 138.02)
+    forward-recv ...................................: (16.08, 19.37)
+    forward-send ...................................: (0.40, 0.49)
+    backward-recv ..................................: (45.88, 46.91)
+    backward-send ..................................: (0.54, 0.82)
+    forward-send-backward-recv .....................: (5635.96, 5713.23)
+    backward-send-forward-recv .....................: (1406.62, 1456.79)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (5.75, 6.03)
+    grads-reduce-scatter ...........................: (15.27, 16.03)
+    params-all-gather ..............................: (8.37, 8.85)
+    optimizer-copy-to-main-grad ....................: (0.64, 0.84)
+    optimizer-clip-main-grad .......................: (3.34, 3.38)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.16, 9.51)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (17.16, 17.32)
+ iteration       70/     100 | consumed samples:        35840 | elapsed time per iteration (ms): 14447.3 | learning rate: 3.281E-06 | global batch size:   512 | lm loss: 1.064729E+01 | loss scale: 1.0 | grad norm: 0.643 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (14346.78, 14390.18)
+    forward-compute ................................: (3557.65, 7334.03)
+    backward-compute ...............................: (4466.16, 5075.22)
+    batch-generator ................................: (110.86, 136.57)
+    forward-recv ...................................: (16.87, 22.96)
+    forward-send ...................................: (0.41, 0.59)
+    backward-recv ..................................: (39.20, 40.47)
+    backward-send ..................................: (1.49, 5.10)
+    forward-send-backward-recv .....................: (6064.76, 6258.35)
+    backward-send-forward-recv .....................: (1872.47, 1948.11)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (5.80, 6.19)
+    grads-reduce-scatter ...........................: (15.35, 15.94)
+    params-all-gather ..............................: (8.35, 8.83)
+    optimizer-copy-to-main-grad ....................: (0.64, 0.80)
+    optimizer-clip-main-grad .......................: (2.58, 2.60)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.16, 9.45)
+    optimizer-copy-main-to-model-params ............: (2.93, 3.10)
+    optimizer ......................................: (16.31, 16.47)
+Mon Feb 12 00:49:44 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   38C    P0             426W / 700W |  67996MiB / 81559MiB |     54%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   44C    P0             440W / 700W |  68108MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   44C    P0             394W / 700W |  67522MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   38C    P0             420W / 700W |  67918MiB / 81559MiB |     96%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   37C    P0             411W / 700W |  54256MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   43C    P0             465W / 700W |  54296MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   42C    P0             400W / 700W |  54362MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   37C    P0             419W / 700W |  54306MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       80/     100 | consumed samples:        40960 | elapsed time per iteration (ms): 13697.3 | learning rate: 3.750E-06 | global batch size:   512 | lm loss: 1.062629E+01 | loss scale: 1.0 | grad norm: 0.409 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13496.95, 13537.94)
+    forward-compute ................................: (3059.32, 7081.93)
+    backward-compute ...............................: (4467.05, 5263.29)
+    batch-generator ................................: (111.97, 135.13)
+    forward-recv ...................................: (16.39, 17.33)
+    forward-send ...................................: (0.41, 0.48)
+    backward-recv ..................................: (53.44, 56.39)
+    backward-send ..................................: (0.73, 2.01)
+    forward-send-backward-recv .....................: (5485.97, 5900.38)
+    backward-send-forward-recv .....................: (1288.31, 1538.71)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (5.71, 5.93)
+    grads-reduce-scatter ...........................: (15.31, 15.91)
+    params-all-gather ..............................: (8.32, 8.89)
+    optimizer-copy-to-main-grad ....................: (0.64, 0.80)
+    optimizer-clip-main-grad .......................: (2.10, 2.11)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.16, 9.82)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (16.42, 16.58)
+ iteration       90/     100 | consumed samples:        46080 | elapsed time per iteration (ms): 14611.9 | learning rate: 4.219E-06 | global batch size:   512 | lm loss: 1.062299E+01 | loss scale: 1.0 | grad norm: 1.561 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (14491.45, 14541.04)
+    forward-compute ................................: (3576.53, 7462.83)
+    backward-compute ...............................: (4534.46, 5171.36)
+    batch-generator ................................: (111.36, 133.51)
+    forward-recv ...................................: (19.58, 21.76)
+    forward-send ...................................: (0.53, 0.56)
+    backward-recv ..................................: (47.95, 66.56)
+    backward-send ..................................: (0.66, 0.78)
+    forward-send-backward-recv .....................: (6088.80, 6309.46)
+    backward-send-forward-recv .....................: (1849.15, 2062.67)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (5.72, 6.01)
+    grads-reduce-scatter ...........................: (15.52, 15.99)
+    params-all-gather ..............................: (8.28, 8.89)
+    optimizer-copy-to-main-grad ....................: (0.65, 0.80)
+    optimizer-clip-main-grad .......................: (2.82, 2.85)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.17, 9.56)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (16.68, 16.84)
+ iteration      100/     100 | consumed samples:        51200 | elapsed time per iteration (ms): 13389.5 | learning rate: 4.687E-06 | global batch size:   512 | lm loss: 1.061740E+01 | loss scale: 1.0 | grad norm: 1.125 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13282.82, 13323.40)
+    forward-compute ................................: (3138.26, 6871.01)
+    backward-compute ...............................: (4450.61, 5116.93)
+    batch-generator ................................: (109.17, 155.18)
+    forward-recv ...................................: (18.21, 18.31)
+    forward-send ...................................: (0.45, 0.51)
+    backward-recv ..................................: (48.25, 71.85)
+    backward-send ..................................: (0.67, 12.98)
+    forward-send-backward-recv .....................: (5504.31, 5597.15)
+    backward-send-forward-recv .....................: (1306.19, 1510.15)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (5.74, 6.04)
+    grads-reduce-scatter ...........................: (15.52, 16.01)
+    params-all-gather ..............................: (8.36, 8.88)
+    optimizer-copy-to-main-grad ....................: (0.64, 0.81)
+    optimizer-clip-main-grad .......................: (2.59, 2.62)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.17, 9.55)
+    optimizer-copy-main-to-model-params ............: (2.94, 3.10)
+    optimizer ......................................: (16.40, 16.56)
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (470813): No such process
+kill: (470904): No such process
+kill: (470922): No such process
+kill: (470940): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=2, pp=4, mbs=4
+LOCAL_IP = 10.64.24.52
+DP=2, MP=2, PP=4
+[2024-02-12 00:56:44,641] torch.distributed.run: [WARNING] 
+[2024-02-12 00:56:44,641] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 00:56:44,641] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 00:56:44,641] torch.distributed.run: [WARNING] *****************************************
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 2): 1573350400
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 2): 1573350400
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 3): 1702466560
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 3): 1702466560
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  4.882 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.859 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.886 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  5.729 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Cutting or padding data end, time cost:  10.611 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.739 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.742 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.816 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (59.63, 858.78)
+    train/valid/test-data-iterators-setup ..........: (0.02, 16948.11)
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+ iteration       10/     100 | consumed samples:         5120 | elapsed time per iteration (ms): 11754.3 | learning rate: 4.687E-07 | global batch size:   512 | lm loss: 1.089459E+01 | loss scale: 1.0 | grad norm: 4.438 | number of skipped iterations:   0 | number of nan iterations:   0 |
+[Rank 9] (after 10 iterations) memory (MB) | allocated: 18151.162109375 | max allocated: 40632.0224609375 | reserved: 62228.0 | max reserved: 62228.0[Rank 8] (after 10 iterations) memory (MB) | allocated: 18151.162109375 | max allocated: 40629.2197265625 | reserved: 61670.0 | max reserved: 61670.0
+
+[Rank 13] (after 10 iterations) memory (MB) | allocated: 19627.7783203125 | max allocated: 48023.3154296875 | reserved: 53048.0 | max reserved: 53048.0
+[Rank 12] (after 10 iterations) memory (MB) | allocated: 19627.7783203125 | max allocated: 48023.173828125 | reserved: 53048.0 | max reserved: 53048.0
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11180.44, 11375.74)
+    forward-compute ................................: (1541.94, 5180.70)
+    backward-compute ...............................: (2731.10, 4621.81)
+    batch-generator ................................: (160.59, 186.45)
+    forward-recv ...................................: (193.42, 519.18)
+    forward-send ...................................: (4.59, 307.59)
+    backward-recv ..................................: (79.41, 450.24)
+    backward-send ..................................: (3.64, 39.19)
+    forward-send-backward-recv .....................: (4915.50, 6206.84)
+    backward-send-forward-recv .....................: (867.91, 1377.90)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.63)
+    grads-reduce-scatter ...........................: (16.08, 229.81)
+    params-all-gather ..............................: (7.55, 9.01)
+    optimizer-copy-to-main-grad ....................: (0.34, 0.50)
+    optimizer-clip-main-grad .......................: (7.43, 7.70)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.95, 10.05)
+    optimizer-copy-main-to-model-params ............: (2.60, 2.89)
+    optimizer ......................................: (21.79, 22.11)
+ iteration       20/     100 | consumed samples:        10240 | elapsed time per iteration (ms): 9833.3 | learning rate: 9.375E-07 | global batch size:   512 | lm loss: 1.081663E+01 | loss scale: 1.0 | grad norm: 1.713 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (9576.42, 9716.12)
+    forward-compute ................................: (1218.99, 4215.87)
+    backward-compute ...............................: (2421.46, 4158.64)
+    batch-generator ................................: (48.85, 59.90)
+    forward-recv ...................................: (29.90, 70.12)
+    forward-send ...................................: (0.51, 23.80)
+    backward-recv ..................................: (63.46, 398.89)
+    backward-send ..................................: (0.79, 59.38)
+    forward-send-backward-recv .....................: (4292.92, 5032.32)
+    backward-send-forward-recv .....................: (1098.43, 1476.51)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.77)
+    grads-reduce-scatter ...........................: (14.65, 16.81)
+    params-all-gather ..............................: (7.61, 8.84)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.46)
+    optimizer-clip-main-grad .......................: (4.18, 4.46)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.70, 9.71)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.89)
+    optimizer ......................................: (17.63, 17.93)
+ iteration       30/     100 | consumed samples:        15360 | elapsed time per iteration (ms): 10873.1 | learning rate: 1.406E-06 | global batch size:   512 | lm loss: 1.069455E+01 | loss scale: 1.0 | grad norm: 0.901 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (10637.25, 10788.81)
+    forward-compute ................................: (1403.36, 5159.17)
+    backward-compute ...............................: (2752.79, 4445.58)
+    batch-generator ................................: (48.60, 59.60)
+    forward-recv ...................................: (34.47, 583.85)
+    forward-send ...................................: (0.72, 542.30)
+    backward-recv ..................................: (58.14, 338.34)
+    backward-send ..................................: (12.31, 48.23)
+    forward-send-backward-recv .....................: (4644.65, 6192.45)
+    backward-send-forward-recv .....................: (742.61, 1708.96)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.51)
+    grads-reduce-scatter ...........................: (14.65, 16.70)
+    params-all-gather ..............................: (7.57, 8.83)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.45)
+    optimizer-clip-main-grad .......................: (3.69, 4.21)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.70)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.88)
+    optimizer ......................................: (17.57, 17.85)
+Mon Feb 12 01:04:35 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   33C    P0             275W / 700W |  76918MiB / 81559MiB |     93%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   37C    P0             301W / 700W |  76900MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   37C    P0             148W / 700W |  78626MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   32C    P0             124W / 700W |  79102MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   37C    P0             322W / 700W |  59626MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   44C    P0             331W / 700W |  59626MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   42C    P0             203W / 700W |  65040MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   37C    P0             153W / 700W |  65040MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       40/     100 | consumed samples:        20480 | elapsed time per iteration (ms): 10631.8 | learning rate: 1.875E-06 | global batch size:   512 | lm loss: 1.068761E+01 | loss scale: 1.0 | grad norm: 0.580 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (10299.02, 10446.33)
+    forward-compute ................................: (1260.08, 4821.65)
+    backward-compute ...............................: (2459.38, 4202.92)
+    batch-generator ................................: (48.83, 57.78)
+    forward-recv ...................................: (29.16, 71.19)
+    forward-send ...................................: (0.60, 23.82)
+    backward-recv ..................................: (81.61, 322.66)
+    backward-send ..................................: (2.95, 32.82)
+    forward-send-backward-recv .....................: (4801.96, 6325.77)
+    backward-send-forward-recv .....................: (583.06, 1359.31)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.76)
+    grads-reduce-scatter ...........................: (14.72, 16.63)
+    params-all-gather ..............................: (7.69, 8.87)
+    optimizer-copy-to-main-grad ....................: (0.32, 0.44)
+    optimizer-clip-main-grad .......................: (2.26, 2.31)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.88)
+    optimizer ......................................: (15.48, 15.77)
+ iteration       50/     100 | consumed samples:        25600 | elapsed time per iteration (ms): 11242.3 | learning rate: 2.344E-06 | global batch size:   512 | lm loss: 1.063168E+01 | loss scale: 1.0 | grad norm: 1.581 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (10980.62, 11166.52)
+    forward-compute ................................: (1444.89, 5641.54)
+    backward-compute ...............................: (2811.94, 4600.68)
+    batch-generator ................................: (49.76, 58.41)
+    forward-recv ...................................: (40.71, 79.72)
+    forward-send ...................................: (0.74, 24.49)
+    backward-recv ..................................: (64.02, 299.71)
+    backward-send ..................................: (0.81, 73.77)
+    forward-send-backward-recv .....................: (4972.05, 6455.60)
+    backward-send-forward-recv .....................: (711.02, 1422.74)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.69)
+    grads-reduce-scatter ...........................: (14.75, 16.71)
+    params-all-gather ..............................: (7.63, 8.80)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.44)
+    optimizer-clip-main-grad .......................: (2.53, 2.61)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.69, 9.94)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.89)
+    optimizer ......................................: (16.15, 16.44)
+ iteration       60/     100 | consumed samples:        30720 | elapsed time per iteration (ms): 9532.9 | learning rate: 2.812E-06 | global batch size:   512 | lm loss: 1.064730E+01 | loss scale: 1.0 | grad norm: 0.664 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (9271.53, 9423.63)
+    forward-compute ................................: (1307.74, 4296.68)
+    backward-compute ...............................: (2574.69, 4306.02)
+    batch-generator ................................: (48.82, 58.03)
+    forward-recv ...................................: (28.69, 70.18)
+    forward-send ...................................: (0.52, 18.13)
+    backward-recv ..................................: (81.72, 335.71)
+    backward-send ..................................: (3.86, 33.69)
+    forward-send-backward-recv .....................: (4221.96, 5052.39)
+    backward-send-forward-recv .....................: (652.72, 964.51)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.68)
+    grads-reduce-scatter ...........................: (14.85, 16.79)
+    params-all-gather ..............................: (7.60, 8.84)
+    optimizer-copy-to-main-grad ....................: (0.32, 0.45)
+    optimizer-clip-main-grad .......................: (2.29, 2.35)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.70, 9.84)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.89)
+    optimizer ......................................: (16.07, 16.37)
+ iteration       70/     100 | consumed samples:        35840 | elapsed time per iteration (ms): 9352.2 | learning rate: 3.281E-06 | global batch size:   512 | lm loss: 1.063983E+01 | loss scale: 1.0 | grad norm: 1.813 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (9133.69, 9265.93)
+    forward-compute ................................: (1321.94, 4200.38)
+    backward-compute ...............................: (2597.22, 4309.17)
+    batch-generator ................................: (49.34, 58.26)
+    forward-recv ...................................: (25.77, 69.28)
+    forward-send ...................................: (0.63, 26.83)
+    backward-recv ..................................: (70.21, 270.42)
+    backward-send ..................................: (0.73, 20.75)
+    forward-send-backward-recv .....................: (4078.00, 4930.43)
+    backward-send-forward-recv .....................: (586.83, 988.63)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.63)
+    grads-reduce-scatter ...........................: (14.77, 16.61)
+    params-all-gather ..............................: (7.65, 8.80)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.44)
+    optimizer-clip-main-grad .......................: (2.78, 2.89)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.69, 10.46)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.89)
+    optimizer ......................................: (16.97, 17.26)
+Mon Feb 12 01:11:14 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   34C    P0             243W / 700W |  76918MiB / 81559MiB |     23%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   38C    P0             424W / 700W |  76900MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   39C    P0             206W / 700W |  63220MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   34C    P0             318W / 700W |  63376MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   38C    P0             487W / 700W |  59626MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   45C    P0             427W / 700W |  59626MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   44C    P0             528W / 700W |  71344MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   39C    P0             390W / 700W |  71344MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       80/     100 | consumed samples:        40960 | elapsed time per iteration (ms): 9738.9 | learning rate: 3.750E-06 | global batch size:   512 | lm loss: 1.062489E+01 | loss scale: 1.0 | grad norm: 1.113 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (9387.32, 9574.65)
+    forward-compute ................................: (1359.35, 4425.85)
+    backward-compute ...............................: (2664.84, 4389.14)
+    batch-generator ................................: (48.28, 60.41)
+    forward-recv ...................................: (31.02, 58.97)
+    forward-send ...................................: (0.54, 11.68)
+    backward-recv ..................................: (79.24, 322.23)
+    backward-send ..................................: (0.70, 39.13)
+    forward-send-backward-recv .....................: (4265.19, 5054.19)
+    backward-send-forward-recv .....................: (546.31, 946.06)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.75)
+    grads-reduce-scatter ...........................: (14.78, 16.65)
+    params-all-gather ..............................: (7.59, 8.86)
+    optimizer-copy-to-main-grad ....................: (0.32, 0.43)
+    optimizer-clip-main-grad .......................: (3.25, 3.41)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.69, 9.80)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.88)
+    optimizer ......................................: (16.62, 16.91)
+ iteration       90/     100 | consumed samples:        46080 | elapsed time per iteration (ms): 9502.5 | learning rate: 4.219E-06 | global batch size:   512 | lm loss: 1.061753E+01 | loss scale: 1.0 | grad norm: 0.835 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (9244.06, 9428.17)
+    forward-compute ................................: (1343.48, 4356.03)
+    backward-compute ...............................: (2637.33, 4374.81)
+    batch-generator ................................: (49.25, 58.55)
+    forward-recv ...................................: (34.52, 80.87)
+    forward-send ...................................: (0.73, 19.68)
+    backward-recv ..................................: (76.93, 336.88)
+    backward-send ..................................: (0.94, 24.74)
+    forward-send-backward-recv .....................: (4032.25, 4939.13)
+    backward-send-forward-recv .....................: (480.19, 988.21)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.60)
+    grads-reduce-scatter ...........................: (14.78, 16.64)
+    params-all-gather ..............................: (7.58, 8.86)
+    optimizer-copy-to-main-grad ....................: (0.32, 0.44)
+    optimizer-clip-main-grad .......................: (2.29, 2.35)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.70, 9.78)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.88)
+    optimizer ......................................: (15.56, 15.85)
+ iteration      100/     100 | consumed samples:        51200 | elapsed time per iteration (ms): 9379.7 | learning rate: 4.687E-06 | global batch size:   512 | lm loss: 1.060932E+01 | loss scale: 1.0 | grad norm: 0.404 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (9091.92, 9257.76)
+    forward-compute ................................: (1306.28, 4264.60)
+    backward-compute ...............................: (2568.09, 4350.81)
+    batch-generator ................................: (50.25, 58.85)
+    forward-recv ...................................: (23.10, 56.56)
+    forward-send ...................................: (0.60, 20.05)
+    backward-recv ..................................: (83.17, 350.79)
+    backward-send ..................................: (3.96, 32.06)
+    forward-send-backward-recv .....................: (4074.40, 4872.01)
+    backward-send-forward-recv .....................: (501.20, 860.70)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.73)
+    grads-reduce-scatter ...........................: (14.45, 17.03)
+    params-all-gather ..............................: (7.57, 8.82)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.44)
+    optimizer-clip-main-grad .......................: (2.03, 2.08)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.69, 9.73)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.89)
+    optimizer ......................................: (15.30, 15.60)
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (471782): No such process
+kill: (471874): No such process
+kill: (471892): No such process
+kill: (471910): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=2, pp=4, mbs=2
+LOCAL_IP = 10.64.24.52
+DP=2, MP=2, PP=4
+[2024-02-12 01:16:38,642] torch.distributed.run: [WARNING] 
+[2024-02-12 01:16:38,642] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 01:16:38,642] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 01:16:38,642] torch.distributed.run: [WARNING] *****************************************
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 2): 1573350400
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 2): 1573350400
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 3): 1702466560
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 3): 1702466560
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  4.775 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.778 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.838 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  6.390 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Cutting or padding data end, time cost:  10.607 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.629 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.732 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.844 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (45.75, 854.65)
+    train/valid/test-data-iterators-setup ..........: (0.02, 17639.26)
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+ iteration       10/     100 | consumed samples:         5120 | elapsed time per iteration (ms): 14255.4 | learning rate: 4.687E-07 | global batch size:   512 | lm loss: 1.089456E+01 | loss scale: 1.0 | grad norm: 4.441 | number of skipped iterations:   0 | number of nan iterations:   0 |
+[Rank 8] (after 10 iterations) memory (MB) | allocated: 18110.009765625 | max allocated: 39017.20556640625 | reserved: 49332.0 | max reserved: 49332.0[Rank 9] (after 10 iterations) memory (MB) | allocated: 18109.3564453125 | max allocated: 39017.37939453125 | reserved: 49698.0 | max reserved: 49698.0
+
+[Rank 12] (after 10 iterations) memory (MB) | allocated: 19586.6259765625 | max allocated: 37598.0810546875 | reserved: 41106.0 | max reserved: 41106.0
+[Rank 13] (after 10 iterations) memory (MB) | allocated: 19586.6259765625 | max allocated: 37598.12890625 | reserved: 42522.0 | max reserved: 42522.0
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13774.38, 13945.25)
+    forward-compute ................................: (1946.34, 6329.46)
+    backward-compute ...............................: (3621.99, 5287.23)
+    batch-generator ................................: (203.86, 236.36)
+    forward-recv ...................................: (182.96, 507.47)
+    forward-send ...................................: (3.67, 300.97)
+    backward-recv ..................................: (61.83, 295.82)
+    backward-send ..................................: (8.24, 28.35)
+    forward-send-backward-recv .....................: (5851.85, 7491.49)
+    backward-send-forward-recv .....................: (1120.70, 1890.32)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.65)
+    grads-reduce-scatter ...........................: (15.99, 224.80)
+    params-all-gather ..............................: (7.63, 8.84)
+    optimizer-copy-to-main-grad ....................: (0.38, 0.46)
+    optimizer-clip-main-grad .......................: (8.03, 8.31)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.96, 10.01)
+    optimizer-copy-main-to-model-params ............: (2.60, 2.87)
+    optimizer ......................................: (22.12, 22.43)
+ iteration       20/     100 | consumed samples:        10240 | elapsed time per iteration (ms): 12119.2 | learning rate: 9.375E-07 | global batch size:   512 | lm loss: 1.081676E+01 | loss scale: 1.0 | grad norm: 1.683 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11933.36, 12040.81)
+    forward-compute ................................: (1631.21, 5580.14)
+    backward-compute ...............................: (3270.08, 4906.16)
+    batch-generator ................................: (93.18, 108.39)
+    forward-recv ...................................: (19.43, 527.33)
+    forward-send ...................................: (0.33, 4.81)
+    backward-recv ..................................: (40.46, 211.77)
+    backward-send ..................................: (0.45, 12.60)
+    forward-send-backward-recv .....................: (5003.28, 6243.49)
+    backward-send-forward-recv .....................: (788.49, 1796.39)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.63)
+    grads-reduce-scatter ...........................: (14.61, 16.62)
+    params-all-gather ..............................: (7.60, 8.80)
+    optimizer-copy-to-main-grad ....................: (0.34, 0.43)
+    optimizer-clip-main-grad .......................: (4.16, 4.43)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.73, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (17.56, 17.84)
+ iteration       30/     100 | consumed samples:        15360 | elapsed time per iteration (ms): 14802.2 | learning rate: 1.406E-06 | global batch size:   512 | lm loss: 1.069446E+01 | loss scale: 1.0 | grad norm: 0.991 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (14646.51, 14737.99)
+    forward-compute ................................: (1779.70, 8011.94)
+    backward-compute ...............................: (3591.80, 5189.48)
+    batch-generator ................................: (96.41, 110.51)
+    forward-recv ...................................: (21.00, 57.37)
+    forward-send ...................................: (0.38, 29.38)
+    backward-recv ..................................: (35.33, 145.53)
+    backward-send ..................................: (5.28, 24.30)
+    forward-send-backward-recv .....................: (6401.10, 9010.42)
+    backward-send-forward-recv .....................: (949.20, 2617.59)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.52)
+    grads-reduce-scatter ...........................: (14.76, 16.61)
+    params-all-gather ..............................: (7.68, 8.83)
+    optimizer-copy-to-main-grad ....................: (0.36, 0.45)
+    optimizer-clip-main-grad .......................: (3.69, 3.91)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.70)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.88)
+    optimizer ......................................: (17.05, 17.34)
+Mon Feb 12 01:26:05 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   33C    P0             289W / 700W |  64150MiB / 81559MiB |      1%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   38C    P0             280W / 700W |  64054MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   38C    P0             290W / 700W |  64646MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   33C    P0             226W / 700W |  65058MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   38C    P0             253W / 700W |  50836MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   44C    P0             348W / 700W |  50678MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   42C    P0             228W / 700W |  51686MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   37C    P0             282W / 700W |  51706MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       40/     100 | consumed samples:        20480 | elapsed time per iteration (ms): 11583.3 | learning rate: 1.875E-06 | global batch size:   512 | lm loss: 1.068771E+01 | loss scale: 1.0 | grad norm: 0.608 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11309.59, 11432.95)
+    forward-compute ................................: (1661.49, 5177.69)
+    backward-compute ...............................: (3310.90, 4924.45)
+    batch-generator ................................: (95.74, 113.13)
+    forward-recv ...................................: (19.72, 53.89)
+    forward-send ...................................: (0.39, 16.00)
+    backward-recv ..................................: (45.55, 169.69)
+    backward-send ..................................: (0.40, 9.06)
+    forward-send-backward-recv .....................: (4886.60, 6022.12)
+    backward-send-forward-recv .....................: (837.66, 1343.53)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.65)
+    grads-reduce-scatter ...........................: (14.93, 16.64)
+    params-all-gather ..............................: (7.73, 9.33)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.44)
+    optimizer-clip-main-grad .......................: (2.25, 2.31)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (15.45, 15.73)
+ iteration       50/     100 | consumed samples:        25600 | elapsed time per iteration (ms): 12930.9 | learning rate: 2.344E-06 | global batch size:   512 | lm loss: 1.063153E+01 | loss scale: 1.0 | grad norm: 0.975 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (12758.98, 12871.23)
+    forward-compute ................................: (1821.12, 5992.47)
+    backward-compute ...............................: (3641.69, 5341.22)
+    batch-generator ................................: (97.38, 112.31)
+    forward-recv ...................................: (21.06, 46.87)
+    forward-send ...................................: (0.46, 13.27)
+    backward-recv ..................................: (40.73, 165.41)
+    backward-send ..................................: (0.48, 20.86)
+    forward-send-backward-recv .....................: (5196.57, 6969.22)
+    backward-send-forward-recv .....................: (1035.25, 1822.38)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.57)
+    grads-reduce-scatter ...........................: (14.59, 16.67)
+    params-all-gather ..............................: (7.63, 8.85)
+    optimizer-copy-to-main-grad ....................: (0.34, 0.43)
+    optimizer-clip-main-grad .......................: (2.49, 2.57)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.70, 9.69)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (15.70, 15.98)
+ iteration       60/     100 | consumed samples:        30720 | elapsed time per iteration (ms): 11678.7 | learning rate: 2.812E-06 | global batch size:   512 | lm loss: 1.064884E+01 | loss scale: 1.0 | grad norm: 1.875 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11502.70, 11595.59)
+    forward-compute ................................: (1695.98, 5399.69)
+    backward-compute ...............................: (3417.02, 5041.30)
+    batch-generator ................................: (97.08, 112.71)
+    forward-recv ...................................: (13.35, 37.66)
+    forward-send ...................................: (0.32, 9.52)
+    backward-recv ..................................: (45.56, 185.84)
+    backward-send ..................................: (0.55, 31.26)
+    forward-send-backward-recv .....................: (4704.09, 6085.14)
+    backward-send-forward-recv .....................: (795.82, 1484.16)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.47)
+    grads-reduce-scatter ...........................: (14.93, 16.74)
+    params-all-gather ..............................: (7.62, 8.84)
+    optimizer-copy-to-main-grad ....................: (0.34, 0.42)
+    optimizer-clip-main-grad .......................: (2.97, 3.10)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.67)
+    optimizer-copy-main-to-model-params ............: (2.59, 3.28)
+    optimizer ......................................: (16.20, 16.89)
+ iteration       70/     100 | consumed samples:        35840 | elapsed time per iteration (ms): 11571.5 | learning rate: 3.281E-06 | global batch size:   512 | lm loss: 1.064087E+01 | loss scale: 1.0 | grad norm: 0.842 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11399.48, 11506.65)
+    forward-compute ................................: (1705.23, 5348.22)
+    backward-compute ...............................: (3442.68, 5043.65)
+    batch-generator ................................: (96.76, 112.41)
+    forward-recv ...................................: (17.75, 48.62)
+    forward-send ...................................: (0.34, 11.80)
+    backward-recv ..................................: (39.82, 151.35)
+    backward-send ..................................: (0.46, 18.84)
+    forward-send-backward-recv .....................: (4733.70, 5953.89)
+    backward-send-forward-recv .....................: (775.97, 1370.44)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.50)
+    grads-reduce-scatter ...........................: (14.51, 16.68)
+    params-all-gather ..............................: (7.62, 8.85)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.43)
+    optimizer-clip-main-grad .......................: (2.25, 2.31)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (15.48, 15.76)
+Mon Feb 12 01:34:06 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   35C    P0             349W / 700W |  64158MiB / 81559MiB |     62%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   39C    P0             321W / 700W |  64064MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   39C    P0             285W / 700W |  64646MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   34C    P0             438W / 700W |  65058MiB / 81559MiB |     95%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   39C    P0             454W / 700W |  50836MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   46C    P0             467W / 700W |  50678MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   44C    P0             452W / 700W |  51686MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   38C    P0             443W / 700W |  51706MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       80/     100 | consumed samples:        40960 | elapsed time per iteration (ms): 11933.9 | learning rate: 3.750E-06 | global batch size:   512 | lm loss: 1.062301E+01 | loss scale: 1.0 | grad norm: 0.681 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11654.34, 11757.96)
+    forward-compute ................................: (1715.38, 5531.54)
+    backward-compute ...............................: (3470.77, 5166.07)
+    batch-generator ................................: (96.43, 112.50)
+    forward-recv ...................................: (16.97, 35.91)
+    forward-send ...................................: (0.34, 6.49)
+    backward-recv ..................................: (56.45, 168.32)
+    backward-send ..................................: (0.55, 8.71)
+    forward-send-backward-recv .....................: (4694.02, 6135.84)
+    backward-send-forward-recv .....................: (863.82, 1453.08)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.59)
+    grads-reduce-scatter ...........................: (14.66, 16.65)
+    params-all-gather ..............................: (7.60, 8.81)
+    optimizer-copy-to-main-grad ....................: (0.35, 0.43)
+    optimizer-clip-main-grad .......................: (2.97, 3.10)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.71, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (16.26, 16.53)
+ iteration       90/     100 | consumed samples:        46080 | elapsed time per iteration (ms): 11718.8 | learning rate: 4.219E-06 | global batch size:   512 | lm loss: 1.061795E+01 | loss scale: 1.0 | grad norm: 0.646 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11512.70, 11622.70)
+    forward-compute ................................: (1738.72, 5232.82)
+    backward-compute ...............................: (3515.67, 5077.45)
+    batch-generator ................................: (95.53, 109.24)
+    forward-recv ...................................: (19.01, 46.83)
+    forward-send ...................................: (0.47, 10.53)
+    backward-recv ..................................: (45.71, 175.94)
+    backward-send ..................................: (0.66, 17.59)
+    forward-send-backward-recv .....................: (4835.41, 5972.72)
+    backward-send-forward-recv .....................: (873.28, 1314.27)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 11.49)
+    grads-reduce-scatter ...........................: (14.61, 16.63)
+    params-all-gather ..............................: (7.58, 8.82)
+    optimizer-copy-to-main-grad ....................: (0.33, 0.43)
+    optimizer-clip-main-grad .......................: (2.97, 3.10)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.70, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (16.23, 16.50)
+ iteration      100/     100 | consumed samples:        51200 | elapsed time per iteration (ms): 11556.4 | learning rate: 4.687E-06 | global batch size:   512 | lm loss: 1.060962E+01 | loss scale: 1.0 | grad norm: 0.405 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (11339.38, 11454.25)
+    forward-compute ................................: (1692.86, 5198.91)
+    backward-compute ...............................: (3446.35, 5045.88)
+    batch-generator ................................: (96.20, 108.51)
+    forward-recv ...................................: (17.02, 37.73)
+    forward-send ...................................: (0.38, 7.49)
+    backward-recv ..................................: (44.82, 251.78)
+    backward-send ..................................: (6.46, 38.04)
+    forward-send-backward-recv .....................: (4723.60, 5820.45)
+    backward-send-forward-recv .....................: (815.84, 1294.47)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 11.62)
+    grads-reduce-scatter ...........................: (14.78, 16.64)
+    params-all-gather ..............................: (7.67, 8.83)
+    optimizer-copy-to-main-grad ....................: (0.34, 0.44)
+    optimizer-clip-main-grad .......................: (2.25, 2.31)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.70, 9.68)
+    optimizer-copy-main-to-model-params ............: (2.59, 2.87)
+    optimizer ......................................: (15.57, 15.85)
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (474162): No such process
+kill: (474254): No such process
+kill: (474272): No such process
+kill: (474290): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=8, pp=1, mbs=2
+LOCAL_IP = 10.64.24.52
+DP=2, MP=8, PP=1
+[2024-02-12 01:40:16,848] torch.distributed.run: [WARNING] 
+[2024-02-12 01:40:16,848] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 01:40:16,848] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 01:40:16,848] torch.distributed.run: [WARNING] *****************************************
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  6.934 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Cutting or padding data end, time cost:  10.682 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (669.09, 785.78)
+    train/valid/test-data-iterators-setup ..........: (0.02, 18034.89)
+NCCL version 2.19.3+cuda12.2
+ iteration       10/     100 | consumed samples:         5120 | elapsed time per iteration (ms): 17417.6 | learning rate: 4.687E-07 | global batch size:   512 | lm loss: 1.090499E+01 | loss scale: 1.0 | grad norm: 4.370 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (17238.87, 17263.79)
+    forward-compute ................................: (10154.03, 10181.68)
+    backward-compute ...............................: (6993.91, 7009.71)
+    batch-generator ................................: (763.64, 849.16)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.03, 0.03)
+    grads-reduce-scatter ...........................: (73.97, 74.87)
+    params-all-gather ..............................: (39.20, 39.65)
+    optimizer-copy-to-main-grad ....................: (1.48, 1.62)
+    optimizer-clip-main-grad .......................: (8.30, 8.38)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.65, 9.87)
+    optimizer-copy-main-to-model-params ............: (3.50, 3.65)
+    optimizer ......................................: (26.69, 27.20)
+ iteration       20/     100 | consumed samples:        10240 | elapsed time per iteration (ms): 15384.1 | learning rate: 9.375E-07 | global batch size:   512 | lm loss: 1.083934E+01 | loss scale: 1.0 | grad norm: 3.100 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15228.59, 15231.93)
+    forward-compute ................................: (8682.96, 8789.82)
+    backward-compute ...............................: (6356.88, 6467.27)
+    batch-generator ................................: (157.26, 207.28)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (73.76, 74.43)
+    params-all-gather ..............................: (39.37, 39.59)
+    optimizer-copy-to-main-grad ....................: (1.39, 1.60)
+    optimizer-clip-main-grad .......................: (5.47, 5.79)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.32, 9.42)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (23.42, 23.81)
+ iteration       30/     100 | consumed samples:        15360 | elapsed time per iteration (ms): 16413.2 | learning rate: 1.406E-06 | global batch size:   512 | lm loss: 1.071734E+01 | loss scale: 1.0 | grad norm: 1.092 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (16258.67, 16266.71)
+    forward-compute ................................: (9288.53, 9362.56)
+    backward-compute ...............................: (6817.99, 6893.22)
+    batch-generator ................................: (157.30, 202.90)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (74.00, 74.69)
+    params-all-gather ..............................: (39.36, 39.68)
+    optimizer-copy-to-main-grad ....................: (1.39, 1.61)
+    optimizer-clip-main-grad .......................: (5.39, 5.57)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.32, 9.39)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (23.21, 23.75)
+Mon Feb 12 01:51:45 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   35C    P0             314W / 700W |  74074MiB / 81559MiB |     33%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   40C    P0             330W / 700W |  75016MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   41C    P0             327W / 700W |  74788MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   35C    P0             361W / 700W |  74720MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   35C    P0             334W / 700W |  74712MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   41C    P0             308W / 700W |  74676MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   39C    P0             356W / 700W |  74924MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   35C    P0             302W / 700W |  74692MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       40/     100 | consumed samples:        20480 | elapsed time per iteration (ms): 15641.2 | learning rate: 1.875E-06 | global batch size:   512 | lm loss: 1.070623E+01 | loss scale: 1.0 | grad norm: 0.588 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15390.43, 15407.82)
+    forward-compute ................................: (8845.91, 8878.09)
+    backward-compute ...............................: (6431.25, 6485.88)
+    batch-generator ................................: (156.74, 212.42)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (73.92, 74.55)
+    params-all-gather ..............................: (39.30, 39.60)
+    optimizer-copy-to-main-grad ....................: (1.37, 1.59)
+    optimizer-clip-main-grad .......................: (3.54, 3.79)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.33, 9.38)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (21.32, 21.67)
+ iteration       50/     100 | consumed samples:        25600 | elapsed time per iteration (ms): 16834.7 | learning rate: 2.344E-06 | global batch size:   512 | lm loss: 1.064942E+01 | loss scale: 1.0 | grad norm: 1.073 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (16679.01, 16689.90)
+    forward-compute ................................: (9497.84, 9671.59)
+    backward-compute ...............................: (6921.99, 7115.41)
+    batch-generator ................................: (152.22, 201.85)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (74.05, 74.51)
+    params-all-gather ..............................: (39.25, 39.67)
+    optimizer-copy-to-main-grad ....................: (1.37, 1.59)
+    optimizer-clip-main-grad .......................: (4.24, 4.40)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.33, 9.39)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (22.06, 22.60)
+ iteration       60/     100 | consumed samples:        30720 | elapsed time per iteration (ms): 15838.1 | learning rate: 2.812E-06 | global batch size:   512 | lm loss: 1.066251E+01 | loss scale: 1.0 | grad norm: 0.725 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15682.56, 15690.21)
+    forward-compute ................................: (8929.29, 9032.04)
+    backward-compute ...............................: (6564.73, 6684.68)
+    batch-generator ................................: (155.01, 202.58)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (73.84, 74.64)
+    params-all-gather ..............................: (39.04, 39.50)
+    optimizer-copy-to-main-grad ....................: (1.41, 1.58)
+    optimizer-clip-main-grad .......................: (3.51, 3.61)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.32, 9.38)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (21.33, 21.70)
+ iteration       70/     100 | consumed samples:        35840 | elapsed time per iteration (ms): 15866.9 | learning rate: 3.281E-06 | global batch size:   512 | lm loss: 1.065670E+01 | loss scale: 1.0 | grad norm: 2.729 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15710.75, 15719.64)
+    forward-compute ................................: (8971.29, 9027.19)
+    backward-compute ...............................: (6598.38, 6671.48)
+    batch-generator ................................: (155.10, 196.47)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (73.58, 74.68)
+    params-all-gather ..............................: (39.03, 39.63)
+    optimizer-copy-to-main-grad ....................: (1.40, 1.58)
+    optimizer-clip-main-grad .......................: (4.11, 4.23)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.34, 9.38)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.65)
+    optimizer ......................................: (22.14, 22.60)
+Mon Feb 12 02:02:32 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   34C    P0             191W / 700W |  75176MiB / 81559MiB |     87%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   39C    P0             180W / 700W |  75832MiB / 81559MiB |     97%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   40C    P0             200W / 700W |  75796MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   34C    P0             205W / 700W |  75894MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   34C    P0             220W / 700W |  75730MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   40C    P0             170W / 700W |  75638MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   38C    P0             215W / 700W |  75944MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   33C    P0             185W / 700W |  75708MiB / 81559MiB |     98%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       80/     100 | consumed samples:        40960 | elapsed time per iteration (ms): 16209.2 | learning rate: 3.750E-06 | global batch size:   512 | lm loss: 1.063807E+01 | loss scale: 1.0 | grad norm: 1.470 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15966.25, 15967.05)
+    forward-compute ................................: (9046.08, 9238.00)
+    backward-compute ...............................: (6648.42, 6843.89)
+    batch-generator ................................: (154.49, 192.27)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 0.04)
+    grads-reduce-scatter ...........................: (73.85, 75.20)
+    params-all-gather ..............................: (39.14, 39.53)
+    optimizer-copy-to-main-grad ....................: (1.41, 1.57)
+    optimizer-clip-main-grad .......................: (4.15, 4.37)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.32, 9.38)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (22.18, 22.58)
+ iteration       90/     100 | consumed samples:        46080 | elapsed time per iteration (ms): 16087.8 | learning rate: 4.219E-06 | global batch size:   512 | lm loss: 1.063601E+01 | loss scale: 1.0 | grad norm: 0.724 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15924.03, 15932.31)
+    forward-compute ................................: (9120.63, 9138.41)
+    backward-compute ...............................: (6699.96, 6735.41)
+    batch-generator ................................: (153.79, 191.49)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (73.98, 74.67)
+    params-all-gather ..............................: (39.08, 39.68)
+    optimizer-copy-to-main-grad ....................: (1.40, 1.60)
+    optimizer-clip-main-grad .......................: (4.11, 4.20)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.32, 9.42)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (21.97, 22.45)
+ iteration      100/     100 | consumed samples:        51200 | elapsed time per iteration (ms): 15869.7 | learning rate: 4.687E-06 | global batch size:   512 | lm loss: 1.062846E+01 | loss scale: 1.0 | grad norm: 0.592 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15713.33, 15723.72)
+    forward-compute ................................: (8958.30, 9020.49)
+    backward-compute ...............................: (6621.33, 6679.37)
+    batch-generator ................................: (153.50, 194.59)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    grads-reduce-scatter ...........................: (73.86, 74.64)
+    params-all-gather ..............................: (39.09, 39.58)
+    optimizer-copy-to-main-grad ....................: (1.41, 1.57)
+    optimizer-clip-main-grad .......................: (3.77, 4.85)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (9.32, 9.38)
+    optimizer-copy-main-to-model-params ............: (3.49, 3.64)
+    optimizer ......................................: (22.66, 22.99)
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (476550): No such process
+kill: (476642): No such process
+kill: (476660): No such process
+kill: (476678): No such process
+10.64.24.50 kill done.
+13b, 8k, gbs=512: dp=2, tp=1, pp=8, mbs=2
+LOCAL_IP = 10.64.24.52
+DP=2, MP=1, PP=8
+[2024-02-12 02:10:10,388] torch.distributed.run: [WARNING] 
+[2024-02-12 02:10:10,388] torch.distributed.run: [WARNING] *****************************************
+[2024-02-12 02:10:10,388] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-02-12 02:10:10,388] torch.distributed.run: [WARNING] *****************************************
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/initialize.py:277: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/training.py:100: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 4): 1573196800
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 5): 1573196800
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 6): 1573196800
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 7): 1830763520
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/megatron/optimizer/distrib_optimizer.py:412: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = grad_buffer.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  4.909 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.906 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.934 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.948 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  4.948 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  5.049 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  5.050 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Loading exists cache end, time cost:  5.137 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Cutting or padding data end, time cost:  10.774 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.844 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.903 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.798 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.935 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  10.913 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  11.067 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  11.605 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (39.38, 700.62)
+    train/valid/test-data-iterators-setup ..........: (15923.27, 17166.59)
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+ iteration       10/     100 | consumed samples:         5120 | elapsed time per iteration (ms): 16344.9 | learning rate: 4.687E-07 | global batch size:   512 | lm loss: 1.088898E+01 | loss scale: 1.0 | grad norm: 4.307 | number of skipped iterations:   0 | number of nan iterations:   0 |
+[Rank 12] (after 10 iterations) memory (MB) | allocated: 18087.134765625 | max allocated: 34675.22265625 | reserved: 41338.0 | max reserved: 41338.0
+[Rank 8] (after 10 iterations) memory (MB) | allocated: 18087.173828125 | max allocated: 40769.35498046875 | reserved: 47274.0 | max reserved: 47274.0
+[Rank 14] (after 10 iterations) memory (MB) | allocated: 21034.9638671875 | max allocated: 39830.31494140625 | reserved: 43898.0 | max reserved: 43898.0
+[Rank 10] (after 10 iterations) memory (MB) | allocated: 18087.87890625 | max allocated: 38018.6650390625 | reserved: 45116.0 | max reserved: 45116.0
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15599.90, 15956.72)
+    forward-compute ................................: (1350.57, 7081.77)
+    backward-compute ...............................: (3002.81, 6535.93)
+    batch-generator ................................: (107.12, 131.35)
+    forward-recv ...................................: (74.84, 319.00)
+    forward-send ...................................: (2.59, 258.65)
+    backward-recv ..................................: (62.74, 804.17)
+    backward-send ..................................: (5.06, 77.96)
+    forward-send-backward-recv .....................: (8002.20, 10246.41)
+    backward-send-forward-recv .....................: (964.15, 2819.27)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 23.24)
+    grads-reduce-scatter ...........................: (17.55, 224.71)
+    params-all-gather ..............................: (7.43, 9.21)
+    optimizer-copy-to-main-grad ....................: (0.21, 0.29)
+    optimizer-clip-main-grad .......................: (7.48, 8.11)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.89, 10.65)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.92)
+    optimizer ......................................: (22.48, 22.98)
+ iteration       20/     100 | consumed samples:        10240 | elapsed time per iteration (ms): 13435.8 | learning rate: 9.375E-07 | global batch size:   512 | lm loss: 1.082056E+01 | loss scale: 1.0 | grad norm: 2.626 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13046.73, 13356.52)
+    forward-compute ................................: (1146.75, 6040.27)
+    backward-compute ...............................: (2676.31, 6205.65)
+    batch-generator ................................: (92.59, 107.82)
+    forward-recv ...................................: (23.52, 96.56)
+    forward-send ...................................: (0.50, 57.63)
+    backward-recv ..................................: (50.50, 694.91)
+    backward-send ..................................: (0.51, 124.82)
+    forward-send-backward-recv .....................: (6894.77, 8490.52)
+    backward-send-forward-recv .....................: (702.54, 1886.62)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 22.59)
+    grads-reduce-scatter ...........................: (14.69, 18.01)
+    params-all-gather ..............................: (7.42, 9.22)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.28)
+    optimizer-clip-main-grad .......................: (4.18, 4.64)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.67, 10.36)
+    optimizer-copy-main-to-model-params ............: (2.44, 2.92)
+    optimizer ......................................: (18.11, 18.58)
+ iteration       30/     100 | consumed samples:        15360 | elapsed time per iteration (ms): 15958.4 | learning rate: 1.406E-06 | global batch size:   512 | lm loss: 1.070534E+01 | loss scale: 1.0 | grad norm: 1.470 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15620.83, 15872.45)
+    forward-compute ................................: (1287.16, 7346.07)
+    backward-compute ...............................: (2912.84, 6446.13)
+    batch-generator ................................: (91.57, 102.66)
+    forward-recv ...................................: (22.73, 586.53)
+    forward-send ...................................: (0.54, 546.72)
+    backward-recv ..................................: (54.07, 633.79)
+    backward-send ..................................: (4.05, 113.42)
+    forward-send-backward-recv .....................: (7835.30, 10550.86)
+    backward-send-forward-recv .....................: (950.69, 3193.79)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 22.35)
+    grads-reduce-scatter ...........................: (14.77, 17.57)
+    params-all-gather ..............................: (7.42, 9.21)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.26)
+    optimizer-clip-main-grad .......................: (4.17, 4.63)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.66, 10.33)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.92)
+    optimizer ......................................: (18.07, 18.54)
+Mon Feb 12 02:21:10 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   31C    P0             241W / 700W |  58000MiB / 81559MiB |     96%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   34C    P0             177W / 700W |  54660MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   35C    P0             207W / 700W |  57610MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   30C    P0             136W / 700W |  51678MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   31C    P0             237W / 700W |  51424MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   35C    P0             171W / 700W |  50192MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   42C    P0             185W / 700W |  49990MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   36C    P0             260W / 700W |  49342MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       40/     100 | consumed samples:        20480 | elapsed time per iteration (ms): 16244.1 | learning rate: 1.875E-06 | global batch size:   512 | lm loss: 1.069296E+01 | loss scale: 1.0 | grad norm: 1.970 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (15801.07, 16074.79)
+    forward-compute ................................: (1173.47, 7385.00)
+    backward-compute ...............................: (2669.83, 6180.18)
+    batch-generator ................................: (90.48, 102.53)
+    forward-recv ...................................: (20.82, 1349.27)
+    forward-send ...................................: (0.52, 1166.53)
+    backward-recv ..................................: (56.78, 596.41)
+    backward-send ..................................: (0.48, 70.67)
+    forward-send-backward-recv .....................: (7894.28, 10078.82)
+    backward-send-forward-recv .....................: (744.89, 3740.93)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 22.53)
+    grads-reduce-scatter ...........................: (14.71, 17.90)
+    params-all-gather ..............................: (7.49, 9.22)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.25)
+    optimizer-clip-main-grad .......................: (3.21, 4.11)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.65, 10.33)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.92)
+    optimizer ......................................: (17.61, 18.08)
+ iteration       50/     100 | consumed samples:        25600 | elapsed time per iteration (ms): 17226.8 | learning rate: 2.344E-06 | global batch size:   512 | lm loss: 1.063624E+01 | loss scale: 1.0 | grad norm: 1.402 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (16865.61, 17106.22)
+    forward-compute ................................: (1311.12, 8466.72)
+    backward-compute ...............................: (3012.13, 6577.34)
+    batch-generator ................................: (91.13, 104.40)
+    forward-recv ...................................: (24.41, 598.02)
+    forward-send ...................................: (0.60, 559.01)
+    backward-recv ..................................: (70.63, 577.53)
+    backward-send ..................................: (3.04, 75.24)
+    forward-send-backward-recv .....................: (8242.67, 11739.95)
+    backward-send-forward-recv .....................: (921.19, 3864.67)
+    layernorm-grads-all-reduce .....................: (0.02, 0.05)
+    embedding-grads-all-reduce .....................: (0.02, 22.57)
+    grads-reduce-scatter ...........................: (14.68, 17.66)
+    params-all-gather ..............................: (7.48, 9.22)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.30)
+    optimizer-clip-main-grad .......................: (3.21, 3.60)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.66, 10.34)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.91)
+    optimizer ......................................: (17.18, 17.65)
+ iteration       60/     100 | consumed samples:        30720 | elapsed time per iteration (ms): 14673.7 | learning rate: 2.812E-06 | global batch size:   512 | lm loss: 1.064921E+01 | loss scale: 1.0 | grad norm: 0.805 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (14295.49, 14544.28)
+    forward-compute ................................: (1207.90, 7200.02)
+    backward-compute ...............................: (2802.05, 6311.90)
+    batch-generator ................................: (90.30, 103.30)
+    forward-recv ...................................: (27.13, 84.74)
+    forward-send ...................................: (0.51, 57.95)
+    backward-recv ..................................: (55.86, 595.48)
+    backward-send ..................................: (0.59, 87.63)
+    forward-send-backward-recv .....................: (7881.73, 9577.83)
+    backward-send-forward-recv .....................: (747.49, 2085.49)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 22.48)
+    grads-reduce-scatter ...........................: (14.75, 17.67)
+    params-all-gather ..............................: (7.42, 9.20)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.25)
+    optimizer-clip-main-grad .......................: (2.50, 2.63)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.66, 10.33)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.91)
+    optimizer ......................................: (16.07, 16.53)
+ iteration       70/     100 | consumed samples:        35840 | elapsed time per iteration (ms): 15149.6 | learning rate: 3.281E-06 | global batch size:   512 | lm loss: 1.063842E+01 | loss scale: 1.0 | grad norm: 0.542 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (14839.64, 15058.90)
+    forward-compute ................................: (1235.33, 6374.86)
+    backward-compute ...............................: (2826.05, 6309.41)
+    batch-generator ................................: (91.99, 101.42)
+    forward-recv ...................................: (17.70, 83.11)
+    forward-send ...................................: (0.49, 39.60)
+    backward-recv ..................................: (63.90, 620.02)
+    backward-send ..................................: (0.50, 42.02)
+    forward-send-backward-recv .....................: (7449.49, 10205.34)
+    backward-send-forward-recv .....................: (755.49, 2559.85)
+    layernorm-grads-all-reduce .....................: (0.02, 0.02)
+    embedding-grads-all-reduce .....................: (0.02, 22.34)
+    grads-reduce-scatter ...........................: (14.71, 17.74)
+    params-all-gather ..............................: (7.38, 9.23)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.25)
+    optimizer-clip-main-grad .......................: (2.01, 2.06)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.67, 10.32)
+    optimizer-copy-main-to-model-params ............: (2.44, 2.91)
+    optimizer ......................................: (15.47, 15.94)
+Mon Feb 12 02:31:22 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  | 00000000:18:00.0 Off |                    0 |
+| N/A   33C    P0             206W / 700W |  58014MiB / 81559MiB |     96%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA H100 80GB HBM3          On  | 00000000:2A:00.0 Off |                    0 |
+| N/A   36C    P0             352W / 700W |  54660MiB / 81559MiB |     97%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA H100 80GB HBM3          On  | 00000000:3A:00.0 Off |                    0 |
+| N/A   37C    P0             208W / 700W |  57628MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA H100 80GB HBM3          On  | 00000000:5D:00.0 Off |                    0 |
+| N/A   32C    P0             273W / 700W |  51678MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   4  NVIDIA H100 80GB HBM3          On  | 00000000:84:00.0 Off |                    0 |
+| N/A   33C    P0             214W / 700W |  51426MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   5  NVIDIA H100 80GB HBM3          On  | 00000000:8C:00.0 Off |                    0 |
+| N/A   37C    P0             295W / 700W |  50192MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   6  NVIDIA H100 80GB HBM3          On  | 00000000:91:00.0 Off |                    0 |
+| N/A   45C    P0             457W / 700W |  49990MiB / 81559MiB |     99%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   7  NVIDIA H100 80GB HBM3          On  | 00000000:E5:00.0 Off |                    0 |
+| N/A   40C    P0             399W / 700W |  49342MiB / 81559MiB |    100%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
++---------------------------------------------------------------------------------------+
+ iteration       80/     100 | consumed samples:        40960 | elapsed time per iteration (ms): 14190.9 | learning rate: 3.750E-06 | global batch size:   512 | lm loss: 1.062142E+01 | loss scale: 1.0 | grad norm: 0.652 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13741.76, 13982.20)
+    forward-compute ................................: (1246.32, 6577.66)
+    backward-compute ...............................: (2843.37, 6408.31)
+    batch-generator ................................: (90.75, 100.67)
+    forward-recv ...................................: (23.11, 97.27)
+    forward-send ...................................: (0.56, 54.94)
+    backward-recv ..................................: (65.37, 499.68)
+    backward-send ..................................: (0.64, 58.98)
+    forward-send-backward-recv .....................: (7137.39, 9027.02)
+    backward-send-forward-recv .....................: (776.81, 2049.52)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 22.52)
+    grads-reduce-scatter ...........................: (14.66, 17.86)
+    params-all-gather ..............................: (7.33, 9.21)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.25)
+    optimizer-clip-main-grad .......................: (3.06, 3.29)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.66, 10.33)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.91)
+    optimizer ......................................: (16.71, 17.17)
+ iteration       90/     100 | consumed samples:        46080 | elapsed time per iteration (ms): 13847.0 | learning rate: 4.219E-06 | global batch size:   512 | lm loss: 1.061503E+01 | loss scale: 1.0 | grad norm: 0.873 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13482.13, 13724.83)
+    forward-compute ................................: (1253.24, 6107.31)
+    backward-compute ...............................: (2861.91, 6347.54)
+    batch-generator ................................: (91.07, 101.98)
+    forward-recv ...................................: (23.35, 112.16)
+    forward-send ...................................: (0.62, 61.07)
+    backward-recv ..................................: (71.10, 606.73)
+    backward-send ..................................: (0.64, 39.29)
+    forward-send-backward-recv .....................: (7244.31, 8734.21)
+    backward-send-forward-recv .....................: (809.04, 1843.12)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 22.46)
+    grads-reduce-scatter ...........................: (14.81, 17.87)
+    params-all-gather ..............................: (7.37, 9.87)
+    optimizer-copy-to-main-grad ....................: (0.20, 0.25)
+    optimizer-clip-main-grad .......................: (2.97, 3.20)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.66, 10.32)
+    optimizer-copy-main-to-model-params ............: (2.45, 2.92)
+    optimizer ......................................: (16.76, 17.23)
+ iteration      100/     100 | consumed samples:        51200 | elapsed time per iteration (ms): 13690.8 | learning rate: 4.687E-06 | global batch size:   512 | lm loss: 1.060808E+01 | loss scale: 1.0 | grad norm: 0.666 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (13252.49, 13528.79)
+    forward-compute ................................: (1231.20, 5980.06)
+    backward-compute ...............................: (2827.00, 6296.29)
+    batch-generator ................................: (91.14, 101.52)
+    forward-recv ...................................: (17.18, 73.82)
+    forward-send ...................................: (0.50, 36.86)
+    backward-recv ..................................: (52.41, 646.57)
+    backward-send ..................................: (3.36, 78.11)
+    forward-send-backward-recv .....................: (7183.28, 8458.43)
+    backward-send-forward-recv .....................: (776.26, 1727.77)
+    layernorm-grads-all-reduce .....................: (0.02, 0.03)
+    embedding-grads-all-reduce .....................: (0.02, 22.53)
+    grads-reduce-scatter ...........................: (14.65, 17.88)
+    params-all-gather ..............................: (7.44, 9.20)
+    optimizer-copy-to-main-grad ....................: (0.19, 0.25)
+    optimizer-clip-main-grad .......................: (2.01, 2.06)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (8.65, 10.32)
+    optimizer-copy-main-to-model-params ............: (2.44, 2.92)
+    optimizer ......................................: (15.49, 15.97)
+Kill on 10.64.24.50 via /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh
+*** Kill processes on 10.64.24.50
+kill: (476742): No such process
+kill: (476777): No such process
+kill: (476789): No such process
+kill: (476801): No such process
+10.64.24.50 kill done.

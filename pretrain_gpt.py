@@ -199,17 +199,41 @@ if __name__ == "__main__":
     #          ModelType.encoder_or_decoder,
     #          forward_step,
     #          args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+    
+    pretrain(train_dataset_provider,
+            model_provider,
+            ModelType.encoder_or_decoder,
+            forward_step,
+            args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+    print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7])
+    '''
     try:
         pretrain(train_dataset_provider,
                 model_provider,
                 ModelType.encoder_or_decoder,
                 forward_step,
                 args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
-        print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
-    except torch.cuda.OutOfMemoryError as e:
+        print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7])
+        print(f'rank {torch.distributed.get_rank()} done')
+    #except torch.cuda.OutOfMemoryError as e:
+    except Exception as e:
         rank = torch.distributed.get_rank()
-        print(f'rank {rank} catch {e}')
-        kill_sh = '/opt/tiger/kill.sh'
-        os.system(f"ssh worker-1 bash {kill_sh}")
-        os.system(f"bash {kill_sh}")
-        raise e
+        print(f'rank {rank} catch exception: {e}')
+        #kill_sh = '/opt/tiger/kill.sh'
+        #os.system(f"ssh worker-1 bash {kill_sh}")
+        #os.system(f"bash {kill_sh}")
+        kill_sh = '/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/kill.sh'
+        ips = ['10.64.24.93', ]
+        for ip in ips:
+            kill_cmd = f"ssh {ip} -t 'bash {kill_sh} &'"
+            print(f"killing on {ip} via {kill_cmd}")
+            os.system(kill_cmd)
+        #peer_ip = '10.64.24.96' if rank == 0 else '10.64.24.95'
+        #os.system(f"ssh {peer_ip} -t 'bash {kill_sh}'")
+        #os.system(f"bash {kill_sh}")
+        #raise e
+        print(f"rank {rank} exiting...")
+        import sys; sys.exit(1)
+    '''
+    
+
