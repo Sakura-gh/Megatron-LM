@@ -137,9 +137,11 @@ def update_statistics(seq_len, attr='packing_seq_len'):
 def get_batch(data_iterator):
     """Generate a batch."""
 
-    # TODO: this is pretty hacky, find a better way
-    if (not mpu.is_pipeline_first_stage()) and (not mpu.is_pipeline_last_stage()):
-        return None, None, None, None, None
+    # # TODO: this is pretty hacky, find a better way
+    # if (not mpu.is_pipeline_first_stage()) and (not mpu.is_pipeline_last_stage()):
+    #     return None, None, None, None, None
+
+    # every pp stage need to read data, for sequence packing related varivales
 
     args = get_args()
     tokenizer = get_tokenizer()
