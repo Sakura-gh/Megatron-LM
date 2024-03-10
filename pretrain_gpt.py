@@ -304,9 +304,19 @@ if __name__ == "__main__":
     # Temporary for transition to core datasets
     train_valid_test_datasets_provider.is_distributed = True
 
-    pretrain(train_dataset_provider,
-             model_provider,
-             ModelType.encoder_or_decoder,
-             forward_step,
-             args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
-    print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
+    try:
+        pretrain(train_dataset_provider,
+                model_provider,
+                ModelType.encoder_or_decoder,
+                forward_step,
+                args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+        print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])
+    except torch.cuda.OutOfMemoryError as e:
+        rank = torch.distributed.get_rank()
+        print(f'rank {rank} catch {e}')
+        # kill_sh = '/opt/tiger/kill.sh'
+        # os.system(f"ssh worker-1 bash {kill_sh}")
+        # just for single node
+        kill_sh = 'kill.sh'
+        os.system(f"bash {kill_sh}")
+        raise e

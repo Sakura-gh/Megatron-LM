@@ -38,8 +38,9 @@ P_P=${5:-1}
 GLOBAL_BATCH_SIZE=${6:-8}
 MICRO_BATCH_SIZE=${7:-2}
 PACK=${8:-'pack'}
-HOSTFILE=${9:-'hostfile_49_50'}
-TRAIN_ITERS=${10:-52}
+SP=${9:-'nosp'}
+HOSTFILE=${10:-'hostfile_49_50'}
+TRAIN_ITERS=${11:-52}
 
 local_ip=$(cat $HOSTFILE | head -n 1 | awk '{print $1}')
 ip_num=$( cat $HOSTFILE | wc -l )
@@ -104,6 +105,12 @@ GPT_ARGS="${GPT_ARGS} \
     --sequence-packing"
 fi
 
+if [ "${SP}" = "sp" ]; then
+echo use sequence parallel
+GPT_ARGS="${GPT_ARGS} \
+    --sequence-parallel"
+fi
+
 DATA_ARGS="
     --data-path $DATA_PATH \
     --json-file $JSON_FILE \
@@ -123,7 +130,7 @@ OUTPUT_ARGS="
 
 LOG_FOLDER=logs/gpt
 mkdir -p ${LOG_FOLDER}
-LOGFILE=${LOG_FOLDER}/gpt_megatron_gpus${NUM_GPUS}_${MODEL}_seqlen${SEQ_LEN}_gbs${GLOBAL_BATCH_SIZE}_mbs${MICRO_BATCH_SIZE}_dp${D_P}_tp${M_P}_pp${P_P}_${PACK}.log
+LOGFILE=${LOG_FOLDER}/gpt_megatron_gpus${NUM_GPUS}_${MODEL}_seqlen${SEQ_LEN}_gbs${GLOBAL_BATCH_SIZE}_mbs${MICRO_BATCH_SIZE}_dp${D_P}_tp${M_P}_pp${P_P}_${PACK}_${SP}.log
 
 # TORCHRUN pretrain_gpt.py \
 torchrun $DISTRIBUTED_ARGS pretrain_gpt.py \
