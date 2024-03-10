@@ -308,7 +308,7 @@ class GradBuffer:
                 numel = 0
                 for param in bucket.params:
                     numel += param.data.nelement()
-                logger.info(f'Params for bucket {index+1} ({numel} elements):')
+                # logger.info(f'Params for bucket {index+1} ({numel} elements):')
                 for param in bucket.params:
                     logger.info(f'    {param_to_name[param]}')
 

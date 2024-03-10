@@ -46,6 +46,35 @@ def post_language_model_processing(lm_output, labels, logit_weights,
 
 from flash_attn.bert_padding import index_first_axis, pad_input, unpad_input
 
+import torch.nn.functional as F
+from megatron.core import mpu
+def pad_to_sequence_parallel(unpad_tokens: torch.Tensor):
+    """pad the tokens such that the total length is a multiple of sp world size
+
+    Args:
+        unpad_tokens: (total_nnz, ...). Tokens after removing padding
+
+    Returns:
+
+    """
+    total_nnz = unpad_tokens.shape[0]
+    sp_world_size = mpu.get_tensor_model_parallel_world_size()
+
+    if total_nnz % sp_world_size == 0:
+        pad_size = 0
+    else:
+        pad_size = sp_world_size - total_nnz % sp_world_size
+
+    if pad_size > 0:
+        if unpad_tokens.ndim == 1:
+            unpad_tokens = F.pad(unpad_tokens, (0, pad_size))
+        elif unpad_tokens.ndim == 2:
+            unpad_tokens = F.pad(unpad_tokens, (0, 0, 0, pad_size))
+        else:
+            raise NotImplementedError(f'Padding dim {unpad_tokens.ndim()} is not supported')
+
+    return unpad_tokens
+
 class GPTModel(MegatronModule):
     """GPT-2 Language model."""
 
@@ -56,6 +85,7 @@ class GPTModel(MegatronModule):
                  pre_process=True,
                  post_process=True):
         args = get_args()
+        self.args = args
         super().__init__(config=config, share_embeddings_and_output_weights=not args.untie_embeddings_and_output_weights)
 
         self.parallel_output = parallel_output
@@ -64,6 +94,7 @@ class GPTModel(MegatronModule):
         self.fp16_lm_cross_entropy = args.fp16_lm_cross_entropy
         self.untie_embeddings_and_output_weights = args.untie_embeddings_and_output_weights
         self.sequence_packing = args.sequence_packing
+        self.sequence_parallel = args.sequence_parallel
         self.language_model, self._language_model_key = get_language_model(
             config=config,
             num_tokentypes=num_tokentypes,
@@ -88,20 +119,26 @@ class GPTModel(MegatronModule):
         if self.sequence_packing:
             batch_size, sequence_length = input_ids.shape
             # sequence packing
-            # remove padding here: (batch_size, seq_len) -> (total_nnz, 1) -> (1, total_nnz)
-            # print_ranks(f'before remove padding: input_ids shape = {input_ids.shape}, attention mask shape = {attention_mask.shape}')
+            # remove padding here: (batch_size, seq_len) -> (total_nnz, 1)
             input_ids, indices, cu_seqlens, max_seqlen_in_batch = unpad_input(input_ids.unsqueeze(dim=-1),
-                                                                              attention_mask)
-            # print_ranks(f'after remove padding: input_ids shape = {input_ids.shape}, attention mask shape = {attention_mask.shape}')                                                                          
+                                                                              attention_mask)                                                                         
             position_ids, _, _, _ = unpad_input(position_ids.unsqueeze(dim=-1), attention_mask)
+            
+            # pad input_ids to multiple of tp for all tp ranks
+            # TODO: for better performance, the sp padding should be removed at each layer. Not sure the performance gap
+            if self.sequence_parallel:
+                # (total_nnz, 1) -> (total_nnz_padded, 1)
+                input_ids = pad_to_sequence_parallel(input_ids)
+                position_ids = pad_to_sequence_parallel(position_ids)
+
+            # (total_nnz_padded, 1) -> (1, total_nnz_padded)
             input_ids = input_ids.transpose(0, 1).contiguous()
             position_ids = position_ids.transpose(0, 1).contiguous()
             # sequence packing
         else:
             sequence_length, indices, cu_seqlens, max_seqlen_in_batch = None, None, None, None
 
-        # print_ranks(f'in gpt_model before language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}')
-        # (1, total_nnz) -> (1, total_nnz, hidden_size) -> (total_nnz, 1, hidden_size)
+        # (1, total_nnz_padded) -> (1, total_nnz_padded//tp) -> (1, total_nnz_padded//tp, hidden_size) -> (total_nnz_padded//tp, 1, hidden_size)
         lm_output = self.language_model(
             input_ids,
             position_ids,
@@ -116,17 +153,23 @@ class GPTModel(MegatronModule):
             retriever_position_ids=retriever_position_ids,
             retriever_attn_mask=retriever_attn_mask,
             inference_params=inference_params)
-        # print_ranks(f'in gpt_model after language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}')            
 
         if self.post_process:
-            # label: (batch_size, seq_len)
             if self.sequence_packing:
-                # lm_output: (total_nnz, 1, hidden_size) -> (total_nnz, hidden_size) -> (batch_size, seq_len, hidden_size)
+                # remove padding from sequence parallel
+                # (total_nnz_padded//tp, 1, hidden_size) -> (total_nnz, 1, hidden_size)
+                if self.sequence_parallel:
+                    lm_output = tensor_parallel.gather_from_sequence_parallel_region(lm_output)
+                    self.args.sequence_parallel = False # workaround: avoid gather again in post process
+                    totol_nnz = cu_seqlens[-1]
+                    lm_output = lm_output[:totol_nnz]
+
+                # lm_output: (total_nnz, 1, hidden_size) -> (total_nnz, hidden_size)
                 lm_output = torch.squeeze(lm_output, dim=1) # remove the artificial batch dimension
+                # (total_nnz, hidden_size) -> (batch_size, seq_len, hidden_size)
                 lm_output = pad_input(lm_output, indices, batch_size, sequence_length)
                 # (batch_size, seq_len, hidden_size) -> (seq_len, batch_size, hidden_size)
                 lm_output = lm_output.transpose(0, 1).contiguous()
-                # print_ranks(f'in gpt_model before loss: lm_output.shape={lm_output.shape}, labels.shape={labels.shape}\n')
             return post_language_model_processing(
                 lm_output, labels,
                 self.language_model.output_layer.weight if self.untie_embeddings_and_output_weights else self.shared_embedding_or_output_weight(),

@@ -805,6 +805,13 @@ class ParallelAttention(MegatronModule):
                 assert indices is not None, 'sequence packing requires indices must not be None!'
                 # use sequence packing
                 # [total_nnz, 1, np, hn] -> [total_nnz, np, hn] 
+                if self.sequence_parallel:
+                    total_nnz = query_layer.shape[0]
+                    sequence_parallel_pad = total_nnz - cu_seqlens[-1]
+                    total_nnz = cu_seqlens[-1]
+                    query_layer = query_layer[:total_nnz]
+                    key_layer = key_layer[:total_nnz]
+                    value_layer = value_layer[:total_nnz]
                 query_layer = torch.squeeze(query_layer, dim=1)
                 key_layer = torch.squeeze(key_layer, dim=1)
                 value_layer = torch.squeeze(value_layer, dim=1)
@@ -823,6 +830,8 @@ class ParallelAttention(MegatronModule):
                 # [total_nnz, np, hn] -> [total_nnz, 1, hidden_size]
                 total_nnz, np, hn = attn_output_unpad.shape
                 context_layer = attn_output_unpad.reshape(total_nnz, 1, np*hn).contiguous()
+                if self.sequence_parallel:
+                    context_layer = F.pad(context_layer, pad=(0, 0, 0, 0, 0, sequence_parallel_pad))
             else:
                 q, k, v = [rearrange(x, 's b ... -> b s ...').contiguous()
                         for x in (query_layer, key_layer, value_layer)]
