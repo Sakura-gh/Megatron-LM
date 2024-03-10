@@ -29,6 +29,8 @@ from megatron.core.models.gpt.gpt_layer_specs import (
     get_gpt_layer_with_transformer_engine_spec,
     gpt_layer_with_transformer_engine_spec_moe
 )
+from gpt_seq_dataset import GPTJsonDataset, get_mask_and_position_ids
+from megatron.model.gpt_model import print_ranks
 
 def model_provider(pre_process=True, post_process=True) -> Union[GPTModel, megatron.model.GPTModel]:
     """Builds the model.
@@ -83,6 +85,54 @@ def model_provider(pre_process=True, post_process=True) -> Union[GPTModel, megat
 
     return model
 
+statistics = {
+    'packing_seq_len': {
+        '128': 0,
+        '256': 0,
+        '512': 0,
+        '1024': 0,
+        '2048': 0,
+        '4096': 0,
+        '8192': 0,
+        '16384': 0,
+        '32768': 0,
+        '>32k': 0
+    },
+    'real_seq_len': {
+        '128': 0,
+        '256': 0,
+        '512': 0,
+        '1024': 0,
+        '2048': 0,
+        '4096': 0,
+        '8192': 0,
+        '16384': 0,
+        '32768': 0,
+        '>32k': 0
+    }    
+}
+
+def update_statistics(seq_len, attr='packing_seq_len'):
+    if seq_len <= 128:
+        statistics[attr]['128'] += 1
+    elif seq_len <= 256:
+        statistics[attr]['256'] += 1
+    elif seq_len <= 512:
+        statistics[attr]['512'] += 1
+    elif seq_len <= 1024:
+        statistics[attr]['1024'] += 1
+    elif seq_len <= 2048:
+        statistics[attr]['2048'] += 1
+    elif seq_len <= 4096:
+        statistics[attr]['4096'] += 1
+    elif seq_len <= 8192:
+        statistics[attr]['8192'] += 1
+    elif seq_len <= 16384:
+        statistics[attr]['16384'] += 1
+    elif seq_len <= 32768:
+        statistics[attr]['32768'] += 1
+    else:
+        statistics[attr]['>32k'] += 1
 
 def get_batch(data_iterator):
     """Generate a batch."""
@@ -94,29 +144,45 @@ def get_batch(data_iterator):
     args = get_args()
     tokenizer = get_tokenizer()
 
-    # Items and their type.
-    keys = ['text']
-    datatype = torch.int64
+    # # Items and their type.
+    # keys = ['text']
+    # datatype = torch.int64
 
     # Broadcast data.
     if data_iterator is not None:
         data = next(data_iterator)
     else:
         data = None
-    data_b = tensor_parallel.broadcast_data(keys, data, datatype)
+    # data_b = tensor_parallel.broadcast_data(keys, data, datatype)
+    datatype = torch.int64
+    data = tensor_parallel.broadcast_data(data, datatype)
 
     # Unpack.
-    tokens_ = data_b['text'].long()
+    # tokens_ = data_b['text'].long()
+    tokens_ = data.long()
     labels = tokens_[:, 1:].contiguous()
     tokens = tokens_[:, :-1].contiguous()
 
-    # Get the masks and postition ids.
-    attention_mask, loss_mask, position_ids = get_ltor_masks_and_position_ids(
-        tokens,
-        tokenizer.eod,
-        args.reset_position_ids,
-        args.reset_attention_mask,
-        args.eod_mask_loss)
+    # # Get the masks and postition ids.
+    # attention_mask, loss_mask, position_ids = get_ltor_masks_and_position_ids(
+    #     tokens,
+    #     tokenizer.eod,
+    #     args.reset_position_ids,
+    #     args.reset_attention_mask,
+    #     args.eod_mask_loss)
+
+    attention_mask, position_ids = get_mask_and_position_ids(tokens, tokenizer.pad)
+    attention_mask = attention_mask.cuda()
+    position_ids = position_ids.cuda()
+    loss_mask = torch.ones(tokens.size(), dtype=torch.float).cuda()
+
+    # statistics for analysis
+    packing_seq_len = attention_mask.eq(True).sum().item()
+    update_statistics(packing_seq_len, 'packing_seq_len')
+
+    real_seq_len_list = attention_mask.eq(True).sum(dim=1).tolist()
+    for real_seq_len in real_seq_len_list:
+        update_statistics(real_seq_len, 'real_seq_len')
 
     batch = {
         'tokens': tokens,
@@ -221,14 +287,26 @@ def train_valid_test_datasets_provider(train_val_test_num_samples):
 
     return train_ds, valid_ds, test_ds
 
+def train_dataset_provider():
+    """Build train dataset."""
+    args = get_args()
+    train_dataset = GPTJsonDataset(
+        json_file=args.json_file,
+        key=args.json_key,
+        max_seq_len=args.seq_length,
+        vocab_file=args.vocab_file,
+        merge_file=args.merge_file)
+    
+    return train_dataset
 
 if __name__ == "__main__":
 
     # Temporary for transition to core datasets
     train_valid_test_datasets_provider.is_distributed = True
 
-    pretrain(train_valid_test_datasets_provider,
+    pretrain(train_dataset_provider,
              model_provider,
              ModelType.encoder_or_decoder,
              forward_step,
              args_defaults={'tokenizer_type': 'GPT2BPETokenizer'})
+    print_ranks(f'{statistics}', [0,1,2,3,4,5,6,7,8])

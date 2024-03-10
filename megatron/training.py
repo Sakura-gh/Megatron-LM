@@ -3,6 +3,7 @@
 """Pretrain utilities."""
 
 import gc
+import os
 from datetime import datetime
 import math
 import logging
@@ -56,7 +57,7 @@ def print_datetime(string):
     print_rank_0('[' + string + '] datetime: {} '.format(time_str))
 
 
-def pretrain(train_valid_test_dataset_provider,
+def pretrain(train_dataset_provider,
              model_provider,
              model_type,
              forward_step_func,
@@ -125,21 +126,20 @@ def pretrain(train_valid_test_dataset_provider,
     # Data stuff.
     timers('train/valid/test-data-iterators-setup', log_level=0).start(
         barrier=True)
-    if args.virtual_pipeline_model_parallel_size is not None:
-        train_data_iterator = []
-        valid_data_iterator = []
-        test_data_iterator = []
-        for i in range(len(model)):
-            mpu.set_virtual_pipeline_model_parallel_rank(i)
-            iterators = build_train_valid_test_data_iterators(
-                train_valid_test_dataset_provider)
-            train_data_iterator.append(iterators[0])
-            valid_data_iterator.append(iterators[1])
-            test_data_iterator.append(iterators[2])
-    else:
-        train_data_iterator, valid_data_iterator, test_data_iterator \
-            = build_train_valid_test_data_iterators(
-                train_valid_test_dataset_provider)
+    # Data loader only on rank 0 of each model parallel group.
+    train_dataloader = None
+    train_data_iterator = None
+    valid_data_iterator = None
+    args.do_train = True
+    args.do_valid = False
+    if mpu.get_tensor_model_parallel_rank() == 0:
+        train_dataset = train_dataset_provider()
+        # train_dataloader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+        print(f'consumed_train_samples = {args.consumed_train_samples}, dataloader_type = {args.dataloader_type}')
+        assert args.dataloader_type == 'single', 'only support single dataloader type!'
+        train_dataloader = build_pretraining_data_loader(train_dataset, args.consumed_train_samples)
+        train_data_iterator = iter(train_dataloader)
+
     timers('train/valid/test-data-iterators-setup').stop()
     print_datetime('after dataloaders are built')
 
@@ -170,20 +170,6 @@ def pretrain(train_valid_test_dataset_provider,
         print_rank_0('skipping training (--skip-train is on) ...')
 
         iteration = args.iteration
-
-    if args.do_valid:
-        prefix = f'iteration {iteration} on validation set'
-        evaluate_and_print_results(prefix, forward_step_func,
-                                   valid_data_iterator, model,
-                                   iteration, process_non_loss_data_func, config,
-                                   verbose=True, write_to_tensorboard=not args.skip_train)
-
-    if args.do_test:
-        prefix = f'iteration {iteration} on test set'
-        evaluate_and_print_results(prefix, forward_step_func,
-                                   test_data_iterator, model,
-                                   iteration, process_non_loss_data_func, config,
-                                   verbose=True, write_to_tensorboard=not args.skip_train)
 
 
 def update_train_iters(args):
@@ -625,6 +611,12 @@ def training_log(loss_dict, total_loss_dict, learning_rate, iteration,
                 iteration,
             )
 
+    if (iteration == 6 or iteration == args.train_iters - 1) \
+        and mpu.get_pipeline_model_parallel_rank() == 0 \
+        and mpu.get_data_parallel_rank() == 0 \
+        and mpu.get_tensor_model_parallel_rank() == 0:
+        print(f'device {torch.cuda.current_device()}: print cuda memory usage: ')
+        os.system('nvidia-smi')
     if iteration % args.log_interval == 0:
         elapsed_time = timers('interval-time').elapsed(barrier=True)
         elapsed_time_per_iteration = elapsed_time / total_iterations
@@ -776,21 +768,6 @@ def train(forward_step_func, model, optimizer, opt_param_scheduler,
            (iteration % args.adlr_autoresume_interval == 0):
             check_adlr_autoresume_termination(iteration, model, optimizer,
                                               opt_param_scheduler)
-
-        # Evaluation
-        if args.eval_interval and iteration % args.eval_interval == 0 and \
-           args.do_valid:
-            if args.manual_gc and args.manual_gc_eval:
-                # Collect all objects.
-                gc.collect()
-            prefix = 'iteration {}'.format(iteration)
-            evaluate_and_print_results(prefix, forward_step_func,
-                                       valid_data_iterator, model,
-                                       iteration, process_non_loss_data_func,
-                                       config, False)
-            if args.manual_gc and args.manual_gc_eval:
-                # Collect only the objects created and used in evaluation.
-                gc.collect(generation=0)
 
         # Checkpointing
         saved_checkpoint = False

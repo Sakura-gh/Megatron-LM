@@ -102,3 +102,81 @@ def broadcast_data(keys, data, datatype):
         offset += numel
 
     return output
+
+
+def _build_size_numel_dictionaries(data):
+    """Build the size on rank 0 and broadcast."""
+    max_dim = _MAX_DATA_DIM
+    sizes = [0 for _ in range(max_dim)]
+
+    # Pack the sizes on rank zero.
+    if get_tensor_model_parallel_rank() == 0:
+        offset = 0
+        assert data.dim() < max_dim, 'you should increase MAX_DATA_DIM'
+        size = data.size()
+        for i, s in enumerate(size):
+            sizes[i + offset] = s
+        offset += max_dim
+
+    # Move to GPU and broadcast.
+    sizes_cuda = torch.cuda.LongTensor(sizes)
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+                                group=get_tensor_model_parallel_group())
+
+    # Move back to cpu and unpack.
+    sizes_cpu = sizes_cuda.cpu()
+    total_size = {}
+    total_numel = {}
+    total_numel = 0
+    offset = 0
+
+    i = 0
+    size = []
+    numel = 1
+    while sizes_cpu[offset + i] > 0:
+        this_size = sizes_cpu[offset + i]
+        size.append(this_size)
+        numel *= this_size
+        i += 1
+    total_size = size
+    total_numel = numel
+    offset += max_dim
+
+    return total_size, total_numel
+
+def broadcast_data(data, datatype):
+    """Broadcast data from rank zero of each model parallel group to the
+    members of the same model parallel group.
+    Arguments:
+        keys: list of keys in the data disctionary to be broadcasted
+        data: data dictionary of string keys and cpu tensor values.
+        datatype: torch data type of all tensors in data associated
+                  with keys.
+    """
+    # Build (key, size) and (key, number of elements) dictionaries along
+    # with the total number of elements on all ranks.
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+
+    # Pack on rank zero.
+    if get_tensor_model_parallel_rank() == 0:
+        assert data.dtype == datatype, f'data type {data.dtype} should equal to {datatype}'
+        # Flatten the data associated with the keys
+        flatten_data = data.contiguous().view(-1).cuda()
+    else:
+        flatten_data = torch.empty(total_numel,
+                                   device=torch.cuda.current_device(),
+                                   dtype=datatype)
+
+    # Broadcast
+    torch.distributed.broadcast(flatten_data, get_tensor_model_parallel_src_rank(),
+                                group=get_tensor_model_parallel_group())
+
+    # Unpack
+    output = {}
+    offset = 0
+    size = total_size
+    numel = total_numel
+    output = flatten_data.narrow(0, offset, numel).view(size)
+    offset += numel
+
+    return output

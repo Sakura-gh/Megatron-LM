@@ -12,6 +12,11 @@ from .enums import AttnMaskType
 from .language_model import parallel_lm_logits
 from .language_model import get_language_model
 
+def print_ranks(message, ranks=[0]):
+    if torch.distributed.is_initialized():
+        local_rank = torch.distributed.get_rank()
+        if local_rank in ranks:
+            print(f'rank {local_rank}: {message}', flush=True)
 
 def post_language_model_processing(lm_output, labels, logit_weights,
                                    parallel_output,
@@ -39,6 +44,7 @@ def post_language_model_processing(lm_output, labels, logit_weights,
         loss = loss.transpose(0,1).contiguous()
         return loss
 
+from flash_attn.bert_padding import index_first_axis, pad_input, unpad_input
 
 class GPTModel(MegatronModule):
     """GPT-2 Language model."""
@@ -57,7 +63,7 @@ class GPTModel(MegatronModule):
         self.post_process = post_process
         self.fp16_lm_cross_entropy = args.fp16_lm_cross_entropy
         self.untie_embeddings_and_output_weights = args.untie_embeddings_and_output_weights
-
+        self.sequence_packing = args.sequence_packing
         self.language_model, self._language_model_key = get_language_model(
             config=config,
             num_tokentypes=num_tokentypes,
@@ -79,16 +85,48 @@ class GPTModel(MegatronModule):
                 retriever_attn_mask=None,
                 labels=None, tokentype_ids=None, inference_params=None):
 
+        if self.sequence_packing:
+            batch_size, sequence_length = input_ids.shape
+            # sequence packing
+            # remove padding here: (batch_size, seq_len) -> (total_nnz, 1) -> (1, total_nnz)
+            # print_ranks(f'before remove padding: input_ids shape = {input_ids.shape}, attention mask shape = {attention_mask.shape}')
+            input_ids, indices, cu_seqlens, max_seqlen_in_batch = unpad_input(input_ids.unsqueeze(dim=-1),
+                                                                              attention_mask)
+            # print_ranks(f'after remove padding: input_ids shape = {input_ids.shape}, attention mask shape = {attention_mask.shape}')                                                                          
+            position_ids, _, _, _ = unpad_input(position_ids.unsqueeze(dim=-1), attention_mask)
+            input_ids = input_ids.transpose(0, 1).contiguous()
+            position_ids = position_ids.transpose(0, 1).contiguous()
+            # sequence packing
+        else:
+            sequence_length, indices, cu_seqlens, max_seqlen_in_batch = None, None, None, None
+
+        # print_ranks(f'in gpt_model before language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}')
+        # (1, total_nnz) -> (1, total_nnz, hidden_size) -> (total_nnz, 1, hidden_size)
         lm_output = self.language_model(
             input_ids,
             position_ids,
             attention_mask,
+            # for flash-attn sequence packing
+            sequence_length=sequence_length,
+            indices=indices,
+            cu_seqlens=cu_seqlens,
+            max_seqlen_in_batch=max_seqlen_in_batch,
+            # for flash-attn sequence packing
             retriever_input_ids=retriever_input_ids,
             retriever_position_ids=retriever_position_ids,
             retriever_attn_mask=retriever_attn_mask,
             inference_params=inference_params)
+        # print_ranks(f'in gpt_model after language_model: input_ids.shape = {input_ids.shape}, position_ids.shape = {position_ids.shape}')            
 
         if self.post_process:
+            # label: (batch_size, seq_len)
+            if self.sequence_packing:
+                # lm_output: (total_nnz, 1, hidden_size) -> (total_nnz, hidden_size) -> (batch_size, seq_len, hidden_size)
+                lm_output = torch.squeeze(lm_output, dim=1) # remove the artificial batch dimension
+                lm_output = pad_input(lm_output, indices, batch_size, sequence_length)
+                # (batch_size, seq_len, hidden_size) -> (seq_len, batch_size, hidden_size)
+                lm_output = lm_output.transpose(0, 1).contiguous()
+                # print_ranks(f'in gpt_model before loss: lm_output.shape={lm_output.shape}, labels.shape={labels.shape}\n')
             return post_language_model_processing(
                 lm_output, labels,
                 self.language_model.output_layer.weight if self.untie_embeddings_and_output_weights else self.shared_embedding_or_output_weight(),

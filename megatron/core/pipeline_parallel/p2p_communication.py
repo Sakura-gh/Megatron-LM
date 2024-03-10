@@ -6,7 +6,8 @@ from typing import Callable, List, Optional, Tuple, Union
 
 import torch
 
-from megatron import core
+from megatron import core, get_args
+from megatron.model.gpt_model import print_ranks
 from megatron.core import ModelParallelConfig
 from megatron.core.parallel_state import (
     get_pipeline_model_parallel_group,
@@ -130,32 +131,28 @@ def _batched_p2p_ops(
         send_prev_op = torch.distributed.P2POp(
             torch.distributed.isend,
             tensor_send_prev,
-            get_pipeline_model_parallel_prev_rank(),
-            group,
+            get_pipeline_model_parallel_prev_rank()
         )
         ops.append(send_prev_op)
     if tensor_recv_prev is not None:
         recv_prev_op = torch.distributed.P2POp(
             torch.distributed.irecv,
             tensor_recv_prev,
-            get_pipeline_model_parallel_prev_rank(),
-            group,
+            get_pipeline_model_parallel_prev_rank()
         )
         ops.append(recv_prev_op)
     if tensor_send_next is not None:
         send_next_op = torch.distributed.P2POp(
             torch.distributed.isend,
             tensor_send_next,
-            get_pipeline_model_parallel_next_rank(),
-            group,
+            get_pipeline_model_parallel_next_rank()
         )
         ops.append(send_next_op)
     if tensor_recv_next is not None:
         recv_next_op = torch.distributed.P2POp(
             torch.distributed.irecv,
             tensor_recv_next,
-            get_pipeline_model_parallel_next_rank(),
-            group,
+            get_pipeline_model_parallel_next_rank()
         )
         ops.append(recv_next_op)
     if len(ops) > 0:

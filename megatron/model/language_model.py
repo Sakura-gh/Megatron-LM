@@ -340,6 +340,7 @@ class TransformerLanguageModel(MegatronModule):
         if args.untie_embeddings_and_output_weights: assert not add_decoder
         super(TransformerLanguageModel, self).__init__(share_embeddings_and_output_weights=not args.untie_embeddings_and_output_weights)
 
+        self.sequence_packing = args.sequence_packing
         self.pre_process = pre_process
         self.post_process = post_process
         self.hidden_size = config.hidden_size
@@ -454,6 +455,10 @@ class TransformerLanguageModel(MegatronModule):
             raise Exception('Stage must have at least either encoder or decoder')
 
     def forward(self, enc_input_ids, enc_position_ids, enc_attn_mask,
+                sequence_length: int = None,
+                indices: torch.Tensor = None,
+                cu_seqlens: int = None,
+                max_seqlen_in_batch: int = None,
                 dec_input_ids=None, dec_position_ids=None, dec_attn_mask=None,
                 retriever_input_ids=None,
                 retriever_position_ids=None,
@@ -485,7 +490,10 @@ class TransformerLanguageModel(MegatronModule):
                 rotary_pos_emb = \
                     self.rotary_pos_emb(inference_params.max_sequence_length)
             else:
-                rotary_pos_emb = self.rotary_pos_emb(self.seq_length)
+                if self.sequence_packing:
+                    rotary_pos_emb = self.rotary_pos_emb(enc_input_ids.shape[-1])
+                else:
+                    rotary_pos_emb = self.rotary_pos_emb(self.seq_length)
 
         # Run encoder.
         if enc_hidden_states is None:
@@ -493,6 +501,12 @@ class TransformerLanguageModel(MegatronModule):
                 encoder_output = self.encoder(
                     encoder_input,
                     enc_attn_mask,
+                    # for flash-attn sequence packing
+                    sequence_length=sequence_length,
+                    indices=indices,
+                    cu_seqlens=cu_seqlens,
+                    max_seqlen_in_batch=max_seqlen_in_batch,
+                    # for flash-attn sequence packing
                     retriever_input=retriever_input,
                     retriever_attn_mask=retriever_attn_mask,
                     inference_params=inference_params,

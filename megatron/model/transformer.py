@@ -507,6 +507,7 @@ class ParallelAttention(MegatronModule):
         self.attn_mask_type = attn_mask_type
         self.params_dtype = config.params_dtype
         self.sequence_parallel = config.sequence_parallel
+        self.sequence_packing = args.sequence_packing
 
         self.group_query_attention = args.group_query_attention
         self.num_query_groups = args.num_query_groups
@@ -631,6 +632,10 @@ class ParallelAttention(MegatronModule):
             device=torch.cuda.current_device())
 
     def forward(self, hidden_states, attention_mask,
+                sequence_length: int = None,
+                indices: torch.Tensor = None,
+                cu_seqlens: torch.Tensor = None,
+                max_seqlen_in_batch: int = None,
                 encoder_output=None, inference_params=None,
                 rotary_pos_emb=None):
         # hidden_states: [sq, b, h]
@@ -796,14 +801,37 @@ class ParallelAttention(MegatronModule):
                 context_layer = self.core_attention(
                     query_layer, key_layer, value_layer, attention_mask)
         else:
-            q, k, v = [rearrange(x, 's b ... -> b s ...').contiguous()
-                       for x in (query_layer, key_layer, value_layer)]
-            if not self.sequence_parallel:
-                with tensor_parallel.get_cuda_rng_tracker().fork():
-                    context_layer = self.core_attention_flash(q, k, v)
+            if self.sequence_packing:
+                assert indices is not None, 'sequence packing requires indices must not be None!'
+                # use sequence packing
+                # [total_nnz, 1, np, hn] -> [total_nnz, np, hn] 
+                query_layer = torch.squeeze(query_layer, dim=1)
+                key_layer = torch.squeeze(key_layer, dim=1)
+                value_layer = torch.squeeze(value_layer, dim=1)
+                attn_output_unpad = flash_attn_unpadded_func(
+                    query_layer,
+                    key_layer,
+                    value_layer,
+                    cu_seqlens_q=cu_seqlens,
+                    cu_seqlens_k=cu_seqlens,
+                    max_seqlen_q=max_seqlen_in_batch,
+                    max_seqlen_k=max_seqlen_in_batch,
+                    # dropout_p=dropout_rate,
+                    softmax_scale=None,
+                    causal=True,
+                )
+                # [total_nnz, np, hn] -> [total_nnz, 1, hidden_size]
+                total_nnz, np, hn = attn_output_unpad.shape
+                context_layer = attn_output_unpad.reshape(total_nnz, 1, np*hn).contiguous()
             else:
-                context_layer = self.core_attention_flash(q, k, v)
-            context_layer = rearrange(context_layer, 'b s h d -> s b (h d)').contiguous()
+                q, k, v = [rearrange(x, 's b ... -> b s ...').contiguous()
+                        for x in (query_layer, key_layer, value_layer)]
+                if not self.sequence_parallel:
+                    with tensor_parallel.get_cuda_rng_tracker().fork():
+                        context_layer = self.core_attention_flash(q, k, v)
+                else:
+                    context_layer = self.core_attention_flash(q, k, v)
+                context_layer = rearrange(context_layer, 'b s h d -> s b (h d)').contiguous()
 
         # =================
         # Output. [sq, b, h]
@@ -1133,7 +1161,11 @@ class ParallelTransformerLayer(MegatronModule):
 
         return retriever_output, norm_input, norm_output
 
-    def forward(self, hidden_states, attention_mask,
+    def forward(self, hidden_states, attention_mask=None,
+                sequence_length: int = None,
+                indices: torch.Tensor = None,
+                cu_seqlens: int = None,
+                max_seqlen_in_batch: int = None,
                 encoder_output=None, enc_dec_attn_mask=None,
                 retriever_input=None,
                 retriever_output=None,
@@ -1150,6 +1182,12 @@ class ParallelTransformerLayer(MegatronModule):
             self.self_attention(
                 norm_output,
                 attention_mask,
+                # for flash-attn sequence packing
+                sequence_length=sequence_length,
+                indices=indices,
+                cu_seqlens=cu_seqlens,
+                max_seqlen_in_batch=max_seqlen_in_batch,
+                # for flash-attn sequence packing
                 inference_params=inference_params,
                 rotary_pos_emb=rotary_pos_emb)
 
@@ -1670,6 +1708,10 @@ class ParallelTransformer(MegatronModule):
         self.input_tensor = input_tensor
 
     def forward(self, hidden_states, attention_mask,
+                sequence_length: int = None,
+                indices: torch.Tensor = None,
+                cu_seqlens: int = None,
+                max_seqlen_in_batch: int = None,
                 encoder_output=None, enc_dec_attn_mask=None,
                 retriever_input=None,
                 retriever_output=None,
@@ -1761,6 +1803,12 @@ class ParallelTransformer(MegatronModule):
                         hidden_states = layer(
                             hidden_states,
                             attention_mask,
+                            # for flash-attn sequence packing
+                            sequence_length=sequence_length,
+                            indices=indices,
+                            cu_seqlens=cu_seqlens,
+                            max_seqlen_in_batch=max_seqlen_in_batch,
+                            # for flash-attn sequence packing,
                             **forward_kwargs)
 
                         # First Retro decoder layer returns both hidden_states
