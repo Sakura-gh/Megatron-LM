@@ -3,7 +3,22 @@
 # export CUDA_DEVICE_MAX_CONNECTIONS=1
 export NCCL_DEBUG=VERSION
 
-ROOT_FOLDER=/opt/tiger/test/data
+export CUDA_DEVICE_MAX_CONNECTIONS=1
+export NCCL_NVLS_ENABLE=0
+export NCCL_DEBUG=WARN
+export NCCL_SOCKET_IFNAME=bond0
+export GLOO_SOCKET_IFNAME=bond0
+export NCCL_IB_DISABLE=0
+export NCCL_IB_HCA=mlx5_0,mlx5_1,mlx5_2,mlx5_5,mlx5_6,mlx5_7,mlx5_8,mlx5_11
+export NCCL_NET_GDR_READ=1
+export NCCL_IB_GID_INDEX=3
+export NCCL_NET_GDR_LEVEL=2
+export NCCL_IB_QPS_PER_CONNECTION=4
+export NCCL_IB_TC=160
+export NCCL_IB_TIMEOUT=22
+export NCCL_PXN_DISABLE=0
+
+ROOT_FOLDER=/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data
 JSON_FILE=${ROOT_FOLDER}/web/refinedweb0.json
 JSON_KEY=content
 VOCAB_FILE=${ROOT_FOLDER}/vocab.json
@@ -46,22 +61,19 @@ MICRO_BATCH_SIZE=${7:-2}
 PACK=${8:-'pack'}
 SP=${9:-'nosp'}
 HOSTFILE=${10:-'hostfile_49_50'}
-TRAIN_ITERS=${11:-52}
+TRAIN_ITERS=${11:-32}
 
-local_ip=$(cat $HOSTFILE | head -n 1 | awk '{print $1}')
-ip_num=$( cat $HOSTFILE | wc -l )
-gpus_per_ip=$( cat $HOSTFILE | head -n 1 | awk -F 'slots=' '{print $2}' )
-
-echo local_ip = $local_ip, ip_num = $ip_num, gpus_per_ip = $gpus_per_ip
-
-GPUS_PER_NODE=$gpus_per_ip
-# Change for multinode config
-MASTER_ADDR=$local_ip
+LOCAL_IP=$(ifconfig bond0 | grep 'inet ' | awk '{print $2}' | cut -d':' -f2)
+MASTER_ADDR=$(cat $HOSTFILE | head -n 1 | awk '{print $1}')
 MASTER_PORT=60066
-NNODES=$ip_num
-NODE_RANK=0
+
+NNODES=$(cat ${HOSTFILE} | wc -l)
+LOCAL_RANK=$(grep -n "\b$LOCAL_IP\b" ${HOSTFILE} | cut -d ':' -f1)
+NODE_RANK=$(($LOCAL_RANK - 1))
+GPUS_PER_NODE=$( cat $HOSTFILE | head -n 1 | awk -F 'slots=' '{print $2}' )
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
-NUM_GPUS=$WORLD_SIZE
+
+echo local_ip = $LOCAL_IP, master_ip = $MASTER_ADDR, nodes_num = $NNODES, gpus_num = $WORLD_SIZE, node_rank = $NODE_RANK
 
 echo use llama ${MODEL} model, gpu_num=${WORLD_SIZE}, seq_len = ${SEQ_LEN}, DP=${D_P}, MP=${M_P}, PP=${P_P}, GBS=${GLOBAL_BATCH_SIZE}, MBS=${MICRO_BATCH_SIZE}
 
@@ -130,6 +142,7 @@ fi
 
 if [ "${SP}" = "sp" ]; then
 echo use sequence parallel
+export CUDA_DEVICE_MAX_CONNECTIONS=1
 GPT_ARGS="${GPT_ARGS} \
     --sequence-parallel"
 fi
@@ -153,7 +166,7 @@ OUTPUT_ARGS="
 
 LOG_FOLDER=logs/llama
 mkdir -p ${LOG_FOLDER}
-LOGFILE=${LOG_FOLDER}/llama_megatron_gpus${NUM_GPUS}_${MODEL}_seqlen${SEQ_LEN}_gbs${GLOBAL_BATCH_SIZE}_mbs${MICRO_BATCH_SIZE}_dp${D_P}_tp${M_P}_pp${P_P}_${PACK}_${SP}.log
+LOGFILE=${LOG_FOLDER}/llama_megatron_gpus${WORLD_SIZE}_${MODEL}_seqlen${SEQ_LEN}_gbs${GLOBAL_BATCH_SIZE}_mbs${MICRO_BATCH_SIZE}_dp${D_P}_tp${M_P}_pp${P_P}_${PACK}_${SP}.log
 
 # TORCHRUN pretrain_gpt.py \
 torchrun $DISTRIBUTED_ARGS pretrain_gpt.py \
