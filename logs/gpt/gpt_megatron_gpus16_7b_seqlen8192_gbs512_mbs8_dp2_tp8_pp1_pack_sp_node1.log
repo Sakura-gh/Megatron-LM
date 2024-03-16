@@ -1,0 +1,129 @@
+[2024-03-11 18:14:29,141] torch.distributed.run: [WARNING] 
+[2024-03-11 18:14:29,141] torch.distributed.run: [WARNING] *****************************************
+[2024-03-11 18:14:29,141] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-03-11 18:14:29,141] torch.distributed.run: [WARNING] *****************************************
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  4.868 s
+Cutting or padding data to max_seq_len + 1 = 8193 begin ...
+Cutting or padding data end, time cost:  10.546 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (472.45, 499.37)
+    train/valid/test-data-iterators-setup ..........: (0.02, 15733.66)
+NCCL version 2.19.3+cuda12.2
+ iteration       10/      32 | consumed samples:         5120 | elapsed time per iteration (ms): 6881.3 | learning rate: 4.687E-07 | global batch size:   512 | lm loss: 1.090235E+01 | loss scale: 1.0 | grad norm: 28.625 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (6579.78, 6610.99)
+    forward-compute ................................: (3660.66, 3959.48)
+    backward-compute ...............................: (2602.87, 2934.83)
+    batch-generator ................................: (689.41, 714.98)
+    layernorm-grads-all-reduce .....................: (2.49, 3.13)
+    embedding-grads-all-reduce .....................: (0.03, 0.05)
+    all-grads-sync .................................: (123.49, 130.00)
+    params-all-gather ..............................: (22.11, 22.38)
+    optimizer-copy-to-main-grad ....................: (1.05, 1.35)
+    optimizer-clip-main-grad .......................: (6.12, 6.15)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (5.25, 5.59)
+    optimizer-copy-main-to-model-params ............: (2.09, 2.29)
+    optimizer ......................................: (38.08, 38.35)
+ iteration       20/      32 | consumed samples:        10240 | elapsed time per iteration (ms): 5158.1 | learning rate: 9.375E-07 | global batch size:   512 | lm loss: 1.086236E+01 | loss scale: 1.0 | grad norm: 92.384 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (5055.15, 5068.93)
+    forward-compute ................................: (2514.26, 2704.95)
+    backward-compute ...............................: (2344.09, 2528.12)
+    batch-generator ................................: (36.84, 47.43)
+    layernorm-grads-all-reduce .....................: (2.40, 2.83)
+    embedding-grads-all-reduce .....................: (0.03, 0.03)
+    all-grads-sync .................................: (38.92, 39.60)
+    params-all-gather ..............................: (22.21, 22.37)
+    optimizer-copy-to-main-grad ....................: (1.02, 1.31)
+    optimizer-clip-main-grad .......................: (3.21, 3.24)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (5.02, 5.14)
+    optimizer-copy-main-to-model-params ............: (2.09, 2.29)
+    optimizer ......................................: (34.85, 35.01)
+ iteration       30/      32 | consumed samples:        15360 | elapsed time per iteration (ms): 6571.3 | learning rate: 1.406E-06 | global batch size:   512 | lm loss: 1.074106E+01 | loss scale: 1.0 | grad norm: 8.931 | number of skipped iterations:   0 | number of nan iterations:   0 |
+(min, max) time across ranks (ms):
+    forward-backward ...............................: (6448.90, 6484.99)
+    forward-compute ................................: (3709.88, 3852.91)
+    backward-compute ...............................: (2594.06, 2743.97)
+    batch-generator ................................: (38.30, 50.59)
+    layernorm-grads-all-reduce .....................: (2.41, 2.93)
+    embedding-grads-all-reduce .....................: (0.02, 0.03)
+    all-grads-sync .................................: (38.84, 39.43)
+    params-all-gather ..............................: (22.21, 22.38)
+    optimizer-copy-to-main-grad ....................: (1.03, 1.31)
+    optimizer-clip-main-grad .......................: (3.23, 3.25)
+    optimizer-count-zeros ..........................: (0.01, 0.01)
+    optimizer-inner-step ...........................: (5.03, 5.12)
+    optimizer-copy-main-to-model-params ............: (2.09, 2.25)
+    optimizer ......................................: (34.67, 34.84)
+rank 8: {'packing_seq_len': {'128': 0, '256': 0, '512': 0, '1024': 5, '2048': 97, '4096': 422, '8192': 361, '16384': 129, '32768': 10, '>32k': 0}, 'real_seq_len': {'128': 1815, '256': 1868, '512': 1862, '1024': 1501, '2048': 703, '4096': 267, '8192': 176, '16384': 0, '32768': 0, '>32k': 0}}

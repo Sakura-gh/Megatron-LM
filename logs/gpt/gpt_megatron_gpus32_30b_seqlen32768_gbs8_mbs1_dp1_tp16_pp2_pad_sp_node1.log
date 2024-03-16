@@ -1,0 +1,109 @@
+[2024-03-13 13:17:07,752] torch.distributed.run: [WARNING] 
+[2024-03-13 13:17:07,752] torch.distributed.run: [WARNING] *****************************************
+[2024-03-13 13:17:07,752] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-03-13 13:17:07,752] torch.distributed.run: [WARNING] *****************************************
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+NCCL version 2.19.3+cuda12.2
+ > number of parameters on (tensor, pipeline) model parallel rank (14, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (10, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (9, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (11, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (13, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (15, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (12, 0): 1242867666
+ > number of parameters on (tensor, pipeline) model parallel rank (8, 0): 1242867666
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[Rank 13] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50936.31640625 | reserved: 60164.0 | max reserved: 77954.0[Rank 15] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50951.421875 | reserved: 59740.0 | max reserved: 77952.0
+[Rank 8] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50925.890625 | reserved: 58704.0 | max reserved: 77954.0
+[Rank 14] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50930.453125 | reserved: 59138.0 | max reserved: 77954.0
+[Rank 11] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50936.203125 | reserved: 60116.0 | max reserved: 77954.0
+[Rank 9] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50920.75390625 | reserved: 58446.0 | max reserved: 77944.0[Rank 12] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50929.171875 | reserved: 58884.0 | max reserved: 77954.0
+
+
+[Rank 10] (after 10 iterations) memory (MB) | allocated: 21878.22900390625 | max allocated: 50954.109375 | reserved: 57942.0 | max reserved: 77950.0
+rank 8: {'packing_seq_len': {'128': 56, '256': 51, '512': 59, '1024': 43, '2048': 28, '4096': 10, '8192': 6, '16384': 2, '32768': 1, '>32k': 0}, 'real_seq_len': {'128': 56, '256': 51, '512': 59, '1024': 43, '2048': 28, '4096': 10, '8192': 6, '16384': 2, '32768': 1, '>32k': 0}}

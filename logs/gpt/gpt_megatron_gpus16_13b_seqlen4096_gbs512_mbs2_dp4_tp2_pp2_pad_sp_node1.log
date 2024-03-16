@@ -1,0 +1,221 @@
+[2024-03-12 05:49:22,108] torch.distributed.run: [WARNING] 
+[2024-03-12 05:49:22,108] torch.distributed.run: [WARNING] *****************************************
+[2024-03-12 05:49:22,108] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-03-12 05:49:22,108] torch.distributed.run: [WARNING] *****************************************
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 97, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 83, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 60, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 245, in _initialize_distributed
+    mpu.initialize_model_parallel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/parallel_state.py", line 274, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 97, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 83, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 60, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 245, in _initialize_distributed
+    mpu.initialize_model_parallel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/parallel_state.py", line 274, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+[E ProcessGroupGloo.cpp:138] Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+[E ProcessGroupGloo.cpp:138] Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+[E ProcessGroupGloo.cpp:138] Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 97, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 83, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 60, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 245, in _initialize_distributed
+    mpu.initialize_model_parallel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/parallel_state.py", line 274, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: [enforce fail at /opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/address.cc:45] sizeof(impl_) == bytes.size(). 136 vs 45
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 97, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 83, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 60, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 245, in _initialize_distributed
+    mpu.initialize_model_parallel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/parallel_state.py", line 274, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 97, in pretrain
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 97, in pretrain
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 83, in initialize_megatron
+    initialize_megatron(extra_args_provider=extra_args_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 83, in initialize_megatron
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 60, in finish_mpu_init
+    finish_mpu_init()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 60, in finish_mpu_init
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 245, in _initialize_distributed
+    _initialize_distributed()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py", line 245, in _initialize_distributed
+    mpu.initialize_model_parallel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/parallel_state.py", line 274, in initialize_model_parallel
+    mpu.initialize_model_parallel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/parallel_state.py", line 274, in initialize_model_parallel
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    group_gloo = torch.distributed.new_group(ranks, backend="gloo")
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 74, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3870, in new_group
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    return _new_group_with_tag(ranks, timeout, backend, pg_options, None, use_local_synchronization=use_local_synchronization)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 3933, in _new_group_with_tag
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    pg, pg_store = _new_process_group_helper(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1269, in _new_process_group_helper
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+    backend_class = ProcessGroupGloo(backend_prefix_store, group_rank, group_size, timeout=timeout)
+RuntimeError: Gloo connectFullMesh failed with [/opt/pytorch/pytorch/third_party/gloo/gloo/transport/tcp/pair.cc:144] no error
+[2024-03-12 05:49:42,130] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 2450826 closing signal SIGTERM
+[2024-03-12 05:49:42,131] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 2450828 closing signal SIGTERM
+[2024-03-12 05:49:42,162] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 2450825) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-03-12_05:49:42
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 10 (local_rank: 2)
+  exitcode  : 1 (pid: 2450827)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-03-12_05:49:42
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 12 (local_rank: 4)
+  exitcode  : 1 (pid: 2450829)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-03-12_05:49:42
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 2450830)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2024-03-12_05:49:42
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 14 (local_rank: 6)
+  exitcode  : 1 (pid: 2450831)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2024-03-12_05:49:42
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 15 (local_rank: 7)
+  exitcode  : 1 (pid: 2450832)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-03-12_05:49:42
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 2450825)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

@@ -1,0 +1,38 @@
+10.64.24.50: usage: torchrun [-h] [--nnodes NNODES] [--nproc-per-node NPROC_PER_NODE]
+10.64.24.50:                 [--rdzv-backend RDZV_BACKEND] [--rdzv-endpoint RDZV_ENDPOINT]
+10.64.24.50:                 [--rdzv-id RDZV_ID] [--rdzv-conf RDZV_CONF] [--standalone]
+10.64.24.50:                 [--max-restarts MAX_RESTARTS]
+10.64.24.50:                 [--monitor-interval MONITOR_INTERVAL]
+10.64.24.50:                 [--start-method {spawn,fork,forkserver}] [--role ROLE] [-m]
+10.64.24.50:                 [--no-python] [--run-path] [--log-dir LOG_DIR] [-r REDIRECTS]
+10.64.24.50:                 [-t TEE] [--node-rank NODE_RANK] [--master-addr MASTER_ADDR]
+10.64.24.50:                 [--master-port MASTER_PORT] [--local-addr LOCAL_ADDR]
+10.64.24.50:                 training_script ...
+10.64.24.50: torchrun: error: the following arguments are required: training_script, training_script_args
+10.64.24.49: usage: torchrun [-h] [--nnodes NNODES] [--nproc-per-node NPROC_PER_NODE]
+10.64.24.49:                 [--rdzv-backend RDZV_BACKEND] [--rdzv-endpoint RDZV_ENDPOINT]
+10.64.24.49:                 [--rdzv-id RDZV_ID] [--rdzv-conf RDZV_CONF] [--standalone]
+10.64.24.49:                 [--max-restarts MAX_RESTARTS]
+10.64.24.49:                 [--monitor-interval MONITOR_INTERVAL]
+10.64.24.49:                 [--start-method {spawn,fork,forkserver}] [--role ROLE] [-m]
+10.64.24.49:                 [--no-python] [--run-path] [--log-dir LOG_DIR] [-r REDIRECTS]
+10.64.24.49:                 [-t TEE] [--node-rank NODE_RANK] [--master-addr MASTER_ADDR]
+10.64.24.49:                 [--master-port MASTER_PORT] [--local-addr LOCAL_ADDR]
+10.64.24.49:                 training_script ...
+10.64.24.49: torchrun: error: the following arguments are required: training_script, training_script_args
+10.64.24.50: bash: line 2: --nproc_per_node: command not found
+10.64.24.50: bash: line 3: pretrain_gpt.py: command not found
+10.64.24.50: bash: line 4: --tensor-model-parallel-size: command not found
+10.64.24.50: bash: line 5: --sequence-packing: command not found
+10.64.24.50: bash: line 6: --data-path: command not found
+10.64.24.50: bash: line 8: --log-interval: command not found
+10.64.24.50: bash: line 9: --distributed-backend: command not found
+pdsh@SYM206-GPU-A0203-P2-Node49: 10.64.24.50: ssh exited with exit code 127
+10.64.24.49: bash: line 2: --nproc_per_node: command not found
+10.64.24.49: bash: line 3: pretrain_gpt.py: command not found
+10.64.24.49: bash: line 4: --tensor-model-parallel-size: command not found
+10.64.24.49: bash: line 5: --sequence-packing: command not found
+10.64.24.49: bash: line 6: --data-path: command not found
+10.64.24.49: bash: line 8: --log-interval: command not found
+10.64.24.49: bash: line 9: --distributed-backend: command not found
+pdsh@SYM206-GPU-A0203-P2-Node49: 10.64.24.49: ssh exited with exit code 127

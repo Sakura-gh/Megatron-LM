@@ -1,0 +1,464 @@
+[2024-03-12 05:54:27,588] torch.distributed.run: [WARNING] 
+[2024-03-12 05:54:27,588] torch.distributed.run: [WARNING] *****************************************
+[2024-03-12 05:54:27,588] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-03-12 05:54:27,588] torch.distributed.run: [WARNING] *****************************************
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 2): 1573350400
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 2): 1573350400
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+INFO:megatron.core.distributed.grad_buffer:Number of buckets for gradient all-reduce / reduce-scatter: 1
+INFO:megatron.core.distributed.grad_buffer:Params for bucket 1 (1573350400 elements):
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+[E ProcessGroupNCCL.cpp:467] [Rank 8] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 119, in pretrain
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 369, in setup_model_and_optimizer
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    model = get_model(model_provider_func, model_type)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 250, in get_model
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 119, in pretrain
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 119, in pretrain
+    model = model_provider_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 78, in model_provider
+    model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 369, in setup_model_and_optimizer
+    model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 369, in setup_model_and_optimizer
+    model = megatron.model.GPTModel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/gpt_model.py", line 107, in __init__
+    model = get_model(model_provider_func, model_type)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 250, in get_model
+    model = model_provider_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 78, in model_provider
+    model = get_model(model_provider_func, model_type)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 250, in get_model
+    model = megatron.model.GPTModel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/gpt_model.py", line 107, in __init__
+    model = model_provider_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 78, in model_provider
+    self.initialize_word_embeddings()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/module.py", line 108, in initialize_word_embeddings
+    self.initialize_word_embeddings()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/module.py", line 108, in initialize_word_embeddings
+    model = megatron.model.GPTModel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/gpt_model.py", line 107, in __init__
+    self.initialize_word_embeddings()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/module.py", line 108, in initialize_word_embeddings
+    torch.distributed.all_reduce(self.shared_embedding_or_output_weight().data,
+    torch.distributed.all_reduce(self.shared_embedding_or_output_weight().data,  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+        return func(*args, **kwargs)return func(*args, **kwargs)
+
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 2044, in all_reduce
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 2044, in all_reduce
+    torch.distributed.all_reduce(self.shared_embedding_or_output_weight().data,
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 2044, in all_reduce
+    work = group.allreduce([tensor], opts)
+    work = group.allreduce([tensor], opts)
+RuntimeError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+Exception raised from doWait at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp:445 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f59b31b0449 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x6a (0x7f59b316b1d8 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x28c (0x7f5965b9123c in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2a (0x7f5965b9150a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x76 (0x7f5965b91816 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f5965b4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f5965b4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f5965b4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f5965b4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #9: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f5965b4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #10: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) + 0x1fa (0x7f5918ed73da in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #11: c10d::ProcessGroupNCCL::getNCCLComm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x228 (0x7f5918eda908 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xe27d37 (0x7f5918ee6d37 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #13: c10d::ProcessGroupNCCL::allreduce_impl(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x21 (0x7f5918ee82e1 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #14: c10d::ProcessGroupNCCL::allreduce(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x421 (0x7f5918eea121 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #15: <unknown function> + 0x4936f0a (0x7f5965b38f0a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x494766f (0x7f5965b4966f in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4950b97 (0x7f5965b52b97 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x495f1ee (0x7f5965b611ee in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0xb8cc15 (0x7f596c322c15 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x39c407 (0x7f596bb32407 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #21: <unknown function> + 0x15fe0e (0x556c30b91e0e in /usr/bin/python)
+frame #22: _PyObject_MakeTpCall + 0x25b (0x556c30b885eb in /usr/bin/python)
+frame #23: <unknown function> + 0x16e7bb (0x556c30ba07bb in /usr/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x6152 (0x556c30b808a2 in /usr/bin/python)
+frame #25: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #26: PyObject_Call + 0x122 (0x556c30ba1192 in /usr/bin/python)
+frame #27: _PyEval_EvalFrameDefault + 0x2b71 (0x556c30b7d2c1 in /usr/bin/python)
+frame #28: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x1981 (0x556c30b7c0d1 in /usr/bin/python)
+frame #30: <unknown function> + 0x16e4e1 (0x556c30ba04e1 in /usr/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x6152 (0x556c30b808a2 in /usr/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #33: _PyObject_FastCallDictTstate + 0x16d (0x556c30b8782d in /usr/bin/python)
+frame #34: <unknown function> + 0x16a744 (0x556c30b9c744 in /usr/bin/python)
+frame #35: _PyObject_MakeTpCall + 0x1fc (0x556c30b8858c in /usr/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x71b8 (0x556c30b81908 in /usr/bin/python)
+frame #37: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #38: _PyEval_EvalFrameDefault + 0x1981 (0x556c30b7c0d1 in /usr/bin/python)
+frame #39: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #40: _PyEval_EvalFrameDefault + 0x6bd (0x556c30b7ae0d in /usr/bin/python)
+frame #41: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #42: _PyEval_EvalFrameDefault + 0x6bd (0x556c30b7ae0d in /usr/bin/python)
+frame #43: _PyFunction_Vectorcall + 0x7c (0x556c30b9270c in /usr/bin/python)
+frame #44: _PyEval_EvalFrameDefault + 0x1981 (0x556c30b7c0d1 in /usr/bin/python)
+frame #45: <unknown function> + 0x239e56 (0x556c30c6be56 in /usr/bin/python)
+frame #46: PyEval_EvalCode + 0x86 (0x556c30c6bcf6 in /usr/bin/python)
+frame #47: <unknown function> + 0x2647d8 (0x556c30c967d8 in /usr/bin/python)
+frame #48: <unknown function> + 0x25e0bb (0x556c30c900bb in /usr/bin/python)
+frame #49: <unknown function> + 0x264525 (0x556c30c96525 in /usr/bin/python)
+frame #50: _PyRun_SimpleFileObject + 0x1a8 (0x556c30c95a08 in /usr/bin/python)
+frame #51: _PyRun_AnyFileObject + 0x43 (0x556c30c95653 in /usr/bin/python)
+frame #52: Py_RunMain + 0x2be (0x556c30c8841e in /usr/bin/python)
+frame #53: Py_BytesMain + 0x2d (0x556c30c5ecad in /usr/bin/python)
+frame #54: <unknown function> + 0x29d90 (0x7f59b4727d90 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #55: __libc_start_main + 0x80 (0x7f59b4727e40 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #56: _start + 0x25 (0x556c30c5eba5 in /usr/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.RuntimeError
+: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+Exception raised from doWait at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp:445 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f833d1b0449 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x6a (0x7f833d16b1d8 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x28c (0x7f82f999123c in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2a (0x7f82f999150a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x76 (0x7f82f9991816 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f82f994a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f82f994a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f82f994a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f82f994a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #9: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f82f994a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #10: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) + 0x1fa (0x7f82accd73da in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #11: c10d::ProcessGroupNCCL::getNCCLComm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x228 (0x7f82accda908 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xe27d37 (0x7f82acce6d37 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #13: c10d::ProcessGroupNCCL::allreduce_impl(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x21 (0x7f82acce82e1 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #14: c10d::ProcessGroupNCCL::allreduce(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x421 (0x7f82accea121 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #15: <unknown function> + 0x4936f0a (0x7f82f9938f0a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x494766f (0x7f82f994966f in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4950b97 (0x7f82f9952b97 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x495f1ee (0x7f82f99611ee in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0xb8cc15 (0x7f8300122c15 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x39c407 (0x7f82ff932407 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #21: <unknown function> + 0x15fe0e (0x55d62df50e0e in /usr/bin/python)
+frame #22: _PyObject_MakeTpCall + 0x25b (0x55d62df475eb in /usr/bin/python)
+frame #23: <unknown function> + 0x16e7bb (0x55d62df5f7bb in /usr/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x6152 (0x55d62df3f8a2 in /usr/bin/python)
+frame #25: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #26: PyObject_Call + 0x122 (0x55d62df60192 in /usr/bin/python)
+frame #27: _PyEval_EvalFrameDefault + 0x2b71 (0x55d62df3c2c1 in /usr/bin/python)
+frame #28: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x1981 (0x55d62df3b0d1 in /usr/bin/python)
+frame #30: <unknown function> + 0x16e4e1 (0x55d62df5f4e1 in /usr/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x6152 (0x55d62df3f8a2 in /usr/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #33: _PyObject_FastCallDictTstate + 0x16d (0x55d62df4682d in /usr/bin/python)
+frame #34: <unknown function> + 0x16a744 (0x55d62df5b744 in /usr/bin/python)
+frame #35: _PyObject_MakeTpCall + 0x1fc (0x55d62df4758c in /usr/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x71b8 (0x55d62df40908 in /usr/bin/python)
+frame #37: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #38: _PyEval_EvalFrameDefault + 0x1981 (0x55d62df3b0d1 in /usr/bin/python)
+frame #39: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #40: _PyEval_EvalFrameDefault + 0x6bd (0x55d62df39e0d in /usr/bin/python)
+frame #41: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #42: _PyEval_EvalFrameDefault + 0x6bd (0x55d62df39e0d in /usr/bin/python)
+frame #43: _PyFunction_Vectorcall + 0x7c (0x55d62df5170c in /usr/bin/python)
+frame #44: _PyEval_EvalFrameDefault + 0x1981 (0x55d62df3b0d1 in /usr/bin/python)
+frame #45: <unknown function> + 0x239e56 (0x55d62e02ae56 in /usr/bin/python)
+frame #46: PyEval_EvalCode + 0x86 (0x55d62e02acf6 in /usr/bin/python)
+frame #47: <unknown function> + 0x2647d8 (0x55d62e0557d8 in /usr/bin/python)
+frame #48: <unknown function> + 0x25e0bb (0x55d62e04f0bb in /usr/bin/python)
+frame #49: <unknown function> + 0x264525 (0x55d62e055525 in /usr/bin/python)
+frame #50: _PyRun_SimpleFileObject + 0x1a8 (0x55d62e054a08 in /usr/bin/python)
+frame #51: _PyRun_AnyFileObject + 0x43 (0x55d62e054653 in /usr/bin/python)
+frame #52: Py_RunMain + 0x2be (0x55d62e04741e in /usr/bin/python)
+frame #53: Py_BytesMain + 0x2d (0x55d62e01dcad in /usr/bin/python)
+frame #54: <unknown function> + 0x29d90 (0x7f8348487d90 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #55: __libc_start_main + 0x80 (0x7f8348487e40 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #56: _start + 0x25 (0x55d62e01dba5 in /usr/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+    work = group.allreduce([tensor], opts)
+RuntimeError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+Exception raised from doWait at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp:445 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f53ecfb0449 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x6a (0x7f53ecf6b1d8 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x28c (0x7f53a979123c in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2a (0x7f53a979150a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x76 (0x7f53a9791816 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f53a974a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f53a974a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f53a974a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f53a974a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #9: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f53a974a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #10: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) + 0x1fa (0x7f535cad73da in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #11: c10d::ProcessGroupNCCL::getNCCLComm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x228 (0x7f535cada908 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xe27d37 (0x7f535cae6d37 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #13: c10d::ProcessGroupNCCL::allreduce_impl(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x21 (0x7f535cae82e1 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #14: c10d::ProcessGroupNCCL::allreduce(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x421 (0x7f535caea121 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #15: <unknown function> + 0x4936f0a (0x7f53a9738f0a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x494766f (0x7f53a974966f in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4950b97 (0x7f53a9752b97 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x495f1ee (0x7f53a97611ee in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0xb8cc15 (0x7f53aff22c15 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x39c407 (0x7f53af732407 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #21: <unknown function> + 0x15fe0e (0x55fa49a97e0e in /usr/bin/python)
+frame #22: _PyObject_MakeTpCall + 0x25b (0x55fa49a8e5eb in /usr/bin/python)
+frame #23: <unknown function> + 0x16e7bb (0x55fa49aa67bb in /usr/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x6152 (0x55fa49a868a2 in /usr/bin/python)
+frame #25: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #26: PyObject_Call + 0x122 (0x55fa49aa7192 in /usr/bin/python)
+frame #27: _PyEval_EvalFrameDefault + 0x2b71 (0x55fa49a832c1 in /usr/bin/python)
+frame #28: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x1981 (0x55fa49a820d1 in /usr/bin/python)
+frame #30: <unknown function> + 0x16e4e1 (0x55fa49aa64e1 in /usr/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x6152 (0x55fa49a868a2 in /usr/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #33: _PyObject_FastCallDictTstate + 0x16d (0x55fa49a8d82d in /usr/bin/python)
+frame #34: <unknown function> + 0x16a744 (0x55fa49aa2744 in /usr/bin/python)
+frame #35: _PyObject_MakeTpCall + 0x1fc (0x55fa49a8e58c in /usr/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x71b8 (0x55fa49a87908 in /usr/bin/python)
+frame #37: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #38: _PyEval_EvalFrameDefault + 0x1981 (0x55fa49a820d1 in /usr/bin/python)
+frame #39: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #40: _PyEval_EvalFrameDefault + 0x6bd (0x55fa49a80e0d in /usr/bin/python)
+frame #41: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #42: _PyEval_EvalFrameDefault + 0x6bd (0x55fa49a80e0d in /usr/bin/python)
+frame #43: _PyFunction_Vectorcall + 0x7c (0x55fa49a9870c in /usr/bin/python)
+frame #44: _PyEval_EvalFrameDefault + 0x1981 (0x55fa49a820d1 in /usr/bin/python)
+frame #45: <unknown function> + 0x239e56 (0x55fa49b71e56 in /usr/bin/python)
+frame #46: PyEval_EvalCode + 0x86 (0x55fa49b71cf6 in /usr/bin/python)
+frame #47: <unknown function> + 0x2647d8 (0x55fa49b9c7d8 in /usr/bin/python)
+frame #48: <unknown function> + 0x25e0bb (0x55fa49b960bb in /usr/bin/python)
+frame #49: <unknown function> + 0x264525 (0x55fa49b9c525 in /usr/bin/python)
+frame #50: _PyRun_SimpleFileObject + 0x1a8 (0x55fa49b9ba08 in /usr/bin/python)
+frame #51: _PyRun_AnyFileObject + 0x43 (0x55fa49b9b653 in /usr/bin/python)
+frame #52: Py_RunMain + 0x2be (0x55fa49b8e41e in /usr/bin/python)
+frame #53: Py_BytesMain + 0x2d (0x55fa49b64cad in /usr/bin/python)
+frame #54: <unknown function> + 0x29d90 (0x7f53f828ed90 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #55: __libc_start_main + 0x80 (0x7f53f828ee40 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #56: _start + 0x25 (0x55fa49b64ba5 in /usr/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 119, in pretrain
+    model, optimizer, opt_param_scheduler = setup_model_and_optimizer(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 369, in setup_model_and_optimizer
+    model = get_model(model_provider_func, model_type)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 250, in get_model
+    model = model_provider_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 78, in model_provider
+    model = megatron.model.GPTModel(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/gpt_model.py", line 107, in __init__
+    self.initialize_word_embeddings()
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/model/module.py", line 108, in initialize_word_embeddings
+    torch.distributed.all_reduce(self.shared_embedding_or_output_weight().data,
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 2044, in all_reduce
+    work = group.allreduce([tensor], opts)
+RuntimeError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Socket Timeout
+Exception raised from doWait at /opt/pytorch/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp:445 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x99 (0x7f54e17b0449 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x6a (0x7f54e176b1d8 in /usr/local/lib/python3.10/dist-packages/torch/lib/libc10.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x28c (0x7f54a8d9123c in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2a (0x7f54a8d9150a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x76 (0x7f54a8d91816 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f54a8d4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f54a8d4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f54a8d4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f54a8d4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #9: c10d::PrefixStore::get(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x2f (0x7f54a8d4a2bf in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #10: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) + 0x1fa (0x7f545c0d73da in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #11: c10d::ProcessGroupNCCL::getNCCLComm(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x228 (0x7f545c0da908 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xe27d37 (0x7f545c0e6d37 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #13: c10d::ProcessGroupNCCL::allreduce_impl(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x21 (0x7f545c0e82e1 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #14: c10d::ProcessGroupNCCL::allreduce(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllreduceOptions const&) + 0x421 (0x7f545c0ea121 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cuda.so)
+frame #15: <unknown function> + 0x4936f0a (0x7f54a8d38f0a in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x494766f (0x7f54a8d4966f in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x4950b97 (0x7f54a8d52b97 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x495f1ee (0x7f54a8d611ee in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0xb8cc15 (0x7f54af522c15 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x39c407 (0x7f54aed32407 in /usr/local/lib/python3.10/dist-packages/torch/lib/libtorch_python.so)
+frame #21: <unknown function> + 0x15fe0e (0x55ee38545e0e in /usr/bin/python)
+frame #22: _PyObject_MakeTpCall + 0x25b (0x55ee3853c5eb in /usr/bin/python)
+frame #23: <unknown function> + 0x16e7bb (0x55ee385547bb in /usr/bin/python)
+frame #24: _PyEval_EvalFrameDefault + 0x6152 (0x55ee385348a2 in /usr/bin/python)
+frame #25: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #26: PyObject_Call + 0x122 (0x55ee38555192 in /usr/bin/python)
+frame #27: _PyEval_EvalFrameDefault + 0x2b71 (0x55ee385312c1 in /usr/bin/python)
+frame #28: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x1981 (0x55ee385300d1 in /usr/bin/python)
+frame #30: <unknown function> + 0x16e4e1 (0x55ee385544e1 in /usr/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x6152 (0x55ee385348a2 in /usr/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #33: _PyObject_FastCallDictTstate + 0x16d (0x55ee3853b82d in /usr/bin/python)
+frame #34: <unknown function> + 0x16a744 (0x55ee38550744 in /usr/bin/python)
+frame #35: _PyObject_MakeTpCall + 0x1fc (0x55ee3853c58c in /usr/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x71b8 (0x55ee38535908 in /usr/bin/python)
+frame #37: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #38: _PyEval_EvalFrameDefault + 0x1981 (0x55ee385300d1 in /usr/bin/python)
+frame #39: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #40: _PyEval_EvalFrameDefault + 0x6bd (0x55ee3852ee0d in /usr/bin/python)
+frame #41: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #42: _PyEval_EvalFrameDefault + 0x6bd (0x55ee3852ee0d in /usr/bin/python)
+frame #43: _PyFunction_Vectorcall + 0x7c (0x55ee3854670c in /usr/bin/python)
+frame #44: _PyEval_EvalFrameDefault + 0x1981 (0x55ee385300d1 in /usr/bin/python)
+frame #45: <unknown function> + 0x239e56 (0x55ee3861fe56 in /usr/bin/python)
+frame #46: PyEval_EvalCode + 0x86 (0x55ee3861fcf6 in /usr/bin/python)
+frame #47: <unknown function> + 0x2647d8 (0x55ee3864a7d8 in /usr/bin/python)
+frame #48: <unknown function> + 0x25e0bb (0x55ee386440bb in /usr/bin/python)
+frame #49: <unknown function> + 0x264525 (0x55ee3864a525 in /usr/bin/python)
+frame #50: _PyRun_SimpleFileObject + 0x1a8 (0x55ee38649a08 in /usr/bin/python)
+frame #51: _PyRun_AnyFileObject + 0x43 (0x55ee38649653 in /usr/bin/python)
+frame #52: Py_RunMain + 0x2be (0x55ee3863c41e in /usr/bin/python)
+frame #53: Py_BytesMain + 0x2d (0x55ee38612cad in /usr/bin/python)
+frame #54: <unknown function> + 0x29d90 (0x7f54f77fdd90 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #55: __libc_start_main + 0x80 (0x7f54f77fde40 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #56: _start + 0x25 (0x55ee38612ba5 in /usr/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+[E ProcessGroupNCCL.cpp:467] [Rank 11] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600681 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:467] [Rank 10] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600683 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:467] [Rank 9] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600692 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:481] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:487] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:852] [Rank 10] NCCL watchdog thread terminated with exception: [Rank 10] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600683 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 10] NCCL watchdog thread terminated with exception: [Rank 10] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600683 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:481] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:487] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:852] [Rank 8] NCCL watchdog thread terminated with exception: [Rank 8] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 8] NCCL watchdog thread terminated with exception: [Rank 8] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:481] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:487] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:852] [Rank 9] NCCL watchdog thread terminated with exception: [Rank 9] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600692 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 9] NCCL watchdog thread terminated with exception: [Rank 9] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600692 milliseconds before timing out.
+[E ProcessGroupNCCL.cpp:481] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[E ProcessGroupNCCL.cpp:487] To avoid data inconsistency, we are taking the entire process down.
+[E ProcessGroupNCCL.cpp:852] [Rank 11] NCCL watchdog thread terminated with exception: [Rank 11] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600681 milliseconds before timing out.
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  [Rank 11] NCCL watchdog thread terminated with exception: [Rank 11] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=6, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) ran for 600681 milliseconds before timing out.
+[2024-03-12 06:04:58,236] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 2453661 closing signal SIGTERM
+[2024-03-12 06:04:58,236] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 2453662 closing signal SIGTERM
+[2024-03-12 06:04:58,236] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 2453664 closing signal SIGTERM
+[2024-03-12 06:05:01,380] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: -6) local_rank: 2 (pid: 2453663) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-03-12_06:04:58
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 12 (local_rank: 4)
+  exitcode  : 1 (pid: 2453665)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-03-12_06:04:58
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 13 (local_rank: 5)
+  exitcode  : 1 (pid: 2453666)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2024-03-12_06:04:58
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 14 (local_rank: 6)
+  exitcode  : 1 (pid: 2453667)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2024-03-12_06:04:58
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 15 (local_rank: 7)
+  exitcode  : 1 (pid: 2453668)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-03-12_06:04:58
+  host      : SYM206-GPU-A0204-P2-Node50
+  rank      : 10 (local_rank: 2)
+  exitcode  : -6 (pid: 2453663)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 2453663
+============================================================

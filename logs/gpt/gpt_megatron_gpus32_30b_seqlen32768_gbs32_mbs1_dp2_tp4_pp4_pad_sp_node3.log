@@ -1,0 +1,296 @@
+[2024-03-13 11:39:17,725] torch.distributed.run: [WARNING] 
+[2024-03-13 11:39:17,725] torch.distributed.run: [WARNING] *****************************************
+[2024-03-13 11:39:17,725] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-03-13 11:39:17,725] torch.distributed.run: [WARNING] *****************************************
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+Zarr-based strategies will not be registered because of missing packages
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/initialize.py:354: UserWarning: nvfuser integration in TorchScript is deprecated. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/jit/codegen/cuda/interface.cpp:235.)
+  output = bias_gelu(bias, input)
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py:106: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/pytorch/pytorch/torch/csrc/tensor/python_tensor.cpp:83.)
+  start_time_tensor = torch.cuda.DoubleTensor([_TRAIN_START_TIME])
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+ > number of parameters on (tensor, pipeline) model parallel rank (1, 3): 2078737024
+ > number of parameters on (tensor, pipeline) model parallel rank (0, 3): 2078737024
+ > number of parameters on (tensor, pipeline) model parallel rank (3, 3): 2078737024
+INFO:megatron.core.distributed.grad_buffer:Number of buckets for gradient all-reduce / reduce-scatter: 1
+INFO:megatron.core.distributed.grad_buffer:Params for bucket 1 (2078737024 elements):
+ > number of parameters on (tensor, pipeline) model parallel rank (2, 3): 2078737024
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/optimizer/distrib_optimizer.py:429: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = bucket.data.storage()._untyped()
+> building GPT2BPETokenizer tokenizer ...
+> building GPT2BPETokenizer tokenizer ...
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+INFO:megatron.tokenizer.gpt2_tokenization:Special tokens {'<pad>': 50257}
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+ > padded vocab (size: 50257) with 47 dummy tokens (new size: 50304)
+Loading exists cache from /data/nolan/develop/bak/ht/hot_switch/gh/Megatron-LM/data/web/refinedweb0_cache.pkl begin ...
+Loading exists cache end, time cost:  5.003 s
+Cutting or padding data to max_seq_len + 1 = 32769 begin ...
+Loading exists cache end, time cost:  5.576 s
+Cutting or padding data to max_seq_len + 1 = 32769 begin ...
+Cutting or padding data end, time cost:  35.564 s
+consumed_train_samples = 0, dataloader_type = single
+Cutting or padding data end, time cost:  35.604 s
+consumed_train_samples = 0, dataloader_type = single
+(min, max) time across ranks (ms):
+    model-and-optimizer-setup ......................: (68.23, 3225.69)
+    train/valid/test-data-iterators-setup ..........: (0.02, 42998.10)
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+[W ProcessGroupNCCL.cpp:1707] Warning: 0NCCL_AVOID_RECORD_STREAMS=1 has no effect for point-to-point collectives. (function operator())
+NCCL version 2.19.3+cuda12.2
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 160, in pretrain
+    iteration = train(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 744, in train
+    train_step(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 413, in train_step
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    losses_reduced = forward_backward_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 1203, in forward_backward_pipelining_without_interleaving
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 160, in pretrain
+    output_tensor = forward_step(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 183, in forward_step
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    iteration = train(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 744, in train
+    output_tensor, loss_func = forward_step_func(data_iterator, model)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 245, in forward_step
+    train_step(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 413, in train_step
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 160, in pretrain
+    tokens, labels, loss_mask, attention_mask, position_ids = get_batch(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 160, in get_batch
+    losses_reduced = forward_backward_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 1203, in forward_backward_pipelining_without_interleaving
+    iteration = train(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 744, in train
+    data = tensor_parallel.broadcast_data(data, datatype)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 158, in broadcast_data
+    output_tensor = forward_step(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 183, in forward_step
+    train_step(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 413, in train_step
+    output_tensor, loss_func = forward_step_func(data_iterator, model)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 245, in forward_step
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 123, in _build_size_numel_dictionaries
+    losses_reduced = forward_backward_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 1203, in forward_backward_pipelining_without_interleaving
+    tokens, labels, loss_mask, attention_mask, position_ids = get_batch(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 160, in get_batch
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1904, in broadcast
+    output_tensor = forward_step(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 183, in forward_step
+    work = group.broadcast([tensor], opts)
+RuntimeError: [3] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer. This may indicate a possible application crash on rank 0 or a network set up issue.
+    data = tensor_parallel.broadcast_data(data, datatype)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 158, in broadcast_data
+    output_tensor, loss_func = forward_step_func(data_iterator, model)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 245, in forward_step
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 123, in _build_size_numel_dictionaries
+    tokens, labels, loss_mask, attention_mask, position_ids = get_batch(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 160, in get_batch
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1904, in broadcast
+        work = group.broadcast([tensor], opts)data = tensor_parallel.broadcast_data(data, datatype)
+
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 158, in broadcast_data
+RuntimeError: [2] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer. This may indicate a possible application crash on rank 0 or a network set up issue.
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 123, in _build_size_numel_dictionaries
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1904, in broadcast
+    work = group.broadcast([tensor], opts)
+RuntimeError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer. This may indicate a possible application crash on rank 0 or a network set up issue.
+NCCL version 2.19.3+cuda12.2
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 160, in pretrain
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 160, in pretrain
+    iteration = train(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 744, in train
+    iteration = train(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 744, in train
+    train_step(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 413, in train_step
+    train_step(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 413, in train_step
+    losses_reduced = forward_backward_func(
+    losses_reduced = forward_backward_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 1203, in forward_backward_pipelining_without_interleaving
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 1203, in forward_backward_pipelining_without_interleaving
+Traceback (most recent call last):
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 310, in <module>
+    output_tensor = forward_step(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 183, in forward_step
+    output_tensor, loss_func = forward_step_func(data_iterator, model)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 245, in forward_step
+    pretrain(train_dataset_provider,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 160, in pretrain
+    tokens, labels, loss_mask, attention_mask, position_ids = get_batch(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 160, in get_batch
+    output_tensor = forward_step(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 183, in forward_step
+    iteration = train(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 744, in train
+    data = tensor_parallel.broadcast_data(data, datatype)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 158, in broadcast_data
+    output_tensor, loss_func = forward_step_func(data_iterator, model)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 245, in forward_step
+    train_step(forward_step_func,
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/training.py", line 413, in train_step
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 123, in _build_size_numel_dictionaries
+    tokens, labels, loss_mask, attention_mask, position_ids = get_batch(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 160, in get_batch
+    losses_reduced = forward_backward_func(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 1203, in forward_backward_pipelining_without_interleaving
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1904, in broadcast
+    work = group.broadcast([tensor], opts)
+    data = tensor_parallel.broadcast_data(data, datatype)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 158, in broadcast_data
+RuntimeError: [2] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer. This may indicate a possible application crash on rank 0 or a network set up issue.
+    output_tensor = forward_step(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/pipeline_parallel/schedules.py", line 183, in forward_step
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 123, in _build_size_numel_dictionaries
+    output_tensor, loss_func = forward_step_func(data_iterator, model)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 245, in forward_step
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1904, in broadcast
+    work = group.broadcast([tensor], opts)
+RuntimeError: [3] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer. This may indicate a possible application crash on rank 0 or a network set up issue.
+    tokens, labels, loss_mask, attention_mask, position_ids = get_batch(
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/pretrain_gpt.py", line 160, in get_batch
+    data = tensor_parallel.broadcast_data(data, datatype)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 158, in broadcast_data
+    total_size, total_numel = _build_size_numel_dictionaries(data)
+  File "/data/nolan/develop/bak/ht/hot_switch/gh/Megatron-llama/Megatron-LM/megatron/core/tensor_parallel/data.py", line 123, in _build_size_numel_dictionaries
+    torch.distributed.broadcast(sizes_cuda, get_tensor_model_parallel_src_rank(),
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/c10d_logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py", line 1904, in broadcast
+    work = group.broadcast([tensor], opts)
+RuntimeError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer. This may indicate a possible application crash on rank 0 or a network set up issue.
+[2024-03-13 11:40:47,937] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217469 closing signal SIGTERM
+[2024-03-13 11:40:47,937] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217470 closing signal SIGTERM
+[2024-03-13 11:40:47,938] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217472 closing signal SIGTERM
+[2024-03-13 11:40:47,938] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217473 closing signal SIGTERM
+[2024-03-13 11:40:47,938] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217474 closing signal SIGTERM
+[2024-03-13 11:40:47,939] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217475 closing signal SIGTERM
+[2024-03-13 11:40:47,939] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 1217476 closing signal SIGTERM
+[2024-03-13 11:40:48,454] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 2 (pid: 1217471) of binary: /usr/bin/python
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.1.0a0+32f93b1', 'console_scripts', 'torchrun')())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+pretrain_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-03-13_11:40:47
+  host      : SYM206-GPU-A0206-P2-Node52
+  rank      : 26 (local_rank: 2)
+  exitcode  : 1 (pid: 1217471)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
